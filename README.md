@@ -38,6 +38,6 @@ _todo_
 _todo_
 
 # Contributing
-Please follow the [Contributing Guidelines]()
+Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 
 
