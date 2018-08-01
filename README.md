@@ -39,5 +39,5 @@ _todo_
 
 # Contributing
 Please follow the [Contributing Guidelines](CONTRIBUTING.md)
-
+- [Kit Sum Pang](https://github.com/ktsmpng)
 
