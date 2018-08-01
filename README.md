@@ -18,6 +18,7 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 
 ## Team
 - [Lili](https://github.com/lili2311)
+- [Maurice](https://github.com/mbanerjeepalmer)
 
 
 
