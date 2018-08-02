@@ -13,5 +13,5 @@ In order to raise a Pull Request with your changes (please make sure all changes
 - Describe all the changes you have made in details and save.
 
 # A few simple rules
-Please make sure you follow the current naming, coding and language conventions by revieweing the existing code and the existing way of working with the team.
-If you are unsure of anythng please ask, mentors are always here to help!
+Please make sure you follow the current naming, coding and language conventions by reviewing the existing code and the existing way of working with the team.
+If you are unsure of anything please ask, mentors are always here to help!
