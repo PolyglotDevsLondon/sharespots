@@ -18,7 +18,7 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 
 ## Team
 - [Lili](https://github.com/lili2311)
-
+- [Kit Sum Pang](https://github.com/ktsmpng)
 
 
 # Setup
@@ -39,5 +39,5 @@ _todo_
 
 # Contributing
 Please follow the [Contributing Guidelines](CONTRIBUTING.md)
-- [Kit Sum Pang](https://github.com/ktsmpng)
+
 
