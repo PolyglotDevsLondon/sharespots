@@ -14,13 +14,16 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 - Backend: Python & Django
 - Front-end: SASS/HTML5/JavaScript
 - Hosting: Heroku
-- Storage: AWS S3 
+- Storage: AWS S3
 
 ## Team
 - [Lili](https://github.com/lili2311)
 - [Maurice](https://github.com/mbanerjeepalmer)
-
-
+- [Stefano](https://github.com/CianciuStyles)
+- [Simon](https://github.com/simonRedwards)
+- [Dan](https://github.com/snowkuma)
+- [Kit Sum Pang](https://github.com/ktsmpng)
+- [Ichi](https://github.com/icicleta)
 
 # Setup
 ## Tools
