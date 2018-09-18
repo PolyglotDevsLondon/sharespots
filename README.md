@@ -26,6 +26,7 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 - [Kit Sum Pang](https://github.com/ktsmpng)
 - [Ichi](https://github.com/icicleta)
 - [Tsveti](https://github.com/tsvetelinak0)
+- [Amy Boyd](https://github.com/amyboyd)
 
 # Setup
 ## Tools
