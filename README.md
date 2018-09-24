@@ -59,6 +59,8 @@ Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 
 # Database
 
+We are using Postgres
+
 ### Mac OSX
 
 Download and install Postgres using https://postgresapp.com/.
@@ -79,21 +81,28 @@ $ psql
 ```
 You will see something similar to this:
 
-```
+<pre>
 psql (10.5)
 Type "help" for help.
 
-_username_=#
-```
+<i>yourusername</i>=#
+</pre>
 
-Create a new database called listings
+Create a new database called listings.
 
 <pre>
 # CREATE DATABASE listings;
-# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your password not this</i>';
+# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your_password_not_this</i>';
 # GRANT ALL PRIVILEGES ON DATABASE listings TO listings;
 # ALTER USER listings CREATEDB;
 </pre>
 
+In the root of your project create a file called .env and add the following:
+
+<pre>
+# PostgreSQL
+DATABASE_URL=postgres://listings:<i>your_password_not_this</i>@127.0.0.1:5432/listings
+
+</pre>
 
 
