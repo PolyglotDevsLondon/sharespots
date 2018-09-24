@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 import environ
 
-ROOT_DIR = environ.Path(__file__) - 2  # two folder back to root # (listings-app/listings_app/settings.py - 2 = listings-app/)
+ROOT_DIR = environ.Path(__file__) - 2  # two folder back to root
 env = environ.Env()
 env.read_env(str(ROOT_DIR.path('.env')))
 

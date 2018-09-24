@@ -1,4 +1,4 @@
-# Sharespots 
+# Sharespots
 Simple Django app that displays a list of curated cafes/spaces to meetup and work in London
 
 # Content
@@ -42,7 +42,11 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 3. Create a new virtual environment with virtualenvwrapper: `mkvirtualenv -a sharespots sharespots`
 4. `cd` into the `sharespots` folder
 5. Install all the dependencies: `pip install -r requirements.txt`
+<<<<<<< HEAD
 6. [Setup Postgres database locally](#database)
+=======
+6. [Setup Postgres database locally](##Database(postgres))
+>>>>>>> a3b5128... adding postgres config plus documentation
 7. Apply the initial database migrations: `python manage.py migrate`
 
 ## Running the project locally
@@ -57,15 +61,15 @@ _todo_
 # Contributing
 Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 
-# Database
-
-We are using Postgres
-
 ### Mac OSX
 
 Download and install Postgres using https://postgresapp.com/.
 Once you have installed click initialise
 You should see three databases _yourusername_ postgres and template1
+
+# Database
+
+We are using Postgres
 
 Run this in your terminal:
 ```
@@ -93,6 +97,18 @@ Create a new database called listings.
 <pre>
 # CREATE DATABASE listings;
 # CREATE ROLE listings WITH LOGIN PASSWORD '<i>your_password_not_this</i>';
+```
+psql (10.5)
+Type "help" for help.
+
+_username_=#
+```
+
+Create a new database called listings
+
+<pre>
+# CREATE DATABASE listings;
+# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your password not this</i>';
 # GRANT ALL PRIVILEGES ON DATABASE listings TO listings;
 # ALTER USER listings CREATEDB;
 </pre>
