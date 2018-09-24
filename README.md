@@ -41,7 +41,7 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 3. Create a new virtual environment with virtualenvwrapper: `mkvirtualenv -a sharespots sharespots`
 4. `cd` into the `sharespots` folder
 5. Install all the dependencies: `pip install -r requirements.txt`
-6. [Setup Postgres database locally](##Database(postgres))
+6. [Setup Postgres database locally](#Database)
 7. Apply the initial database migrations: `python manage.py migrate`
 
 ## Running the project locally
@@ -56,7 +56,7 @@ _todo_
 # Contributing
 Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 
-## Database(postgres)
+# Database
 
 ### Mac OSX
 
