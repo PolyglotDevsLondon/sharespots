@@ -36,13 +36,15 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 1. **Terminal**: [iTerm2](https://www.iterm2.com/) (MacOSX), [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) (Linux) or use your preferred one.
 2. **Text Editor**: [Sublime Text](http://www.sublimetext.com/) or you preferred one.
 
-## Dev Enviroment Setup
+# Dev Enviroment Setup
+
 1. [Setup](https://github.com/PolyglotDevsLondon/setup/wiki)
 2. Clone the repo: `git@github.com:PolyglotDevsLondon/sharespotsgit`
 3. Create a new virtual environment with virtualenvwrapper: `mkvirtualenv -a sharespots sharespots`
 4. `cd` into the `sharespots` folder
 5. Install all the dependencies: `pip install -r requirements.txt`
-6. Apply the initial database migrations: `python manage.py migrate`
+6. [Setup Postgres database locally](#database)
+7. Apply the initial database migrations: `python manage.py migrate`
 
 ## Running the project locally
 0. If not already active, activate the virtual environment: `workon sharespots`
@@ -59,4 +61,72 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 # Contributing
 Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 
+# Database
 
+We are using Postgres
+
+### Mac OSX
+
+Download and install Postgres using https://postgresapp.com/.
+Once you have installed click initialise
+You should see three databases _yourusername_ postgres and template1
+
+Run this in your terminal:
+```
+sudo mkdir -p /etc/paths.d &&
+echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
+```
+
+This will let you run psql command from anywhere. Either double click on once of the databases in postgresapp
+or go to bash and type
+
+```
+$ psql
+```
+You will see something similar to this:
+
+<pre>
+psql (10.5)
+Type "help" for help.
+
+<i>yourusername</i>=#
+</pre>
+
+Create a new database called listings.
+
+<pre>
+# CREATE DATABASE listings;
+# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your_password_not_this</i>';
+
+<pre>
+psql (10.5)
+Type "help" for help.
+
+<i>yourusername</i>=#
+</pre>
+
+Create a new database called listings.
+
+<pre>
+# CREATE DATABASE listings;
+# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your password not this</i>';
+# GRANT ALL PRIVILEGES ON DATABASE listings TO listings;
+# ALTER USER listings CREATEDB;
+</pre>
+
+Before running migrate/runserver you will need to add the environment variable
+DATABASE_URL into your system.
+
+<pre>
+
+$ export DATABASE_URL=postgres://listings:<i>your_password_not_this</i>@127.0.0.1:5432/listings
+
+</pre>
+
+then
+
+<pre>
+
+$ ./manage.py migrate
+
+</pre>
