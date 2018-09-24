@@ -57,6 +57,7 @@ _todo_
 # Contributing
 Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 
+
 ### Mac OSX
 
 Download and install Postgres using https://postgresapp.com/.
@@ -97,14 +98,14 @@ Create a new database called listings.
 psql (10.5)
 Type "help" for help.
 
-_username_=#
-```
+<i>yourusername</i>=#
+</pre>
 
-Create a new database called listings
+Create a new database called listings.
 
 <pre>
 # CREATE DATABASE listings;
-# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your password not this</i>';
+# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your_password_not_this</i>';
 # GRANT ALL PRIVILEGES ON DATABASE listings TO listings;
 # ALTER USER listings CREATEDB;
 </pre>
