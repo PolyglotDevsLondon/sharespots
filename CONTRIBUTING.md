@@ -8,7 +8,7 @@ In order to raise a Pull Request with your changes (please make sure all changes
 
 - Save and commit your changes (If you don't know how to do this start with an [introduction to Git & Github](https://docs.google.com/document/d/1Mk_3mW1nHG4WrtTQcmPH5oCCrbgNIoTcegFk398K8OE/edit))
 - Push your changes and create a pull request: `git push origin your_branch_name`
-- Go to the [repo](https://github.com/PolyglotDevsLondon/listings-app) and you should see a green button "Raise a Pull Request"
+- Go to the [repo](https://github.com/PolyglotDevsLondon/sharespots) and you should see a green button "Raise a Pull Request"
 ![](https://help.github.com/assets/images/help/pull_requests/pull-request-click-to-create.png)
 - Describe all the changes you have made in details and save.
 
