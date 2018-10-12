@@ -1,1 +1,1 @@
-console.log('****** Listings app js ******);
+console.log('****** Sharespots app js ******);
