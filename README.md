@@ -96,12 +96,22 @@ Create a new database called listings.
 # ALTER USER listings CREATEDB;
 </pre>
 
-In the root of your project create a file called .env and add the following:
+Before running migrate/runserver you will need to add the environment variable
+DATABASE_URL into your system.
 
 <pre>
-# PostgreSQL
-DATABASE_URL=postgres://listings:<i>your_password_not_this</i>@127.0.0.1:5432/listings
+
+$ echo DATABASE_URL=postgres://listings:<i>your_password_not_this</i>@127.0.0.1:5432/listings
 
 </pre>
+
+then
+
+<pre>
+
+$ ./manage.py migrate
+
+</pre>
+
 
 
