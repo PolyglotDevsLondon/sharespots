@@ -1,7 +1,7 @@
 from unittest import mock
 from django.utils import timezone
 from django.test import TestCase
-from core.models import Venue
+from .models import Venue
 
 
 class TestVenueModel(TestCase):
