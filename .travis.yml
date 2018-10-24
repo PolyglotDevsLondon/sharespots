@@ -18,4 +18,4 @@ env:
   - DJANGO=2.0.8
 
 script:
-  - pytest --ds=sharespots.settings
+  - pytest --ds=sharespots.sharespots.settings
