@@ -1,4 +1,4 @@
-# Listings App (looking for a new name!)
+# Sharespots 
 Simple Django app that displays a list of curated cafes/spaces to meetup and work in London
 
 # Content
@@ -26,6 +26,9 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 - [Kit Sum Pang](https://github.com/ktsmpng)
 - [Ichi](https://github.com/icicleta)
 - [Tsveti](https://github.com/tsvetelinak0)
+- [Amy Boyd](https://github.com/amyboyd)
+- [Chris Wedgwood](https://github.com/chriswedgwood)
+- [Thao Vo](https://github.com/littlethao)
 
 # Setup
 ## Tools
@@ -34,14 +37,14 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 
 ## Dev Enviroment Setup
 1. [Setup](https://github.com/PolyglotDevsLondon/setup/wiki)
-2. Clone the repo: `git@github.com:PolyglotDevsLondon/listings-app.git`
-3. Create a new virtual environment with virtualenvwrapper: `mkvirtualenv -a listings-app listings-app`
-4. `cd` into the `listings-app` folder
+2. Clone the repo: `git@github.com:PolyglotDevsLondon/sharespotsgit`
+3. Create a new virtual environment with virtualenvwrapper: `mkvirtualenv -a sharespots sharespots`
+4. `cd` into the `sharespots` folder
 5. Install all the dependencies: `pip install -r requirements.txt`
 6. Apply the initial database migrations: `python manage.py migrate`
 
 ## Running the project locally
-0. If not already active, activate the virtual environment: `workon listings-app`
+0. If not already active, activate the virtual environment: `workon sharespots`
 1. Run `python manage.py runserver`
 2. Open your browser at http://localhost:8000/
 
