@@ -63,12 +63,23 @@ Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 
 # Database
 
-We are using Postgres
+We are using PostgreSQL 9.5
 
-### Mac OSX
+## Mac OSX
 
-Download and install Postgres using https://postgresapp.com/.
-Once you have installed click initialise
+1. Download and install Postgres using https://postgresapp.com.
+2. Once you have installed click initialise
+
+
+### Create a new DB 
+
+You have a few options to make a new DB, either:
+
+1. In your command line run `createdb sharespots`
+2. Set the DATABASE_URL env variable `export DATABASE_URL=postgresql://sharespots`
+
+Or create the DB via psql command line:
+#### Create a new DB via psql
 You should see three databases _yourusername_ postgres and template1
 
 Run this in your terminal:
@@ -105,21 +116,21 @@ Type "help" for help.
 <i>yourusername</i>=#
 </pre>
 
-Create a new database called listings.
+Create a new database called `sharespots`.
 
 <pre>
 # CREATE DATABASE listings;
-# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your password not this</i>';
-# GRANT ALL PRIVILEGES ON DATABASE listings TO listings;
+# CREATE ROLE sharespots WITH LOGIN PASSWORD '<i>your password not this</i>';
+# GRANT ALL PRIVILEGES ON DATABASE sharespots TO sharespots;
 # ALTER USER listings CREATEDB;
 </pre>
 
 Before running migrate/runserver you will need to add the environment variable
-DATABASE_URL into your system.
+DATABASE_URL into your system. 
 
 <pre>
 
-$ export DATABASE_URL=postgres://listings:<i>your_password_not_this</i>@127.0.0.1:5432/listings
+$ export DATABASE_URL=postgres://sharespots:<i>your_password_not_this</i>@127.0.0.1:5432/sharespots
 
 </pre>
 
