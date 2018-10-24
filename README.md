@@ -101,7 +101,7 @@ DATABASE_URL into your system.
 
 <pre>
 
-$ echo DATABASE_URL=postgres://listings:<i>your_password_not_this</i>@127.0.0.1:5432/listings
+$ export DATABASE_URL=postgres://listings:<i>your_password_not_this</i>@127.0.0.1:5432/listings
 
 </pre>
 
