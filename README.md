@@ -51,8 +51,11 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 
 
 ## Front End changes
-_todo_
-
+1. To install [Sass](https://sass-lang.com/install) 
+- You can install using node package manager `npm install -g sass`
+- Windows: `choco install sass`
+- Mac OS X: `brew install sass/sass/sass`
+2. To compile sass changes to css file use `sass --watch input/file/path/styles.scss output/file/path/styles.css`
 # Contributing
 Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 

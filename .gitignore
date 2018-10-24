@@ -120,6 +120,7 @@ venv.bak/
 
 
 # End of https://www.gitignore.io/api/python,django
+frontend/src/styles/.sass-cache
 
 #Pycharm
 .idea/
