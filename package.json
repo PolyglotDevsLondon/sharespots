@@ -1,0 +1,29 @@
+{
+  "name": "sharespots",
+  "version": "1.0.0",
+  "description": "Simple Django app that displays a list of curated cafes/spaces to meetup and work in London",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolyglotDevsLondon/sharespots.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolyglotDevsLondon/sharespots/issues"
+  },
+  "homepage": "https://github.com/PolyglotDevsLondon/sharespots#readme",
+  "devDependencies": {
+    "webpack": "^4.23.0",
+    "webpack-cli": "^3.1.2"
+  }
+}
