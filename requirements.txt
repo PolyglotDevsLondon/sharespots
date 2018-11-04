@@ -16,3 +16,12 @@ pytz==2018.5
 six==1.11.0
 typed-ast==1.1.0
 wrapt==1.10.11
+django-environ==0.4.5
+psycopg2==2.7.5
+django-environ==0.4.5
+psycopg2==2.7.5
+env_utils==1.2.0
+psycopg2-binary==2.7.5
+dj-database-url==0.5.0
+gunicorn==19.9.0
+django-heroku==0.3.1
