@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "build-watch": "tsc -w",
     "build": "tsc",
     "tslint": "tslint --project tsconfig.json --format stylish --exclude **/src/**/*.js",
     "lint": "npm run tslint",
@@ -21,14 +22,9 @@
   "homepage": "https://github.com/PolyglotDevsLondon/sharespots#readme",
   "dependencies": {
     "@types/lodash": "^4.14.118",
-    "babel": "^6.23.0",
     "lodash": "^4.17.11"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.5",
-    "@babel/core": "^7.1.5",
-    "@babel/preset-env": "^7.1.5",
-    "@babel/preset-typescript": "^7.1.0",
     "awesome-typescript-loader": "^5.2.1",
     "source-map-loader": "^0.2.4",
     "tslint": "^5.11.0",

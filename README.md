@@ -58,6 +58,7 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 - Windows: `choco install sass`
 - Mac OS X: `brew install sass/sass/sass`
 2. To compile sass changes to css file use `sass --watch input/file/path/styles.scss output/file/path/styles.css`
+3. For all JavaScript changes you can run `npm run build-watch` which will watch for changes and compile all JS into the dist folder.
 # Contributing
 Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 
