@@ -17,5 +17,8 @@ services:
 env:
   - DJANGO=2.0.8
 
+before_script:
+  - psql -c 'create database sharespots_test;' -U postgres
+
 script:
   - pytest --ds=sharespots.settings
