@@ -1,0 +1,33 @@
+{
+  "name": "sharespots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build-watch": "tsc -w",
+    "build": "tsc",
+    "tslint": "tslint --project tsconfig.json --format stylish --exclude **/src/**/*.js",
+    "lint": "npm run tslint",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.js\" --source-maps inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/PolyglotDevsLondon/sharespots.git"
+  },
+  "author": "Polyglot Devs London",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolyglotDevsLondon/sharespots/issues"
+  },
+  "homepage": "https://github.com/PolyglotDevsLondon/sharespots#readme",
+  "dependencies": {
+    "@types/lodash": "^4.14.118",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "source-map-loader": "^0.2.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  }
+}
