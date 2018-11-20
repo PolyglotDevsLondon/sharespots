@@ -73,18 +73,29 @@ We are using PostgreSQL 11.0
 2. Once you have installed click initialise
 
 
-### Create a new DB 
+### Create a new DB ( DO THIS AFTER YOU HAVE SETUP YOUR DEV ENVIRONMENT)
 
 You have a few options to make a new DB, either:
 
 1. In your command line run `createdb sharespots`
-2. Set the DATABASE_URL env variable `export DATABASE_URL=postgresql:///sharespots`
+2. Set the DATABASE_URL env variable `export DATABASE_URL=postgres://postgres:@localhost:5432/sharespots`
 
-Or create the DB via psql command line:
-then form within your virtualenv
+ADD THIS TO YOUR .bash_profile file so you dont have to keep resetting it
+
+then
+
+ACTIVATE your virtual environment
+
+<pre>
+source <i>venv</i>/bin/activate 
+</pre>
+or 
+<pre>
+workon <i>venv</i>
+</pre>
 
 <pre>
 
-$ ./manage.py migrate
+(venv)$ ./manage.py migrate
 
 </pre>
