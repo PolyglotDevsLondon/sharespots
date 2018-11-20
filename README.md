@@ -63,7 +63,7 @@ Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 
 # Database
 
-We are using PostgreSQL 9.5
+We are using PostgreSQL 11.0
 
 ## Mac OSX
 
@@ -71,73 +71,29 @@ We are using PostgreSQL 9.5
 2. Once you have installed click initialise
 
 
-### Create a new DB 
+### Create a new DB ( DO THIS AFTER YOU HAVE SETUP YOUR DEV ENVIRONMENT)
 
 You have a few options to make a new DB, either:
 
 1. In your command line run `createdb sharespots`
-2. Set the DATABASE_URL env variable `export DATABASE_URL=postgresql://sharespots`
+2. Set the DATABASE_URL env variable `export DATABASE_URL=postgres://postgres:@localhost:5432/sharespots`
 
-Or create the DB via psql command line:
-#### Create a new DB via psql
-You should see three databases _yourusername_ postgres and template1
-
-Run this in your terminal:
-```
-sudo mkdir -p /etc/paths.d &&
-echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
-```
-
-This will let you run psql command from anywhere. Either double click on once of the databases in postgresapp
-or go to bash and type
-
-```
-$ psql
-```
-You will see something similar to this:
-
-<pre>
-psql (10.5)
-Type "help" for help.
-
-<i>yourusername</i>=#
-</pre>
-
-Create a new database called listings.
-
-<pre>
-# CREATE DATABASE listings;
-# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your_password_not_this</i>';
-
-<pre>
-psql (10.5)
-Type "help" for help.
-
-<i>yourusername</i>=#
-</pre>
-
-Create a new database called `sharespots`.
-
-<pre>
-# CREATE DATABASE listings;
-# CREATE ROLE sharespots WITH LOGIN PASSWORD '<i>your password not this</i>';
-# GRANT ALL PRIVILEGES ON DATABASE sharespots TO sharespots;
-# ALTER USER listings CREATEDB;
-</pre>
-
-Before running migrate/runserver you will need to add the environment variable
-DATABASE_URL into your system. 
-
-<pre>
-
-$ export DATABASE_URL=postgres://sharespots:<i>your_password_not_this</i>@127.0.0.1:5432/sharespots
-
-</pre>
+ADD THIS TO YOUR .bash_profile file so you dont have to keep resetting it
 
 then
 
+ACTIVATE your virtual environment
+
+<pre>
+source <i>venv</i>/bin/activate 
+</pre>
+or 
+<pre>
+workon <i>venv</i>
+</pre>
+
 <pre>
 
-$ ./manage.py migrate
+(venv)$ ./manage.py migrate
 
 </pre>
