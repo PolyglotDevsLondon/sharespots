@@ -17,3 +17,6 @@ def cafe(request, id):
     ## GET A CAFE BY IT'S ID ##
     cafe = venue.get_venue(id)
     return render(request, 'core/cafe.html', {'cafe':cafe})
+
+def about_us(request):
+    return render(request, 'core/about_us.html')
