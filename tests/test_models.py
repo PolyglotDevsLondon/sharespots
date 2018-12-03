@@ -21,11 +21,11 @@ class TestVenueModel(TestCase):
     def test_get_default_cafe_name(self):
         self.assertEqual(type(self.default_cafe.name), str)
         self.assertEqual(self.default_cafe.name, 'test cafe')
-    
+
     def test_get_default_cafe_address_1(self):
         self.assertEqual(type(self.default_cafe.address_1), str)
         self.assertEqual(self.default_cafe.address_1, '10')
-        
+
     def test_get_default_cafe_address_2(self):
         self.assertEqual(type(self.default_cafe.address_2), str)
         self.assertEqual(self.default_cafe.address_2, 'test street')
@@ -45,7 +45,6 @@ class TestVenueModel(TestCase):
             test_now.return_value = testtime
             new_venue = Venue()
             new_venue.save()
-        
+
         self.assertEqual(type(self.default_cafe.post_code), str)
         self.assertEqual(testtime, new_venue.created_at)
- 
