@@ -126,3 +126,6 @@ frontend/node_modules/
 
 #Pycharm
 .idea/
+
+#VSCode
+.vscode

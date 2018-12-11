@@ -16,7 +16,7 @@ DEBUG = True
 ############
 # Security #
 ############
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []  
 
 # SESSION_COOKIE_HTTPONLY = True
 
@@ -72,7 +72,8 @@ WSGI_APPLICATION = 'sharespots.wsgi.application'
 # Database #
 ############
 
-DATABASE_URL = get_env('DATABASE_URL')
+#DATABASE_URL = get_env('DATABASE_URL')
+DATABASE_URL = 'postgres://127.0.0.1:5434/listings'
 
 DATABASES = dict(default=dj_database_url.config(default=DATABASE_URL))
 

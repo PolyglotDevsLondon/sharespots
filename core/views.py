@@ -1,22 +1,13 @@
-from django.shortcuts import render
-from .helpers import VenueHelpers
+from django.shortcuts import render, get_object_or_404
+from .models import Venue
 
 
 def homepage(request):
     return render(request, 'core/index.html')
 
-def cafe(request, id):
-    venue = VenueHelpers()
-    
-    ## UNCOMMENT THE BELOW TO SETUP DEFAULT VENUE FOR DEVELOPMENT ##
-
-    ##if not venue.check_default_venue_exists():
-       ## venue.create_default_venue()
-    ##default_venue = venue.get_default_venue()
-
-    ## GET A CAFE BY IT'S ID ##
-    cafe = venue.get_venue(id)
-    return render(request, 'core/cafe.html', {'cafe':cafe})
+def venue(request, id):
+    venue = get_object_or_404(Venue, id=id)
+    return render(request, 'core/venue.html', {'venue':venue})
 
 def about_us(request):
     return render(request, 'core/about_us.html')

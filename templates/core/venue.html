@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %} Venue {% endblock %}
+
+{% load static %}]
+
+{% block main %}
+    <section>
+        {% if venue %}
+            <h1>{{ venue.name }}</h1>
+            <p>{{ venue.address_1 }}</p>
+            <p>{{ venue.address_2 }}</p>
+            <p>{{ venue.post_code }}</p>
+            <p>{{ venue.description }}</p>
+        {% endif %}
+</section>
+{% endblock %}
