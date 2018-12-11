@@ -72,8 +72,7 @@ WSGI_APPLICATION = 'sharespots.wsgi.application'
 # Database #
 ############
 
-#DATABASE_URL = get_env('DATABASE_URL')
-DATABASE_URL = 'postgres://127.0.0.1:5434/listings'
+DATABASE_URL = get_env('DATABASE_URL')
 
 DATABASES = dict(default=dj_database_url.config(default=DATABASE_URL))
 
