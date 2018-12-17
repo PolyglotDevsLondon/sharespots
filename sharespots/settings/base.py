@@ -18,7 +18,7 @@ DEBUG = True
 ############
 # Security #
 ############
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 # SESSION_COOKIE_HTTPONLY = True
 
