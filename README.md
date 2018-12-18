@@ -30,6 +30,8 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 - [Chris Wedgwood](https://github.com/chriswedgwood)
 - [Thao Vo](https://github.com/littlethao)
 - [Andreea](https://github.com/etiquetteX)
+- [Adnan] [https://github.com/adnansalehin]
+- [Ju-Vern] [https://github.com/juvern]
 
 # Setup
 ## Tools
@@ -98,7 +100,7 @@ We are using PostgreSQL 9.5
 You have a few options to make a new DB, either:
 
 1. In your command line run `createdb sharespots`
-2. Set the DATABASE_URL env variable `export DATABASE_URL=postgresql://sharespots`
+2. Set the DATABASE_URL env variable `export DATABASE_URL=postgresql:///sharespots`
 
 Or create the DB via psql command line:
 #### Create a new DB via psql
