@@ -16,7 +16,7 @@ DEBUG = True
 ############
 # Security #
 ############
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []  
 
 # SESSION_COOKIE_HTTPONLY = True
 
@@ -71,6 +71,7 @@ WSGI_APPLICATION = 'sharespots.wsgi.application'
 ############
 # Database #
 ############
+
 DATABASE_URL = get_env('DATABASE_URL')
 
 DATABASES = dict(default=dj_database_url.config(default=DATABASE_URL))
