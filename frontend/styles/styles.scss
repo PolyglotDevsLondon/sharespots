@@ -1,4 +1,15 @@
+//
+// Variables
+//
+
+@import "base/variables";
+@import "title";
+
+//
+// Normalize
+//
 @import "normalize";
+
 body {
-  background-color: white;
+  background-color: $color-pink;
 }
