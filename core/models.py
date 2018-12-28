@@ -15,7 +15,7 @@ class Venue(models.Model):
     post_code = models.CharField(max_length=10)
     description = models.TextField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True)
-    rating = models.ForeignKey(Rating, on_delete=models.CASCADE, null=True)
+    wifi_rating = models.ForeignKey('Rating', on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return '{0} - created at: {1}'.format(self.name, self.created_at)
