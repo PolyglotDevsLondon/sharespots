@@ -1,0 +1,13 @@
+.navbar_header{
+	display: flex;
+    justify-content: flex-end;
+    padding: 5px 20px;
+}
+
+.navbar_header--item{
+	background-color: transparent;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin: 20px 7px 7px;
+    color: black;
+}
