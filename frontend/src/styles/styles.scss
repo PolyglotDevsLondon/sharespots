@@ -15,3 +15,24 @@ body {
   background-color: $color-pink;
   font-family: 'Roboto', sans-serif;
 }
+
+.main_title_block{
+	align-items: center;
+    height: 450px;
+    display: flex;
+	
+	.main_title_block--inner{
+		padding: 30px;
+    	margin: 0px 50px;
+	}
+	
+
+	h1{
+		font-size: 90px;
+		text-align:left;
+	}
+
+	h2{
+		text-align:left;
+	}
+}
