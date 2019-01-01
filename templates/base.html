@@ -9,9 +9,9 @@
     <body>
 
    		<nav class='navbar_header'>
-			<a href='' class='navbar_header--item'>Home</a>
-			<a href='' class='navbar_header--item'>About</a>
-			<a href='' class='navbar_header--item'>Contact</a>
+			<a href="{% url 'homepage' %}" class='navbar_header--item'>Home</a>
+			<a href="{% url 'about' %}" class='navbar_header--item'>About</a>
+			<a href="" class='navbar_header--item'>Contact</a>
 		</nav>
 
         {% block layout %} {% endblock %}
