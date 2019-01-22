@@ -80,8 +80,9 @@ This allows you to install all the Python dependencies in a "box" so they are no
 - You can install using node package manager `npm install -g sass`
 - Windows: `choco install sass`
 - Mac OS X: `brew install sass/sass/sass`
-2. To compile sass changes to css file use `sass --watch input/file/path/styles.scss output/file/path/styles.css`
+2. To compile sass changes to css file use `build-sass`
 3. For all JavaScript changes you can run `npm run build-watch` which will watch for changes and compile all JS into the dist folder.
+4. To build everything Front end related run `npm run build`
 # Contributing
 Please follow the [Contributing Guidelines](CONTRIBUTING.md)
 

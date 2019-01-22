@@ -5,10 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "build-watch": "tsc -w",
-    "build": "tsc",
+    "build-sass": "sass src/styles/styles.scss dist/styles.css",
+    "build": "npm run lint && tsc && npm run build-sass",
     "tslint": "tslint --project tsconfig.json --format stylish --exclude **/src/**/*.js",
-    "lint": "npm run tslint",
-    "build:js": "babel src --out-dir dist --extensions \".ts,.js\" --source-maps inline"
+    "lint": "npm run tslint"
   },
   "repository": {
     "type": "git",

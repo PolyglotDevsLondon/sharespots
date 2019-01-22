@@ -8,5 +8,4 @@ function onLoad() {
 	initComponents();
 }
 
-
 onLoad();

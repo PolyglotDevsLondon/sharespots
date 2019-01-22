@@ -4,7 +4,10 @@ from django.db import models
 
 class Rating(models.Model):
 
-    rate = models.IntegerField(default=0, validators=[MaxValueValidator(5), MinValueValidator(0)])
+    rate = models.IntegerField(
+        blank=True, null=True,
+        validators=[MaxValueValidator(5), MinValueValidator(0)]
+    )
 
 
 class Venue(models.Model):
