@@ -8,15 +8,17 @@ from env_utils import (
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = 'h)wmbja@&kvo3#0yyv@piqcp6*(xs=r5!2grbiej8y2!issrn@'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
+
 DEBUG = True
+
 
 ############
 # Security #
 ############
-ALLOWED_HOSTS = []  
+ALLOWED_HOSTS = ['*']
 
 # SESSION_COOKIE_HTTPONLY = True
 

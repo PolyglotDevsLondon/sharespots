@@ -21,4 +21,4 @@ before_script:
   - psql -c 'create database sharespots_test;' -U postgres
 
 script:
-  - pytest --ds=sharespots.settings
+  - pytest --ds=sharespots.settings.test
