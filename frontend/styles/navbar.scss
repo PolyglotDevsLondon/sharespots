@@ -1,3 +1,9 @@
+//
+// Variables
+//
+
+@import "base/variables";
+
 .navbar_header{
 	display: flex;
     justify-content: flex-end;
@@ -9,9 +15,9 @@
     text-decoration: none;
     padding: 15px 20px;
     margin: 20px 7px 7px;
-    color: black;
+    color: $color-black;
 }
 
-.navbar_header--item:hover{
-	background-color: #d66565;
+.navbar_header--item:active{
+	background-color: $color-dark-red;
 }

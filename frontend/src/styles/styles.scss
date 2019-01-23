@@ -13,29 +13,7 @@
 
 body {
   background-color: $color-pink;
-  font-family: 'Roboto', sans-serif;
+  font-family: $base-font;
+  font-weight:300;
 }
 
-.main_title_block{
-	align-items: center;
-    height: 450px;
-    display: flex;
-	
-	.main_title_block--inner{
-		padding: 30px;
-    	margin: 0px 50px;
-	}
-	
-
-	h1{
-		font-size: 90px;
-		font-weight: 100;
-		text-align:left;
-		margin-bottom: auto;
-	}
-
-	h2{
-	    font-weight: 100;
-	    width: 250px;
-	}
-}
