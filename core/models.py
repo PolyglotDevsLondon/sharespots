@@ -3,11 +3,13 @@ from django.db import models
 
 
 class Rating(models.Model):
-
     rate = models.IntegerField(
         blank=True, null=True,
         validators=[MaxValueValidator(5), MinValueValidator(0)]
     )
+
+    def __str__(self):
+        return str(self.rate)
 
 
 class Venue(models.Model):
