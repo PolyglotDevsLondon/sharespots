@@ -4,8 +4,6 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "build-watch": "tsc -w",
-    "build-sass": "sass src/styles/styles.scss dist/styles.css",
     "build": "webpack --mode production",
     "tslint": "tslint --project tsconfig.json --format stylish --exclude **/src/**/*.js",
     "lint": "npm run tslint",
