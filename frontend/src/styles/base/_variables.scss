@@ -18,11 +18,13 @@ $zindex-layer-5: 1005 !default;
 $color-white: #fff !default;
 $color-black: #000 !default;
 $color-pink: #FE7273 !default;
+$color-dark-red: #F46A6B !default;
 
 //
 // Typography
 //
-
+$base-font: 'Roboto', sans-serif;
+$heading-font: 'Monoton', cursive;
 $base-font-color: $color-black !default;
 $base-link-color: $color-pink !default;
 $base-font: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
@@ -34,6 +36,9 @@ $h2-heading-font: $heading-font !default;
 $h3-heading-font: $heading-font !default;
 $h4-heading-font: $heading-font !default;
 $h5-heading-font: $heading-font !default;
+
+// Title Font
+$title-font-size: 96px;
 
 $base-font-size: (
     base: 16,

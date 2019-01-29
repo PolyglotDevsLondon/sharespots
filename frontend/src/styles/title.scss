@@ -1,8 +1,33 @@
-h1 {
-  color: $color-white;
-  text-align: center;
-}
+//
+// Variables
+//
 
-h2 {
-  text-align: center;
+@import "base/variables";
+
+.homepage_section_block{
+	align-items: center;
+    height: 450px;
+    display: flex;
+	
+	.homepage_section_block--inner{
+		padding: 30px;
+    	margin: 0px 50px;
+	}
+	
+	h1{
+		color: $color-white;
+  		font-family: $heading-font;
+		font-size: $title-font-size;
+		font-weight: 300;
+		text-align:left;
+		margin-bottom: auto;
+	}
+
+	h2{
+		font-family: 'Raleway', san-serif;
+		font-size: 36px;
+	    font-weight: 300;
+	    text-align:left;
+	    max-width: 250px;
+	}
 }
