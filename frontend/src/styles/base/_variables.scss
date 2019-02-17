@@ -16,7 +16,7 @@ $zindex-layer-5: 1005 !default;
 //
 
 $color-white: #fff !default;
-$color-black: #000 !default;
+$color-black: #16162C !default;
 $color-pink: #FE7273 !default;
 $color-dark-red: #F46A6B !default;
 
@@ -25,6 +25,7 @@ $color-dark-red: #F46A6B !default;
 //
 $base-font: 'Roboto', sans-serif;
 $heading-font: 'Monoton', cursive;
+$subheading-font: 'Raleway';
 $base-font-color: $color-black !default;
 $base-link-color: $color-pink !default;
 $base-font: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
@@ -32,7 +33,7 @@ $heading-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans"
 $quote-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
 
 $h1-heading-font: $heading-font !default;
-$h2-heading-font: $heading-font !default;
+$h2-heading-font: $subheading-font !default;
 $h3-heading-font: $heading-font !default;
 $h4-heading-font: $heading-font !default;
 $h5-heading-font: $heading-font !default;

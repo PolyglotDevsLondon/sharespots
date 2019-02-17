@@ -3,17 +3,22 @@
 //
 
 @import "base/variables";
-@import "title";
 
 //
 // Normalize
 //
 @import "normalize";
-@import "navbar";
+
+//
+// Components
+//
+@import "components/navbar";
+@import "components/title";
+@import "components/layout";
 
 body {
   background-color: $color-pink;
   font-family: $base-font;
-  font-weight:300;
+  font-weight: 300;
+  color: $color-black;
 }
-
