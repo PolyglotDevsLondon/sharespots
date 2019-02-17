@@ -124,7 +124,7 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, '..', 'frontend/dist'),
+    os.path.join(BASE_DIR, 'frontend/dist'),
 )
 
 # Activate Django-Heroku.
