@@ -1,3 +1,3 @@
 from .base import *
 
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = get_env['SECRET_KEY']
