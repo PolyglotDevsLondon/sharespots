@@ -26,8 +26,8 @@ services:
   postgres:
     build:
       context: .
-      dockerfile: ./compose/production/postgres/Dockerfile
-    image: sharespots_production_postgres
+      dockerfile: ./compose/local/postgres/Dockerfile
+    image: sharespots_local_postgres
     volumes:
       - local_postgres_data:/var/lib/postgresql/data
       - local_postgres_data_backups:/backups

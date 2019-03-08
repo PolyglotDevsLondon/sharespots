@@ -2,6 +2,6 @@
 # ------------------------------------------------------------------------------
 POSTGRES_HOST=postgres
 POSTGRES_PORT=5432
-POSTGRES_DB=pcndodger
+POSTGRES_DB=sharespots
 POSTGRES_USER=fSPnPfCiVkuomMmFAUJAaBStFWqeAuis
 POSTGRES_PASSWORD=oGbuQExfPFHQM4IvqedjiASRNS1YIjBDOtmUP2DI2fwBDEDfDiSknkpe7fMLx56a

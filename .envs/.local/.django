@@ -3,14 +3,5 @@
 USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
 
-# Redis
-# ------------------------------------------------------------------------------
-REDIS_URL=redis://redis:6379/0
 
-# Celery
-# ------------------------------------------------------------------------------
-
-# Flower
-CELERY_FLOWER_USER=tOToPRINJlEipmkLVZJkYTUUfsMkcSDw
-CELERY_FLOWER_PASSWORD=TMbEqoTLxqqATZtdzwwo0BFs9sxHfkqebTNloGCgeomN6L1uFPijSYpQ3Qjh8NPg
-
+SECRET_KEY=~R.e|Olx,rMS:m#w%z@ZY!(}C~h>!i~s_sM]v;DrJS+|Lu#]H{
