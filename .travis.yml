@@ -15,7 +15,7 @@ services:
   - postgresql
 
 env:
-  - DJANGO=2.0.8
+  - DJANGO=2.1.7
 
 before_script:
   - psql -c 'create database sharespots_test;' -U postgres
