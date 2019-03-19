@@ -164,3 +164,26 @@ then
 $ ./manage.py migrate
 
 </pre>
+
+
+### Use Docker
+
+1. Download Docker from https://www.docker.com/products/docker-desktop
+2. From the root of your project run 
+
+<pre>
+docker-compose -f local.yml build
+</pre>
+
+3. Then run
+
+<pre>
+docker-compose -f local.yml up
+</pre>
+
+4. Make sure you dont have any errors :)
+
+Included is django, postgres, pgadmin and jupyter notebook run from django_extensions 
+
+
+
