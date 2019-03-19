@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,12 @@ STATICFILES_DIRS = (
 
 # Activate Django-Heroku.
 django_heroku.settings(locals(), logging=not DEBUG, databases=not DEBUG)
+
+
+
+NOTEBOOK_ARGUMENTS = [
+    '--ip', '0.0.0.0',
+    #'--port', '8888',
+    '--allow-root',
+    '--no-browser',
+]
