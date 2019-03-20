@@ -124,6 +124,7 @@ env.py
 # End of https://www.gitignore.io/api/python,django
 frontend/src/styles/.sass-cache
 frontend/node_modules/
+frontend/.sass-cache
 
 
 #Pycharm
