@@ -12,5 +12,13 @@
 				<h2>Find your perfect spot to work together</h2>
 			</div>
 		</section>
+		<section>
+			<h2>Recommended venues:</h2>
+				<ul>
+					{% for Venue in venues %}
+							<li>{{ Venue.name }}</li>
+					{% endfor %}
+					</ul>
+		</section>
 	{% endblock %}
 
