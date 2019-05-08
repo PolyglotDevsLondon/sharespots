@@ -1,0 +1,37 @@
+@import "base/variables";
+
+.home_search_bar{
+	background: $color-light-green;
+	padding: 30px;
+	position: absolute;
+    width: 552.69px;
+    height: min-content;
+    left: 600px;
+    top: 450px;
+
+	h3{
+		font-family: $subheading-font;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 300;
+	}
+
+	.inner-searchbar-container{
+		display: flex;
+		justify-content: space-around;
+		align-content: center;
+
+		.search-field{
+			height: 50px;
+			width: 67%;
+			border-width: 0px;
+		}
+
+		.submit-button{
+			height: 53px;
+			width: 29%;
+			background-color: $color-light-pink;
+		}
+	}
+	
+}

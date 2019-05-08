@@ -5,7 +5,6 @@
 {% load static %}
 
     {% block main %}
-
 		<section class='homepage_section_block'>
 			<div>
 				<h1>sharespots</h1>
@@ -18,9 +17,18 @@
 		<section class='home_search_bar'>
 			<form>
 				<h3>Find a co-working spot</h3>
-				<input type="text" name="search">
-				<input type="submit" value="Search">
+				<br/>
+				<div class="inner-searchbar-container">
+					<input class="search-field" type="text" placeholder="Search by postcode" name="search">
+					<input class="submit-button" type="submit" value="Search">
+				</div>
 			</form>
 		</section>
 	{% endblock search %}
 
+	{% block contents %}
+		<section>
+			<div>
+			</div>
+		</section>
+	{% endblock contents %}
