@@ -6,8 +6,15 @@ from env_utils import (
     get_env,
 )
 
+from dotenv import load_dotenv
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_DIR = os.path.abspath(os.path.dirname(__name__))
+ENV_FILE = os.path.join(PROJECT_DIR, '.env')
+
+if os.path.exists(ENV_FILE):
+    load_dotenv(dotenv_path=ENV_FILE,override=True)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/

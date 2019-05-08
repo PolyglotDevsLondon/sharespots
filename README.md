@@ -126,11 +126,11 @@ Type "help" for help.
 <i>yourusername</i>=#
 </pre>
 
-Create a new database called listings.
+Create a new database called sharespots.
 
 <pre>
-# CREATE DATABASE listings;
-# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your_password_not_this</i>';
+# CREATE DATABASE sharespots;
+# CREATE ROLE sharespots WITH LOGIN PASSWORD 'sharespots';
 
 <pre>
 psql (10.5)
@@ -142,19 +142,19 @@ Type "help" for help.
 Create a new database called `sharespots`.
 
 <pre>
-# CREATE DATABASE listings;
-# CREATE ROLE sharespots WITH LOGIN PASSWORD '<i>your password not this</i>';
+# CREATE DATABASE sharespots;
+# CREATE ROLE sharespots WITH LOGIN PASSWORD 'sharespots';
 # GRANT ALL PRIVILEGES ON DATABASE sharespots TO sharespots;
-# ALTER USER listings CREATEDB;
+# ALTER USER sharespots CREATEDB;
 </pre>
 
 Before running migrate/runserver you will need to add the environment variable
-DATABASE_URL into your system.
-
+DATABASE_URL into your system. To do this add a .env file into the root of your project
+and add the following two lines:
 <pre>
 
-$ export DATABASE_URL=postgres://sharespots:<i>your_password_not_this</i>@127.0.0.1:5432/sharespots
-
+DATABASE_URL=postgres://sharespots:sharespots@loclahost:5432/sharespots
+SECRET_KEY=<i>Insert random long alphanumeric string</i>
 </pre>
 
 then
