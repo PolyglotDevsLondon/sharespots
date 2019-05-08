@@ -1,13 +1,44 @@
 @import "base/variables";
 
+@media screen 
+	and (min-width: 1100px)
+	and (max-width: 1280px) {
+		.home_search_bar{
+			position: absolute;
+		    width: 552.69px;
+		    height: min-content;
+		    left: 590px;
+		    top: 450px;
+		}
+}
+
+@media screen 
+	and (max-width: 1100px)
+	and (min-width: 600px) {
+		.home_search_bar{
+			position: absolute;
+		    width: max-content;
+		    height: min-content;
+		    left: 400px;
+		    top: 450px;
+		}
+}
+
+@media screen 
+	and (max-device-width: 320px) {
+		.home_search_bar{
+			position: unset;
+		    width: 100%;
+		    height: min-content;
+		}
+}
+
 .home_search_bar{
 	background: $color-light-green;
-	padding: 30px;
-	position: absolute;
-    width: 552.69px;
-    height: min-content;
-    left: 600px;
-    top: 450px;
+
+	form{	
+		padding: 30px;
+	}
 
 	h3{
 		font-family: $subheading-font;
