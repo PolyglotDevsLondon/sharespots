@@ -1,38 +1,7 @@
 @import "base/variables";
 
-@media screen 
-	and (min-width: 1100px)
-	and (max-width: 1280px) {
-		.home_search_bar{
-			position: absolute;
-		    width: 552.69px;
-		    height: min-content;
-		    left: 590px;
-		    top: 450px;
-		}
-}
 
-@media screen 
-	and (max-width: 1100px)
-	and (min-width: 600px) {
-		.home_search_bar{
-			position: absolute;
-		    width: max-content;
-		    height: min-content;
-		    left: 400px;
-		    top: 450px;
-		}
-}
-
-@media screen 
-	and (max-device-width: 320px) {
-		.home_search_bar{
-			position: unset;
-		    width: 100%;
-		    height: min-content;
-		}
-}
-
+//Mobile
 .home_search_bar{
 	background: $color-light-green;
 
@@ -42,7 +11,7 @@
 
 	h3{
 		font-family: $subheading-font;
-		font-size: 36px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: 300;
 	}
@@ -51,18 +20,104 @@
 		display: flex;
 		justify-content: space-around;
 		align-content: center;
+		height: 29.65px;
 
 		.search-field{
-			height: 50px;
-			width: 67%;
+			box-sizing: border-box;
+			height: 100%;
+			flex: 1;
 			border-width: 0px;
+			padding-left: 20px;
 		}
 
 		.submit-button{
-			height: 53px;
+			box-sizing: border-box;
+			height: 100%;
 			width: 29%;
 			background-color: $color-light-pink;
+			margin-left: 15px;
 		}
 	}
 	
 }
+
+//Tablet
+@media screen and (min-width: 768px) {
+	.search_component_container{
+		display: flex;
+
+		.home_search_bar{
+			flex: 5;
+			h3{
+				font-size: 22px;
+			}
+
+			.inner-searchbar-container{
+				height: 36.31px;
+			}
+		}
+
+		.filler_space{
+		    background: white;
+		    border-top: 80px solid #FE7273;
+		}
+
+		#filler_space_right{
+			flex: 1;
+		}
+
+		#filler_space_left{
+			flex: 3;
+		}
+	}	
+}
+
+//Desktop
+@media screen and (min-width: 1024px) {
+	.search_component_container{
+		display: flex;
+
+		.home_search_bar{
+			flex: 5;
+			h3{
+				font-size: 28px;
+			}
+
+			.inner-searchbar-container{
+				height: 50px;
+			}
+		}
+
+		.filler_space{
+		    background: white;
+		    border-top: 80px solid #FE7273;
+		}
+
+		#filler_space_right{
+			flex: 1;
+		}
+
+		#filler_space_left{
+			flex: 4;
+		}
+	}	
+}
+
+//Desktop HD
+@media screen and (min-width: 1440px) {
+	.search_component_container{
+		display: flex;
+
+		.home_search_bar{
+			flex: 5;
+			h3{
+				font-size: 36px;
+			}
+
+			.inner-searchbar-container{
+				height: 50px;
+			}
+		}
+	}	
+}
+

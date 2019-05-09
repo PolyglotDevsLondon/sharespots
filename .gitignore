@@ -1,5 +1,7 @@
 
 # Created by https://www.gitignore.io/api/python,django
+.envs
+.DS_Store
 
 ### Django ###
 *.log
