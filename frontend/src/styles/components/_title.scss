@@ -7,8 +7,10 @@
 .homepage_section_block {
 	align-items: center;
     height: 450px;
-	display: flex;
-	
+    display: flex;
+    padding: 0 30px 30px;
+    margin: 0px 50px;
+
 	h1 {
 		color: $color-white;
 		font-family: $heading-font;
