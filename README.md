@@ -43,16 +43,49 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 1. **Terminal**: [iTerm2](https://www.iterm2.com/) (MacOSX), [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) (Linux) or use your preferred one.
 2. **Text Editor**: [Sublime Text](http://www.sublimetext.com/) or you preferred one.
 
-Install virtualenv: pip install virtualenv
-Install virtualenvwrapper: pip install virtualenvwrapper \*You can skip this and use virtualenv installed in a step before directly, virtualenvwrapper allows for nice interfacing with virtualenv
-Source the virtualenvwrapper: source /usr/local/bin/virtualenvwrapper.sh NOTE: To help do this automatically on every new shell you open add the line above to your .bash_profile or .bashrc
-Create a new env for the project: mkvirtualenv pimp
+## Project Setup
 
-## Laptop Setup
+1. Clone the repo: `git@github.com:PolyglotDevsLondon/sharespotsgit`
+2. [Download Docker](https://www.docker.com/products/docker-desktop)
+3. From the root of your project run:
+```
+docker-compose -f local.yml build
+```
+4. Then run:
+
+```
+docker-compose -f local.yml up
+```
+4. Make sure you dont have any errors :)
+
+Included is django, postgres, pgadmin and jupyter notebook run from django_extensions
+
+# Running the project locally
+
+1. Run `docker-compose -f local.yml run django python manage.py runserver`
+2. Open your browser at http://localhost:8000/
+
+## Front End changes
+
+1. To install [Sass](https://sass-lang.com/install)
+
+- You can install using node package manager `docker-compose -f local.yml run npm install -g sass`
+- Windows: `choco install sass`
+- Mac OS X: `brew install sass/sass/sass`
+
+2. To build everything Front end related run `npm run build`
+
+# Contributing
+
+Please follow the [Contributing Guidelines](CONTRIBUTING.md)
+
+## Manual setup
+If you prefer to get it setup without Docker you can try these steps
+### Laptop Setup
 
 1. [Setup](https://github.com/PolyglotDevsLondon/setup/wiki)
 
-## Virtual Enviroment Setup
+### Virtual Enviroment Setup
 
 This allows you to install all the Python dependencies in a "box" so they are not globally installed and clashing with other projects.
 
@@ -67,34 +100,12 @@ This allows you to install all the Python dependencies in a "box" so they are no
 4. Create a new env for the project:
    `mkvirtualenv sharespots`
 
-# Project Setup
-
-2. Clone the repo: `git@github.com:PolyglotDevsLondon/sharespotsgit`
-3. Create a new virtual environment with virtualenvwrapper: `mkvirtualenv -a sharespots sharespots`
-4. `cd` into the `sharespots` folder
-5. Install all the dependencies: `pip install -r requirements.txt`
-6. [Setup Postgres database locally](#database)
-7. Apply the initial database migrations: `python manage.py migrate`
-
-## Running the project locally
-
-0. If not already active, activate the virtual environment: `workon sharespots`
-1. Run `python manage.py runserver`
-1. Open your browser at http://localhost:8000/
-
-## Front End changes
-
-1. To install [Sass](https://sass-lang.com/install)
-
-- You can install using node package manager `npm install -g sass`
-- Windows: `choco install sass`
-- Mac OS X: `brew install sass/sass/sass`
-
-2. To build everything Front end related run `npm run build`
-
-# Contributing
-
-Please follow the [Contributing Guidelines](CONTRIBUTING.md)
+### Project Setup
+1. Clone the repo: `git@github.com:PolyglotDevsLondon/sharespotsgit`
+2. `cd` into the `sharespots` folder
+3. Install all the dependencies: `pip install -r requirements.txt`
+4. [Setup Postgres database locally](#database)
+5. Apply the initial database migrations: `python manage.py migrate`
 
 # Database
 
@@ -123,78 +134,45 @@ Run this in your terminal:
 ```
 sudo mkdir -p /etc/paths.d &&
 echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
+
 ```
 
 This will let you run psql command from anywhere. Either double click on once of the databases in postgresapp
 or go to bash and type
 
 ```
+
 $ psql
+
 ```
 
 You will see something similar to this:
 
-<pre>
+```
 psql (10.5)
 Type "help" for help.
 
-<i>yourusername</i>=#
-</pre>
+yourusername</i>=#
+```
 
 Create a new database called listings.
 
-<pre>
+```
 # CREATE DATABASE listings;
 # CREATE ROLE listings WITH LOGIN PASSWORD '<i>your_password_not_this</i>';
 
-<pre>
-psql (10.5)
-Type "help" for help.
-
-<i>yourusername</i>=#
-</pre>
-
+```
 Create a new database called `sharespots`.
 
-<pre>
+```
 # CREATE DATABASE listings;
 # CREATE ROLE sharespots WITH LOGIN PASSWORD '<i>your password not this</i>';
 # GRANT ALL PRIVILEGES ON DATABASE sharespots TO sharespots;
 # ALTER USER listings CREATEDB;
-</pre>
-
+```
 Before running migrate/runserver you will need to add the environment variable
 DATABASE_URL into your system.
 
-<pre>
-
-$ export DATABASE_URL=postgres://sharespots:<i>your_password_not_this</i>@127.0.0.1:5432/sharespots
-
-</pre>
-
-then
-
-<pre>
-
-$ ./manage.py migrate
-
-</pre>
-
-### Use Docker
-
-1. Download Docker from https://www.docker.com/products/docker-desktop
-2. From the root of your project run
-
-<pre>
-docker-compose -f local.yml build
-</pre>
-
-3. Then run
-
-<pre>
-docker-compose -f local.yml up
-</pre>
-
-4. Make sure you dont have any errors :)
-
-Included is django, postgres, pgadmin and jupyter notebook run from django_extensions
+```
+$ export DATABASE_URL=postgres://sharespots:your_password_not_this@127.0.0.1:5432/sharespots
+```
