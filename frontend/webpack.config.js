@@ -1,31 +1,44 @@
 // importing node path module
-const path = require('path');
+const path = require("path");
+
+const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = {
-    entry: [
-        './src/index.js',
-        './src/styles/styles.scss',
-    ],
+    entry: ["./src/index.js", "./src/styles/styles.scss"],
     output: {
-        filename: 'main.js',
-        path: path.resolve(__dirname, './dist')
+        filename: "main.js",
+        path: path.resolve(__dirname, "./dist")
     },
     module: {
-        rules: [{
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/
-          },
-          {
-            test: /\.scss$/,
-            use: [
-                "style-loader", // creates style nodes from JS strings
-                "css-loader", // translates CSS into CommonJS
-                "sass-loader" // compiles Sass to CSS, using Node Sass by default
-            ]
-        }]
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: "ts-loader",
+                exclude: /node_modules/
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader", // creates style nodes from JS strings
+                    "css-loader", // translates CSS into CommonJS
+                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                ]
+            }
+        ]
     },
+    plugins: [
+        new BrowserSyncPlugin(
+            {
+                host: "localhost",
+                port: 3000,
+                proxy: "http://0.0.0.0:8000/"
+            },
+            {
+                reload: true
+            }
+        )
+    ],
     resolve: {
-        extensions: [ '.tsx', '.ts', '.js' ]
+        extensions: [".tsx", ".ts", ".js"]
     }
 };
