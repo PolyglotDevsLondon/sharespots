@@ -134,3 +134,4 @@ frontend/.sass-cache
 
 #VSCode
 .vscode
+.DS_Store

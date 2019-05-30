@@ -15,7 +15,7 @@
 			<h2>Recommended venues:</h2>
 				<ul>
 					{% for Venue in venues %}
-							<li>{{ Venue.name }}</li>
+							<li><a href="/venue-detail/{{ Venue.id }}">{{ Venue.name }}</a></li>
 					{% endfor %}
 					</ul>
 		</section>
