@@ -153,7 +153,7 @@ DATABASE_URL into your system. To do this add a .env file into the root of your 
 and add the following two lines:
 <pre>
 
-DATABASE_URL=postgres://sharespots:sharespots@loclahost:5432/sharespots
+DATABASE_URL=postgres://sharespots:sharespots@localhost:5432/sharespots
 SECRET_KEY=<i>Insert random long alphanumeric string</i>
 </pre>
 
