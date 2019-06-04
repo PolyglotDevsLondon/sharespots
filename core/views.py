@@ -3,7 +3,9 @@ from .models import Venue
 
 
 def homepage(request):
-    return render(request, 'core/index.html')
+    featuredVenues = Venue.objects.filter(featured=True)
+    context = {'venues': featuredVenues}
+    return render(request, 'core/index.html', context)
 
 def venue_detail(request, id):
     venue_detail = get_object_or_404(Venue, id=id)

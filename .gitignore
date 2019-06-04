@@ -1,5 +1,7 @@
 
 # Created by https://www.gitignore.io/api/python,django
+.envs
+.DS_Store
 
 ### Django ###
 *.log
@@ -132,3 +134,4 @@ frontend/.sass-cache
 
 #VSCode
 .vscode
+.DS_Store

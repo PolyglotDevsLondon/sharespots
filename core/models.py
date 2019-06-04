@@ -22,6 +22,8 @@ class Venue(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     wifi_rating = models.ForeignKey('Rating', on_delete=models.CASCADE, null=True)
     featured = models.BooleanField(default=False)
+    slogan = models.CharField(max_length=250, null=True)
+
 
     def __str__(self):
         return '{0} - created at: {1}'.format(self.name, self.created_at)
