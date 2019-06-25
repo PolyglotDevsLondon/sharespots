@@ -20,7 +20,8 @@ class Venue(models.Model):
     post_code = models.CharField(max_length=10)
     description = models.TextField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True)
-    wifi_rating = models.ForeignKey('Rating', on_delete=models.CASCADE, null=True)
+    wifi_rating = models.ForeignKey('Rating', on_delete=models.CASCADE, null=True, related_name='wifi')
+    food_rating = models.ForeignKey('Rating', on_delete=models.CASCADE, null=True, related_name='food')
     featured = models.BooleanField(default=False)
     slogan = models.CharField(max_length=250, null=True)
 
