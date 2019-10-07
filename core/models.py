@@ -15,14 +15,17 @@ class Rating(models.Model):
 class Venue(models.Model):
 
     name = models.CharField(max_length=150)
+    featured = models.BooleanField(default=False)
     address_1 = models.CharField(max_length=150)
     address_2 = models.CharField(max_length=150)
     post_code = models.CharField(max_length=10)
     description = models.TextField(max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True)
-    wifi_rating = models.ForeignKey('Rating', on_delete=models.CASCADE, null=True, related_name='wifi')
-    food_rating = models.ForeignKey('Rating', on_delete=models.CASCADE, null=True, related_name='food')
-    featured = models.BooleanField(default=False)
+    wifi = models.OneToOneField('Rating', on_delete=models.CASCADE, null=True, related_name='wifi')
+    food = models.OneToOneField('Rating', on_delete=models.CASCADE, null=True, related_name='food')
+    atmosphere = models.OneToOneField('Rating', on_delete=models.CASCADE, null=True, related_name='atmosphere')
+    sockets = models.OneToOneField('Rating', on_delete=models.CASCADE, null=True, related_name='sockets')
+    coffee = models.OneToOneField('Rating', on_delete=models.CASCADE, null=True, related_name='coffee')
     slogan = models.CharField(max_length=250, null=True)
 
 
