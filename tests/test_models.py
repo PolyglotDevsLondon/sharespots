@@ -37,7 +37,11 @@ class TestVenueModel(TestCase):
                              address_2='test street',
                              post_code='W1D 3PU',
                              description='This is a cafe.',
-                             wifi_rating=self.default_rating)
+                             wifi=self.default_rating,
+                             food=self.default_rating,
+                             atmosphere=self.default_rating,
+                             sockets=self.default_rating,
+                             coffee=self.default_rating)
 
         self.default_cafe = Venue.objects.get(name='test cafe')
 
@@ -68,9 +72,25 @@ class TestVenueModel(TestCase):
         self.assertEqual(type(self.default_cafe.description), str)
         self.assertEqual(self.default_cafe.description, 'This is a cafe.')
 
-    def test_get_default_cafe_wifi_rating(self):
-        self.assertTrue(isinstance(self.default_cafe.wifi_rating, Rating))
-        self.assertEqual(self.default_cafe.wifi_rating, self.default_rating)
+    def test_get_default_cafe_wifi(self):
+        self.assertTrue(isinstance(self.default_cafe.wifi, Rating))
+        self.assertEqual(self.default_cafe.wifi, self.default_rating)
+
+    def test_get_default_cafe_food(self):
+        self.assertTrue(isinstance(self.default_cafe.food, Rating))
+        self.assertEqual(self.default_cafe.food, self.default_rating)
+
+    def test_get_default_cafe_atmosphere(self):
+        self.assertTrue(isinstance(self.default_cafe.atmosphere, Rating))
+        self.assertEqual(self.default_cafe.atmosphere, self.default_rating)
+
+    def test_get_default_cafe_sockets(self):
+        self.assertTrue(isinstance(self.default_cafe.sockets, Rating))
+        self.assertEqual(self.default_cafe.sockets, self.default_rating)
+
+    def test_get_default_cafe_coffee(self):
+        self.assertTrue(isinstance(self.default_cafe.coffee, Rating))
+        self.assertEqual(self.default_cafe.coffee, self.default_rating)
 
     ## MOCK THE DATETIME VALUE SO THAT AUTO_NOW_ADD USES THE MOCKED VALUE ##
     def test_get_default_cafe_created_at(self):
