@@ -1,13 +1,8 @@
 from django.contrib import admin
-from .models import Venue, Rating
+from .models import Venue
 
-
-class RatingInline(admin.StackedInline):
-    model = Rating
 
 class VenueAdmin(admin.ModelAdmin):
-    inlines = [
-        RatingInline
-    ]
+    pass
 
 admin.site.register(Venue)

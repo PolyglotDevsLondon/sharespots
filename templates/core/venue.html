@@ -39,7 +39,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.wifi.rate %}
+            {% if forloop.counter <= venue_detail.wifi %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
@@ -59,7 +59,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.food.rate %}
+            {% if forloop.counter <= venue_detail.food %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
@@ -79,7 +79,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.atmosphere.rate %}
+            {% if forloop.counter <= venue_detail.atmosphere %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
@@ -99,7 +99,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.sockets.rate %}
+            {% if forloop.counter <= venue_detail.sockets %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
@@ -119,7 +119,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.coffee.rate %}
+            {% if forloop.counter <= venue_detail.coffee %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
