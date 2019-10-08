@@ -95,6 +95,14 @@ Reload your project in your web browser at
 
 2. To build everything Front end related run `npm run build`
 
+## Troubleshooting
+
+If the project doesn't work after pulling the latest changes by doing a `git pull`, you may need to run new database migrations:
+
+```shell
+docker-compose -f local.yml run django python manage.py makemigrations
+```
+
 ## Team
 
 - [Lili](https://github.com/lili2311)
