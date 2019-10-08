@@ -1,0 +1,64 @@
+[
+  { "model": "core.rating", "pk": 1, "fields": { "rate": 1 } },
+  { "model": "core.rating", "pk": 2, "fields": { "rate": 2 } },
+  { "model": "core.rating", "pk": 3, "fields": { "rate": 3 } },
+  { "model": "core.rating", "pk": 4, "fields": { "rate": 4 } },
+  { "model": "core.rating", "pk": 5, "fields": { "rate": 5 } },
+  {
+    "model": "core.venue",
+    "pk": 1,
+    "fields": {
+      "name": "The Ramp",
+      "featured": true,
+      "address_1": "95A Rye Lane",
+      "address_2": "London",
+      "post_code": "SE15 4ST",
+      "description": "The Ramp is a co-working space, in Peckham. It offers full-time desk option as well as hot-desks, on a monthly basis (two months minimum.) Membership includes use of a meeting room, telephone booths and lockers.\r\n\r\nIt is on the third floor of an old disused multi-storey carpark, that was converted into into a creative work space.\r\n\r\nOn other floors of the building you'll find small hip business studios/offices, a food court, bars, art exhibitions, event spaces, and on the roof during the summer, the famous 'Frank's' bar/cafe with it's signature campari cocktails, festival atmosphere, and great views across London.\",",
+      "created_at": "2019-10-08T16:15:09.855Z",
+      "wifi": 5,
+      "food": 5,
+      "atmosphere": 5,
+      "sockets": 5,
+      "coffee": 5,
+      "slogan": "Co-working in a hip, colourful converted old multi-storey carpark in Peckham"
+    }
+  },
+  {
+    "model": "core.venue",
+    "pk": 2,
+    "fields": {
+      "name": "Office Club",
+      "featured": true,
+      "address_1": "The Bussey Building, Block B, Floor 3, 133 Rye Lane",
+      "address_2": "London",
+      "post_code": "SE15 4SL",
+      "description": "Nested in the hip Bussey Building, is the Office Club co-working.\r\n\r\nIt has two offices, a bigger one, with mainly full-time desks, and mainly inhabited by small teams.\r\n\r\nThen there is a smaller office mainly home to freelancers, who hang out together, and on the day I visited, were a little hung-over from doing chilli-shot roulette the night before.\r\n\r\nThe building also hosts, shops, offices, studios, bars,. It often hosts Goldsmith University art student exhibitions, has a festival in the summer, has an open air cinema on the roof, a radio station in a shipping container, and a yoga studio. Membership of the co-working space includes a free fortnightly yoga class.",
+      "created_at": "2019-10-08T16:44:31.401Z",
+      "wifi": 4,
+      "food": 4,
+      "atmosphere": 4,
+      "sockets": 4,
+      "coffee": 4,
+      "slogan": "Co-working in a close community in an iconic building in Peckham"
+    }
+  },
+  {
+    "model": "core.venue",
+    "pk": 3,
+    "fields": {
+      "name": "Market Peckham",
+      "featured": true,
+      "address_1": "133a Rye Ln",
+      "address_2": "London",
+      "post_code": "SE15 4BQ",
+      "description": "Spread over at least four levels, the Market Peckham is a co-working space in a building recently renovated in 2019.\r\n\r\nThe interior decor is to a high standard, like a WeWork, and like a WeWork, Market Peckham seems to mostly host small companies in private offices and feels a little soulless compared to the other offerings in Peckham.\r\n\r\nThe building is due to also host a cafe, bar, shop and roof terrace, but at the time we visited in Summer 2019 these were still being renovated.",
+      "created_at": "2019-10-08T16:47:53.502Z",
+      "wifi": 3,
+      "food": 3,
+      "atmosphere": 3,
+      "sockets": 3,
+      "coffee": 3,
+      "slogan": "Co-working with a high standard of interior decor, good for small teams."
+    }
+  }
+]
