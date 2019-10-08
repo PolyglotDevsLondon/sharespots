@@ -3,7 +3,7 @@
 Sharespots is a simple Django app that displays a curated list of cafes/co-working spaces to meetup and work in London.
 
 <!--
-Add auto table of contents after this issue is fixed
+@TODO Add auto table of contents after this issue is fixed
 https://github.com/isaacs/github/issues/215
 e.g. [TOC] or {:toc max_level=3 }
 -->
@@ -23,50 +23,75 @@ e.g. [TOC] or {:toc max_level=3 }
 
 ## Project Setup
 
-1. Clone the repo:
+Open iTerm2 (or your preferred terminal.)
+
+Clone the repo:
 
 ```shell
 git clone git@github.com:PolyglotDevsLondon/sharespots.git
 ```
 
-2. [Download and install Docker Desktop](https://www.docker.com/products/docker-desktop) if you haven't already
+Change directory into the sharespots directory:
 
-3. Build the docker container (included is django, postgres, pgadmin and jupyter notebook run from django_extensions):
+```shell
+cd sharespots
+```
+
+[Download and install Docker Desktop](https://www.docker.com/products/docker-desktop) if you haven't already.
+
+Build the docker container (included is django, postgres, pgadmin and jupyter notebook run from django_extensions):
 
 ```shell
 docker-compose -f local.yml build
 ```
 
-4. Fire up the docker container:
+Fire up the docker container:
 
 ```shell
 docker-compose -f local.yml up
 ```
 
-5. Load seed data:
+Open project in your web browser at:
+
+[http://0.0.0.0:8000/](http://0.0.0.0:8000/)
+
+You should now see the Sharespots website (but no venue data will show yet.)
+
+Open a new iTerm2 terminal tab by pressing ⌘T (or open an additional terminal window using your preferred terminal.)
+
+Change to your sharespots directory:
+
+```shell
+cd [your/sharespot/directory]
+```
+
+Load seed data:
 
 ```shell
 docker-compose -f local.yml run django python manage.py loaddata seed_data.json
 ```
 
-6. Set up a super user
+Set up a super user for django admin:
 
 ```shell
 docker-compose -f local.yml run django python manage.py createsuperuser
 ```
 
-7. Open project in your web browser at
-   [http://0.0.0.0:8000/](http://0.0.0.0:8000/)
+Reload your project in your web browser at
 
-You should now see the Sharespots website.
+[http://0.0.0.0:8000/](http://0.0.0.0:8000/)
+
+**You should now see the Sharespots website with venues displaying.**
+
+(Optional) Open another browser tab/window and login using the superuser account you created in the django admin panel at [http://0.0.0.0:8000/admin](http://0.0.0.0:8000/admin)
 
 ## Front End changes
 
 1. To install [Sass](https://sass-lang.com/install)
 
-- You can install using node package manager `docker-compose -f local.yml run npm install -g sass`
-- Windows: `choco install sass`
-- Mac OS X: `brew install sass/sass/sass`
+   - You can install using node package manager `docker-compose -f local.yml run npm install -g sass`
+   - Windows: `choco install sass`
+   - Mac OS X: `brew install sass/sass/sass`
 
 2. To build everything Front end related run `npm run build`
 
