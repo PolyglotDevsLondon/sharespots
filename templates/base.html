@@ -10,8 +10,8 @@
 
    		<nav class='navbar_header'>
 			<a href="{% url 'homepage' %}" class='navbar_header--item {% if request.resolver_match.url_name == "homepage" %}active{% endif %}'>Home</a>
-			<a href="{% url 'about' %}" class='navbar_header--item {% if request.resolver_match.url_name == "About" %}active{% endif %}'>About</a>
-			<a href="" class='navbar_header--item'>Contact</a>
+			<a href="{% url 'about' %}" class='navbar_header--item {% if request.resolver_match.url_name == "about" %}active{% endif %}'>About</a>
+			<a href="{% url 'contact' %}" class='navbar_header--item {% if request.resolver_match.url_name == "contact" %}active{% endif %}'>Contact</a>
 		</nav>
 
         {% block layout %} {% endblock %}
