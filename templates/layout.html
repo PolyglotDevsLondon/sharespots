@@ -18,6 +18,15 @@
         {% endblock contents %}
     </div>
     <footer>
+        <div class=footer-nav>
+            <a href="{% url 'homepage' %}" class='navbar_header--item'>Home</a>
+			<a href="{% url 'about' %}" class='navbar_header--item'>About</a>
+            <a href="{% url 'contact' %}" class='navbar_header--item'>Contact</a>
+        </div>
+        <p class=created>Created by Polyglot Devs London</p>
+        <a href="https://twitter.com/devs_london">@devs_london</a> 
+
+
     </footer>
 
  {% endblock %}

@@ -88,7 +88,6 @@ Reload your project in your web browser at
 ## Front End changes
 
 1. To install [Sass](https://sass-lang.com/install)
-
    - You can install using node package manager `docker-compose -f local.yml run npm install -g sass`
    - Windows: `choco install sass`
    - Mac OS X: `brew install sass/sass/sass`
