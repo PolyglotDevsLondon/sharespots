@@ -4,20 +4,23 @@
 
 @import "base/variables";
 
-.navbar_header{
-	display: flex;
+.navbar_header {
+    background-color: $color-bittersweet;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: flex-end;
     padding: 5px 20px;
+    font-family: $subheading-font;
 }
 
-.navbar_header--item{
+.navbar_header--item {
 	background-color: transparent;
     text-decoration: none;
     padding: 15px 20px;
     margin: 20px 7px 7px;
-    color: $color-black;
+    color: $color-mirage;
 }
 
-.navbar_header--item:hover{
-	background-color: $color-dark-red;
+.navbar_header--item:hover {
+    background-color: $color-froly;
 }

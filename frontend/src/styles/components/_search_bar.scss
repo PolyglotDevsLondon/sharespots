@@ -3,7 +3,7 @@
 
 //Mobile
 .home_search_bar{
-	background: $color-light-green;
+	background: $color-surfcrest;
 
 	form{	
 		padding: 30px;
@@ -20,6 +20,7 @@
 		display: flex;
 		justify-content: space-around;
 		align-content: center;
+		position: absolute;
 		height: 29.65px;
 
 		.search-field{
@@ -34,7 +35,7 @@
 			box-sizing: border-box;
 			height: 100%;
 			width: 29%;
-			background-color: $color-light-pink;
+			background-color: $color-lavenderpink;
 			margin-left: 15px;
 		}
 	}
@@ -58,8 +59,8 @@
 		}
 
 		.filler_space{
-		    background: white;
-		    border-top: 80px solid #FE7273;
+		    background: $color-white;
+		    border-top: 80px solid $color-bittersweet;
 		}
 
 		#filler_space_right{
@@ -90,7 +91,7 @@
 
 		.filler_space{
 		    background: white;
-		    border-top: 80px solid #FE7273;
+		    border-top: 80px solid $color-bittersweet;
 		}
 
 		#filler_space_right{
@@ -120,4 +121,3 @@
 		}
 	}	
 }
-

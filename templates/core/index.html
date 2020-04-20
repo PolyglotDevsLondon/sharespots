@@ -4,41 +4,58 @@
 
 {% load static %}
 
-    {% block main %}
-		<section class='homepage_section_block'>
-			<div>
-				<h1>sharespots</h1>
-				<h2>Find your perfect spot to work together</h2>
-			</div>
-		</section>
-		<section>
-			<h2>Recommended venues:</h2>
-				<ul>
-					{% for Venue in venues %}
-							<li><a href="/venue-detail/{{ Venue.id }}">{{ Venue.name }}</a></li>
-					{% endfor %}
-					</ul>
-		</section>
-	{% endblock %}
-
-	{% block search %}
-		<div class='filler_space' id='filler_space_left'></div>
-		<div class='home_search_bar'>
-			<form>
-				<h3>Find a co-working spot</h3>
-				<br/>
-				<div class="inner-searchbar-container">
-					<input class="search-field" type="text" placeholder="Search by postcode" name="search">
-					<input class="submit-button" type="submit" value="Search">
-				</div>
-			</form>
+{% block main %}
+	<section class='homepage_section_block'>
+		<div class='index_header_block'>
+			<h1>sharespots</h1>
+			<h2>Find your perfect spot to work together</h2>
 		</div>
-		<div class='filler_space' id='filler_space_right'></div>
-	{% endblock search %}
+	</section>
+{% endblock %}
 
-	{% block contents %}
-		<section>
-			<div>
+{% block search %}
+<!-- <div class='filler_space' id='filler_space_left'></div> -->
+<div class='home_search_bar'>
+	<form>
+		<h3>Find a co-working spot</h3>
+		<br/>
+		<div class="inner-searchbar-container">
+			<input class="search-field" type="text" placeholder="Search by postcode" name="search">
+			<input class="submit-button" type="submit" value="Search">
+		</div>
+	</form>
+</div>
+<!-- <div class='filler_space' id='filler_space_right'></div> -->
+{% endblock search %}
+
+{% block content %}
+
+<div class="recommended">
+	<div class="re_content">
+		<h2>Recommended venues:</h2>
+		<ul>
+			{% for Venue in venues %}
+			<li><a href="/venue-detail/{{ Venue.id }}">{{ Venue.name }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+
+{% endblock %}
+
+{% block content2 %}
+	<div class="index_bottom_container">
+		<div class="side_left">
+			<h3>The best creative spaces, cafes for a quiet spot away from work</h3>
+			<p>Find a co-working spot Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio augue, sollicitudin sed dui vitae, vulputate auctor nisl. Morbi mollis at mi quis tincidunt. Proin ac nisl congue, pretium mi et, convallis nunc. Aliquam ac posuere eros, eget interdum nisi. Integer a elementum nisl, sed luctus nisl. Maecenas quis lacus fringilla, condimentum urna vitae, facilisis neque. Proin semper aliquam metus, eget imperdiet mi. Fusce consequat ac diam at accumsan.</p>
+			<button>
+				<a href="{% url 'about' %}">About Us</a>
+			</button>
+		</div>
+		<div class="side_image">
+			<div class="fake_image" style="height:150px;color:burlywood;">
+				<img src="" alt="">Image
 			</div>
-		</section>
-	{% endblock contents %}
+		</div>
+	</div>
+{% endblock %}

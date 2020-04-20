@@ -5,7 +5,8 @@
 {% load static %}
 
 {% block main %}
-<section class="title_section_block">
+<section class="venue_section_block">
+    <div class="venue_container">
     <h1>{{ venue_detail.name }}</h1>
     <p>{{ venue_detail.address_1 }}</p>
     <p>{{ venue_detail.address_2 }}</p>
@@ -90,6 +91,6 @@
         {% endif %}
         {% endfor %}        
     </div>
-
+    </div>
 </section>
 {% endblock %}

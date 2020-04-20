@@ -4,7 +4,31 @@
 
 @import "base/variables";
 
-.contents-container{
-	background: white;
-	height: -webkit-fill-available;
+
+.index_header_block {
+	display: flex;
+	padding-left: 55px;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.about_header_block {
+	display: flex;
+	padding-left: 55px;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.contact_header_block {
+	padding-left: 55px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.venue_container {
+	padding-left: 55px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }

@@ -15,12 +15,15 @@ $zindex-layer-5: 1005 !default;
 // colours are named using http://chir.ag/projects/name-that-color/
 //
 
-$color-white: #fff !default;
-$color-black: #16162C !default;
-$color-pink: #FE7273 !default;
-$color-light-pink:#FAB7C8 !default;
-$color-dark-red: #F46A6B !default;
-$color-light-green:#C7E3C4 !default;
+$color-white: #FFFFFF !default;
+$color-mirage: #16162C !default;
+$color-bittersweet: #FE7273 !default;
+$color-lavenderpink:#FAB7C8 !default;
+$color-froly: #F46A6B !default;
+$color-surfcrest:#C7E3C4 !default;
+$color-cinderella: #FEE0E0 !default;
+$color-provincialpink: #FEF2F2 !default;
+$color-mercury: #E5E5E5 !default;
 
 
 //
@@ -29,8 +32,8 @@ $color-light-green:#C7E3C4 !default;
 $base-font: 'Roboto', sans-serif;
 $heading-font: 'Monoton', cursive;
 $subheading-font: 'Raleway';
-$base-font-color: $color-black !default;
-$base-link-color: $color-pink !default;
+$base-font-color: $color-mirage !default;
+$base-link-color: $color-lavenderpink !default;
 $base-font: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
 $heading-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
 $quote-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
@@ -79,12 +82,13 @@ $h1-margin-top: (
     base: 30px,
     lg: 40px,
 ) !default;
-$h2-font-size: (
-    base: 26,
-    md: 32,
-    lg: 36,
-    xl: 36,
-) !default;
+$h2-font-size: 36px;
+// $h2-font-size: (
+//     base: 26,
+//     md: 32,
+//     lg: 36,
+//     xl: 36,
+// ) !default;
 $h2-line-height: (
     base: 30,
     md: 40,

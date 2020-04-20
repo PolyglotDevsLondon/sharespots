@@ -1,32 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
 {% block layout %}
 
-    <header class="">
-    </header>
-    <div class="container">
+<div class="container">
+    <header>
         {% block main %}
         {% endblock %}
-    </div>
-    <div class="search_component_container">
-        {% block search %}
-        {% endblock search %}
-    </div>
-    <div class="contents-container">
-        {% block contents %}
-        {% endblock contents %}
-    </div>
+    </header>
+
+    {% block search %}
+    {% endblock search %}
+
+    {% block content %}
+    {% endblock content %}
+
+    <!-- {% block content2 %}
+    {% endblock %} -->
+
     <footer>
-        <div class=footer-nav>
-            <a href="{% url 'homepage' %}" class='navbar_header--item'>Home</a>
-			<a href="{% url 'about' %}" class='navbar_header--item'>About</a>
-            <a href="{% url 'contact' %}" class='navbar_header--item'>Contact</a>
-        </div>
-        <p class=created>Created by Polyglot Devs London</p>
-        <a href="https://twitter.com/devs_london">@devs_london</a> 
-
-
+       {% include 'footer.html' %}
     </footer>
+</div>
 
- {% endblock %}
+{% endblock %}
