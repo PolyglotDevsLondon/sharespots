@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block title %} Venue {% endblock %}
+
+{% load static %}
+
+{% block main %}
+<section class="title_section_block">
+    <h1>{{ venue_detail.name }}</h1>
+    <p>{{ venue_detail.address_1 }}</p>
+    <p>{{ venue_detail.address_2 }}</p>
+    <p>{{ venue_detail.post_code }}</p>
+    <p>{{ venue_detail.description }}</p>
+    <h2>Amenity Ratings:</h2>
+    
+    <div>
+    <span>Wifi:</span>
+    {% for i in 12345|make_list %}       
+        {% if forloop.counter <= venue_detail.wifi.rate %}
+                <span class="star--filled">
+                    ★
+                </span>
+        {% else %}
+            <span class="star">
+                ☆
+            </span>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+    <div>    
+        <span>Food:</span>
+        {% for i in 12345|make_list %}       
+        {% if forloop.counter <= venue_detail.food.rate %}
+                <span class="star--filled">
+                    ★
+                </span>
+        {% else %}
+            <span class="star">
+                ☆
+            </span>
+        {% endif %}
+        {% endfor %}        
+    </div>
+    
+    
+    <div>    
+        <span>Atmosphere:</span>
+        {% for i in 12345|make_list %}       
+        {% if forloop.counter <= venue_detail.atmosphere.rate %}
+                <span class="star--filled">
+                    ★
+                </span>
+        {% else %}
+            <span class="star">
+                ☆
+            </span>
+        {% endif %}
+        {% endfor %}        
+    </div>
+    
+    
+    <div>    
+        <span>Power socket access:</span>
+        {% for i in 12345|make_list %}       
+        {% if forloop.counter <= venue_detail.sockets.rate %}
+                <span class="star--filled">
+                    ★
+                </span>
+        {% else %}
+            <span class="star">
+                ☆
+            </span>
+        {% endif %}
+        {% endfor %}        
+    </div>
+        
+
+    <div>    
+        <span>Coffee:</span>
+        {% for i in 12345|make_list %}       
+        {% if forloop.counter <= venue_detail.coffee.rate %}
+                <span class="star--filled">
+                    ★
+                </span>
+        {% else %}
+            <span class="star">
+                ☆
+            </span>
+        {% endif %}
+        {% endfor %}        
+    </div>
+
+</section>
+{% endblock %}

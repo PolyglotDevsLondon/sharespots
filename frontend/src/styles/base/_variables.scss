@@ -1,0 +1,108 @@
+//
+// Z-index
+//
+
+$zindex-layer-minus-1: -1 !default;
+$zindex-layer-0: 0 !default;
+$zindex-layer-1: 1001 !default;
+$zindex-layer-2: 1002 !default;
+$zindex-layer-3: 1003 !default;
+$zindex-layer-4: 1004 !default;
+$zindex-layer-5: 1005 !default;
+
+//
+// Colours
+// colours are named using http://chir.ag/projects/name-that-color/
+//
+
+$color-white: #fff !default;
+$color-black: #16162C !default;
+$color-pink: #FE7273 !default;
+$color-light-pink:#FAB7C8 !default;
+$color-dark-red: #F46A6B !default;
+$color-light-green:#C7E3C4 !default;
+
+
+//
+// Typography
+//
+$base-font: 'Roboto', sans-serif;
+$heading-font: 'Monoton', cursive;
+$subheading-font: 'Raleway';
+$base-font-color: $color-black !default;
+$base-link-color: $color-pink !default;
+$base-font: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
+$heading-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
+$quote-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
+
+$h1-heading-font: $heading-font !default;
+$h2-heading-font: $subheading-font !default;
+$h3-heading-font: $heading-font !default;
+$h4-heading-font: $heading-font !default;
+$h5-heading-font: $heading-font !default;
+
+// Title Font
+$title-font-size: 96px;
+
+$base-font-size: (
+    base: 16,
+    sm: 16,
+    md: 16,
+    lg: 16,
+    xl: 18,
+) !default;
+$base-line-height: (
+    base: 24,
+    sm: 24,
+    md: 24,
+    lg: 26,
+    xl: 28,
+) !default;
+$base-vertical-margin: (
+    base: 20,
+    md: 25,
+) !default;
+$h1-font-size: (
+    base: 32,
+    md: 40,
+    lg: 48,
+    xl: 48,
+) !default;
+$h1-line-height: (
+    base: 40,
+    md: 45,
+    lg: 52,
+    xl: 52,
+) !default;
+$h1-weight: normal;
+$h1-margin-top: (
+    base: 30px,
+    lg: 40px,
+) !default;
+$h2-font-size: (
+    base: 26,
+    md: 32,
+    lg: 36,
+    xl: 36,
+) !default;
+$h2-line-height: (
+    base: 30,
+    md: 40,
+    lg: 45,
+    xl: 45,
+) !default;
+$h2-weight: normal;
+$h2-margin-top: (
+    base: 30px,
+    lg: 40px,
+) !default;
+$small-font-size: (
+    base: 14,
+    lg: 14,
+    xl: 14,
+) !default;
+$small-line-height: (
+    base: 20,
+    lg: 22,
+    xl: 22,
+) !default;

@@ -1,5 +1,7 @@
 
 # Created by https://www.gitignore.io/api/python,django
+.envs
+.DS_Store
 
 ### Django ###
 *.log
@@ -26,7 +28,6 @@ media
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -40,6 +41,8 @@ wheels/
 .installed.cfg
 *.egg
 MANIFEST
+node_modules/
+.vscode/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -101,6 +104,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+env.py
 
 # Spyder project settings
 .spyderproject
@@ -121,6 +125,13 @@ venv.bak/
 
 # End of https://www.gitignore.io/api/python,django
 frontend/src/styles/.sass-cache
+frontend/node_modules/
+frontend/.sass-cache
+
 
 #Pycharm
 .idea/
+
+#VSCode
+.vscode
+.DS_Store

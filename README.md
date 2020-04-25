@@ -1,22 +1,109 @@
 # Sharespots
-Simple Django app that displays a list of curated cafes/spaces to meetup and work in London
 
-# Content
+Sharespots is a simple Django app that displays a curated list of cafes/co-working spaces to meetup and work in London.
 
-1. [Description](#description)
-4. [Setup](#setup)
-5. [Contributing](#contributing)
+<!--
+@TODO Add auto table of contents after this issue is fixed
+https://github.com/isaacs/github/issues/215
+e.g. [TOC] or {:toc max_level=3 }
+-->
 
+## Technology Stack
 
-# Description
-
-## Tech
 - Backend: Python & Django
 - Front-end: SASS/HTML5/JavaScript
 - Hosting: Heroku
 - Storage: AWS S3
 
+## Software Tools Required
+
+1. **Terminal**: [iTerm2](https://www.iterm2.com/) (MacOSX), [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) (Linux) or use your preferred one.
+2. **Text Editor**: [Sublime Text](http://www.sublimetext.com/) or your preferred one.
+3. [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+## Project Setup
+
+Open iTerm2 (or your preferred terminal.)
+
+Clone the repo:
+
+```shell
+git clone git@github.com:PolyglotDevsLondon/sharespots.git
+```
+
+Change directory into the sharespots directory:
+
+```shell
+cd sharespots
+```
+
+[Download and install Docker Desktop](https://www.docker.com/products/docker-desktop) if you haven't already.
+
+Build the docker container (included is django, postgres, pgadmin and jupyter notebook run from django_extensions):
+
+```shell
+docker-compose -f local.yml build
+```
+
+Fire up the docker container:
+
+```shell
+docker-compose -f local.yml up
+```
+
+Open project in your web browser at:
+
+[http://0.0.0.0:8000/](http://0.0.0.0:8000/)
+
+You should now see the Sharespots website (but no venue data will show yet.)
+
+Open a new iTerm2 terminal tab by pressing ⌘T (or open an additional terminal window using your preferred terminal.)
+
+Change to your sharespots directory:
+
+```shell
+cd [your/sharespot/directory]
+```
+
+Load seed data:
+
+```shell
+docker-compose -f local.yml run django python manage.py loaddata seed_data.json
+```
+
+Set up a super user for django admin:
+
+```shell
+docker-compose -f local.yml run django python manage.py createsuperuser
+```
+
+Reload your project in your web browser at
+
+[http://0.0.0.0:8000/](http://0.0.0.0:8000/)
+
+**You should now see the Sharespots website with venues displaying.**
+
+(Optional) Open another browser tab/window and login using the superuser account you created in the django admin panel at [http://0.0.0.0:8000/admin](http://0.0.0.0:8000/admin)
+
+## Front End changes
+
+1. To install [Sass](https://sass-lang.com/install)
+   - You can install using node package manager `docker-compose -f local.yml run npm install -g sass`
+   - Windows: `choco install sass`
+   - Mac OS X: `brew install sass/sass/sass`
+
+2. To build everything Front end related run `npm run build`
+
+## Troubleshooting
+
+If the project doesn't work after pulling the latest changes by doing a `git pull`, you may need to run new database migrations:
+
+```shell
+docker-compose -f local.yml run django python manage.py makemigrations
+```
+
 ## Team
+
 - [Lili](https://github.com/lili2311)
 - [Fatimat](https://github.com/gbaja)
 - [Maurice](https://github.com/mbanerjeepalmer)
@@ -30,136 +117,6 @@ Simple Django app that displays a list of curated cafes/spaces to meetup and wor
 - [Chris Wedgwood](https://github.com/chriswedgwood)
 - [Thao Vo](https://github.com/littlethao)
 - [Andreea](https://github.com/etiquetteX)
-
-# Setup
-## Tools
-1. **Terminal**: [iTerm2](https://www.iterm2.com/) (MacOSX), [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) (Linux) or use your preferred one.
-2. **Text Editor**: [Sublime Text](http://www.sublimetext.com/) or you preferred one.
-
-Install virtualenv: pip install virtualenv
-Install virtualenvwrapper: pip install virtualenvwrapper *You can skip this and use virtualenv installed in a step before directly, virtualenvwrapper allows for nice interfacing with virtualenv
-Source the virtualenvwrapper: source /usr/local/bin/virtualenvwrapper.sh NOTE: To help do this automatically on every new shell you open add the line above to your .bash_profile or .bashrc
-Create a new env for the project: mkvirtualenv pimp
-
-## Laptop Setup
-1. [Setup](https://github.com/PolyglotDevsLondon/setup/wiki)
-
-
-## Virtual Enviroment Setup
-This allows you to install all the Python dependencies in a "box" so they are not globally installed and clashing with other projects.
-1. Install [virtualenv](https://virtualenv.pypa.io/en/stable/):
-	`pip install virtualenv`
-2. Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html):
-	`pip install virtualenvwrapper`
-	*You can skip this and use [virtualenv](https://virtualenv.pypa.io/en/stable/) installed in a step before directly, virtualenvwrapper allows for nice interfacing with virtualenv
-3. Source the `virtualenvwrapper`:
-	`source /usr/local/bin/virtualenvwrapper.sh`
-	**NOTE**: To help do this automatically on every new shell you open add the line above to your `.bash_profile` or  `.bashrc`
-4. Create a new env for the project:
-	 `mkvirtualenv sharespots`
-
-
-# Project Setup
-2. Clone the repo: `git@github.com:PolyglotDevsLondon/sharespotsgit`
-3. Create a new virtual environment with virtualenvwrapper: `mkvirtualenv -a sharespots sharespots`
-4. `cd` into the `sharespots` folder
-5. Install all the dependencies: `pip install -r requirements.txt`
-6. [Setup Postgres database locally](#database)
-7. Apply the initial database migrations: `python manage.py migrate`
-
-## Running the project locally
-0. If not already active, activate the virtual environment: `workon sharespots`
-1. Run `python manage.py runserver`
-2. Open your browser at http://localhost:8000/
-
-
-## Front End changes
-1. To install [Sass](https://sass-lang.com/install)
-- You can install using node package manager `npm install -g sass`
-- Windows: `choco install sass`
-- Mac OS X: `brew install sass/sass/sass`
-2. To compile sass changes to css file use `sass --watch input/file/path/styles.scss output/file/path/styles.css`
-3. For all JavaScript changes you can run `npm run build-watch` which will watch for changes and compile all JS into the dist folder.
-# Contributing
-Please follow the [Contributing Guidelines](CONTRIBUTING.md)
-
-# Database
-
-We are using PostgreSQL 9.5
-
-## Mac OSX
-
-1. Download and install Postgres using https://postgresapp.com.
-2. Once you have installed click initialise
-
-
-### Create a new DB
-
-You have a few options to make a new DB, either:
-
-1. In your command line run `createdb sharespots`
-2. Set the DATABASE_URL env variable `export DATABASE_URL=postgresql://sharespots`
-
-Or create the DB via psql command line:
-#### Create a new DB via psql
-You should see three databases _yourusername_ postgres and template1
-
-Run this in your terminal:
-```
-sudo mkdir -p /etc/paths.d &&
-echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
-```
-
-This will let you run psql command from anywhere. Either double click on once of the databases in postgresapp
-or go to bash and type
-
-```
-$ psql
-```
-You will see something similar to this:
-
-<pre>
-psql (10.5)
-Type "help" for help.
-
-<i>yourusername</i>=#
-</pre>
-
-Create a new database called listings.
-
-<pre>
-# CREATE DATABASE listings;
-# CREATE ROLE listings WITH LOGIN PASSWORD '<i>your_password_not_this</i>';
-
-<pre>
-psql (10.5)
-Type "help" for help.
-
-<i>yourusername</i>=#
-</pre>
-
-Create a new database called `sharespots`.
-
-<pre>
-# CREATE DATABASE listings;
-# CREATE ROLE sharespots WITH LOGIN PASSWORD '<i>your password not this</i>';
-# GRANT ALL PRIVILEGES ON DATABASE sharespots TO sharespots;
-# ALTER USER listings CREATEDB;
-</pre>
-
-Before running migrate/runserver you will need to add the environment variable
-DATABASE_URL into your system.
-
-<pre>
-
-$ export DATABASE_URL=postgres://sharespots:<i>your_password_not_this</i>@127.0.0.1:5432/sharespots
-
-</pre>
-
-then
-
-<pre>
-
-$ ./manage.py migrate
-
-</pre>
+- [Adnan](https://github.com/adnansalehin)
+- [Ju-Vern](https://github.com/juvern)
+- [Louie Christie](https://github.com/louiechristie)
