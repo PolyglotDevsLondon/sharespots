@@ -1,11 +1,11 @@
-version: '3'
+version: "3"
 
 volumes:
   local_postgres_data: {}
   local_postgres_data_backups: {}
+  node-modules: 
 
 services:
-
   django: &django
     build:
       context: .
@@ -50,4 +50,14 @@ services:
     <<: *django
     command: python3 manage.py shell_plus --notebook
     ports:
-        - "8888:8888"
+      - "8888:8888"
+
+  frontend:
+    <<: *django
+    working_dir: /frontend
+    command: npm run dev
+    volumes:
+      - .:/app
+      - node-modules:/node_modules
+    ports:
+      - "3000:3000"

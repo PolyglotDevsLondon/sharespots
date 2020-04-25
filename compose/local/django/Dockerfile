@@ -14,15 +14,23 @@ RUN apk update \
   && apk add gettext \
   # https://docs.djangoproject.com/en/dev/ref/django-admin/#dbshell
   && apk add postgresql-client \
-  && apk add bash
+  && apk add bash \
+  # install Node.js & npm
+  && apk add --update nodejs nodejs-npm
 
-RUN  apk add py-zmq libxml2-dev libxslt-dev g++
+RUN node -v
+RUN npm -v
+
+COPY ./frontend/package.json /package.json
+RUN npm install
+
+RUN apk add py-zmq libxml2-dev libxslt-dev g++
 
 #RUN apk add gcc python3-dev python3-pip libxml2-dev libxslt1-dev zlib1g-dev g++
 RUN pip install --upgrade pip
 
 RUN addgroup -S django \
-    && adduser -S -G django django
+  && adduser -S -G django django
 #RUN apk del .build-deps gcc musl-dev
 
 # Requirements have to be pulled and installed here, otherwise caching won't work
