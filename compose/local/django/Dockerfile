@@ -24,6 +24,8 @@ RUN npm -v
 COPY ./frontend/package.json /package.json
 RUN npm install
 
+
+
 RUN apk add py-zmq libxml2-dev libxslt-dev g++
 
 #RUN apk add gcc python3-dev python3-pip libxml2-dev libxslt1-dev zlib1g-dev g++
@@ -48,5 +50,6 @@ RUN chmod +x /start
 
 
 WORKDIR /app
+
 
 ENTRYPOINT ["/entrypoint"]

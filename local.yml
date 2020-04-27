@@ -54,7 +54,7 @@ services:
 
   frontend:
     <<: *django
-    working_dir: /frontend
+    working_dir: /app/frontend
     command: npm run dev
     volumes:
       - .:/app
