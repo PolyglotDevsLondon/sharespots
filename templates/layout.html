@@ -3,30 +3,25 @@
 
 {% block layout %}
 
-    <header class="">
-    </header>
-    <div class="container">
-        {% block main %}
-        {% endblock %}
+<header>
+    <nav class='navbar_header'>
+        <a href="{% url 'homepage' %}" class='navbar_header--item {% if request.resolver_match.url_name == "homepage" %}active{% endif %}'>Home</a>
+        <a href="{% url 'about' %}" class='navbar_header--item {% if request.resolver_match.url_name == "about" %}active{% endif %}'>About</a>
+        <a href="{% url 'contact' %}" class='navbar_header--item {% if request.resolver_match.url_name == "contact" %}active{% endif %}'>Contact</a>
+    </nav>
+</header>
+<div class="container">
+    {% block main %}
+    {% endblock %}
+</div>
+<footer>
+    <div class=footer-nav>
+        <a href="{% url 'homepage' %}" class='navbar_header--item'>Home</a>
+        <a href="{% url 'about' %}" class='navbar_header--item'>About</a>
+        <a href="{% url 'contact' %}" class='navbar_header--item'>Contact</a>
     </div>
-    <div class="search_component_container">
-        {% block search %}
-        {% endblock search %}
-    </div>
-    <div class="contents-container">
-        {% block contents %}
-        {% endblock contents %}
-    </div>
-    <footer>
-        <div class=footer-nav>
-            <a href="{% url 'homepage' %}" class='navbar_header--item'>Home</a>
-			<a href="{% url 'about' %}" class='navbar_header--item'>About</a>
-            <a href="{% url 'contact' %}" class='navbar_header--item'>Contact</a>
-        </div>
-        <p class=created>Created by Polyglot Devs London</p>
-        <a href="https://twitter.com/devs_london">@devs_london</a> 
+    <p class=created>Created by Polyglot Devs London</p>
+    <a href="https://twitter.com/devs_london">@devs_london</a>
+</footer>
 
-
-    </footer>
-
- {% endblock %}
+{% endblock %}
