@@ -92,7 +92,7 @@ Reload your project in your web browser at
    - Windows: `choco install sass`
    - Mac OS X: `brew install sass/sass/sass`
 
-2. To build everything Front end related run `npm run build`
+2. To build everything frontend related run `npm i && npm run build`
 
 ## Troubleshooting
 
