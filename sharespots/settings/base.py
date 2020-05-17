@@ -5,6 +5,7 @@ import django_heroku
 from env_utils import (
     get_env,
     get_list,
+    get_bool,
 )
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
