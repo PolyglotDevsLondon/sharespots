@@ -27,6 +27,7 @@ class Venue(models.Model):
     sockets = models.OneToOneField('Rating', on_delete=models.CASCADE, null=True, related_name='sockets')
     coffee = models.OneToOneField('Rating', on_delete=models.CASCADE, null=True, related_name='coffee')
     slogan = models.CharField(max_length=250, null=True)
+    image = models.URLField(max_length=200, null=True)
 
 
     def __str__(self):
