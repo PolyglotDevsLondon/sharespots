@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %} Venues {% endblock %}
+
+{% load static %}
+
+{% block main %}
+<section class="title_section_block">
+    <ul>
+		{% for venue in searched_venues %}
+		<li><a href="/venue-detail/{{ venue.id }}">{{ venue.name }}</a></li>
+		{% endfor %}
+	</ul>
+
+</section>
+{% endblock %}
