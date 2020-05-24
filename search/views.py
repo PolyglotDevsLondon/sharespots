@@ -4,9 +4,6 @@ from django.http import HttpResponse
 
 
 def search(request):
-    search_venue = request.GET.get('search_venue')
+    search_venue = request.GET.get('search')
     searched_venues = Venue.objects.filter(name__icontains=search_venue)
-    # apply the filter on Venue model with search_venue
-    # render the search list to FE
-    # return render(request, 'core/venue.html', {'venue_detail': venue_detail})
-    return HttpResponse(searched_venues)
+    return render(request, 'search/venue_list.html', {'searched_venues': searched_venues})
