@@ -7,4 +7,4 @@ def search(request):
     search_venue = request.GET.get('search')
     searched_venues = Venue.objects.filter(name__icontains=search_venue)
     context = {'searched_venues': searched_venues}
-    return render(request, 'search/venue_list.html', context)
+    return render(request, 'search/venues.html', context)

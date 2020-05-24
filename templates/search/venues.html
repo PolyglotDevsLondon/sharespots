@@ -7,9 +7,14 @@
 {% block main %}
 <section class="title_section_block">
     <ul>
-		{% for venue in searched_venues %}
-		<li><a href="/venue-detail/{{ venue.id }}">{{ venue.name }}</a></li>
-		{% endfor %}
+		{% if searched_venues|length >= 1 %}
+			{% for venue in searched_venues %}
+				<li><a href="/venue-detail/{{ venue.id }}">{{ venue.name }}</a></li>
+			{% endfor %}
+		{% else %}
+		  <p>Could not find any matches</p>
+		{% endif %}
+
 	</ul>
 
 </section>
