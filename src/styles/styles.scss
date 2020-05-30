@@ -37,16 +37,8 @@ html, body {
   height: 100%;
 }
 
-.container {
-  min-height: 100%;
-  position: relative;
-}
-
-
 footer {
   background-color: $color-pink;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 8.813em;
   color: $color-white;
