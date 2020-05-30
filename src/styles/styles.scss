@@ -18,9 +18,73 @@
 @import "components/search_bar";
 @import "components/star";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $color-pink;
   font-family: $base-font;
   font-weight: 300;
   color: $color-black;
+  padding: 10px;
+  padding-bottom: 6.813em;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+footer {
+  background-color: $color-pink;
+  width: 100%;
+  height: 8.813em;
+  color: $color-white;
+  font-family: $subheading-font;
+  font-style: normal;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-inner-wrap {
+  padding-top: 30px;
+}
+
+.footer-menu ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.footer-menu ul {
+  list-style: none;
+  width: 200px;
+  margin: auto;
+  padding: 0;
+}
+
+.footer-menu ul li a {
+  font-size: 14px;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: $color-white;
+}
+
+.twitter {
+  font-size: 12px;
+  line-height: 12px;
+  width: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.footer-twitter {
+  color: $color-white;
+  text-decoration: none;
 }
