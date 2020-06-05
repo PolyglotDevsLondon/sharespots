@@ -2,7 +2,7 @@
     "name": "sharespots",
     "version": "1.0.0",
     "description": "",
-    "main": "dist/index.js",
+    "main": "dist/main.js",
     "scripts": {
         "build": "webpack --mode production",
         "tslint": "tslint --project tsconfig.json --format stylish --exclude **/src/**/*.js",
@@ -20,15 +20,15 @@
     },
     "homepage": "https://github.com/PolyglotDevsLondon/sharespots#readme",
     "dependencies": {
-        "lodash": "^4.17.11"
+        "lodash": "^4.17.15"
     },
     "devDependencies": {
         "@types/lodash": "^4.14.118",
         "awesome-typescript-loader": "^5.2.1",
-        "browser-sync": "^2.26.5",
+        "browser-sync": "^2.26.7",
         "browser-sync-webpack-plugin": "^2.2.2",
         "css-loader": "^2.0.1",
-        "node-sass": "^4.12.0",
+        "node-sass": "^4.14.1",
         "sass-loader": "^7.1.0",
         "source-map-loader": "^0.2.4",
         "style-loader": "^0.23.1",
@@ -36,6 +36,6 @@
         "tslint": "^5.11.0",
         "typescript": "^3.2.2",
         "webpack": "^4.27.1",
-        "webpack-cli": "^3.1.2"
+        "webpack-cli": "^3.3.11"
     }
 }

@@ -14,7 +14,15 @@ RUN apk update \
   && apk add gettext \
   # https://docs.djangoproject.com/en/dev/ref/django-admin/#dbshell
   && apk add postgresql-client \
-  && apk add bash
+  && apk add bash \
+  # install Node.js & npm
+  && apk add --update nodejs nodejs-npm
+
+RUN node -v
+RUN npm -v
+# install app dependencies
+COPY package*.json ./
+RUN npm install
 
 RUN  apk add py-zmq libxml2-dev libxslt-dev g++
 
