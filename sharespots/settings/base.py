@@ -21,7 +21,7 @@ DEBUG = True
 # Security #
 ############
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = get_list('ALLOWED_HOSTS', separator=',')
 
 # SESSION_COOKIE_HTTPONLY = True
 
