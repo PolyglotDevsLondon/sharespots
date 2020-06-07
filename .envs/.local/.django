@@ -5,3 +5,4 @@ IPYTHONDIR=/app/.ipython
 
 
 SECRET_KEY=~R.e|Olx,rMS:m#w%z@ZY!(}C~h>!i~s_sM]v;DrJS+|Lu#]H{
+DJANGO_DEBUG=True
