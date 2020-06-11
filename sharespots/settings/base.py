@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'django_extensions',
+    'django.contrib.postgres',
+    'search',
 ]
 
 MIDDLEWARE = [
