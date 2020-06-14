@@ -17,7 +17,9 @@
 @import "components/layout";
 @import "components/search_bar";
 @import "components/star";
+@import "components/venue";
 @import "components/hero_section";
+@import "components/amenity_rating";
 
 * {
 	box-sizing: border-box;
@@ -31,7 +33,8 @@ body {
 	padding-bottom: 6.813em;
 }
 
-html, body {
+html,
+body {
 	padding: 0;
 	margin: 0;
 	height: 100%;

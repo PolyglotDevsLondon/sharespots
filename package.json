@@ -7,7 +7,7 @@
         "build": "webpack --mode production",
         "tslint": "tslint --project tsconfig.json --format stylish --exclude **/src/**/*.js",
         "lint": "npm run tslint",
-        "dev": "webpack --mode development"
+        "dev": "webpack --mode development --watch"
     },
     "repository": {
         "type": "git",

@@ -1,123 +1,101 @@
-@import "base/variables";
-
-
 //Mobile
-.home_search_bar{
-	background: $color-light-green;
-
-	form{	
-		padding: 30px;
-	}
-
-	h3{
-		font-family: $subheading-font;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 300;
-	}
-
-	.inner-searchbar-container{
-		display: flex;
-		justify-content: space-around;
-		align-content: center;
-		height: 29.65px;
-
-		.search-field{
-			box-sizing: border-box;
-			height: 100%;
-			flex: 1;
-			border-width: 0px;
-			padding-left: 20px;
-		}
-
-		.submit-button{
-			box-sizing: border-box;
-			height: 100%;
-			width: 29%;
-			background-color: $color-light-pink;
-			margin-left: 15px;
-		}
-	}
-	
+.home_search_bar {
+    background: $color-light-green;
+    form {
+        padding: 30px;
+    }
+    h3 {
+        font-family: $subheading-font;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+    }
+    .inner-searchbar-container {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        height: 29.65px;
+        .search-field {
+            box-sizing: border-box;
+            height: 100%;
+            flex: 1;
+            border-width: 0px;
+            padding-left: 20px;
+        }
+        .submit-button {
+            box-sizing: border-box;
+            height: 100%;
+            width: 29%;
+            background-color: $color-light-pink;
+            margin-left: 15px;
+        }
+    }
 }
 
 //Tablet
 @media screen and (min-width: 768px) {
-	.search_component_container{
-		display: flex;
-
-		.home_search_bar{
-			flex: 5;
-			h3{
-				font-size: 22px;
-			}
-
-			.inner-searchbar-container{
-				height: 36.31px;
-			}
-		}
-
-		.filler_space{
-		    background: white;
-		    border-top: 80px solid #FE7273;
-		}
-
-		#filler_space_right{
-			flex: 1;
-		}
-
-		#filler_space_left{
-			flex: 3;
-		}
-	}	
+    .search_component_container {
+        display: flex;
+        .home_search_bar {
+            flex: 5;
+            h3 {
+                font-size: 22px;
+            }
+            .inner-searchbar-container {
+                height: 36.31px;
+            }
+        }
+        .filler_space {
+            background: white;
+            border-top: 80px solid #FE7273;
+        }
+        #filler_space_right {
+            flex: 1;
+        }
+        #filler_space_left {
+            flex: 3;
+        }
+    }
 }
 
 //Desktop
 @media screen and (min-width: 1024px) {
-	.search_component_container{
-		display: flex;
-
-		.home_search_bar{
-			flex: 5;
-			h3{
-				font-size: 28px;
-			}
-
-			.inner-searchbar-container{
-				height: 50px;
-			}
-		}
-
-		.filler_space{
-		    background: white;
-		    border-top: 80px solid #FE7273;
-		}
-
-		#filler_space_right{
-			flex: 1;
-		}
-
-		#filler_space_left{
-			flex: 4;
-		}
-	}	
+    .search_component_container {
+        display: flex;
+        .home_search_bar {
+            flex: 5;
+            h3 {
+                font-size: 28px;
+            }
+            .inner-searchbar-container {
+                height: 50px;
+            }
+        }
+        .filler_space {
+            background: white;
+            border-top: 80px solid #FE7273;
+        }
+        #filler_space_right {
+            flex: 1;
+        }
+        #filler_space_left {
+            flex: 4;
+        }
+    }
 }
 
 //Desktop HD
 @media screen and (min-width: 1440px) {
-	.search_component_container{
-		display: flex;
-
-		.home_search_bar{
-			flex: 5;
-			h3{
-				font-size: 36px;
-			}
-
-			.inner-searchbar-container{
-				height: 50px;
-			}
-		}
-	}	
+    .search_component_container {
+        display: flex;
+        .home_search_bar {
+            flex: 5;
+            h3 {
+                font-size: 36px;
+            }
+            .inner-searchbar-container {
+                height: 50px;
+            }
+        }
+    }
 }
-

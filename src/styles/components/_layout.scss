@@ -4,7 +4,23 @@
 
 @import "base/variables";
 
-.contents-container{
-	background: white;
-	height: -webkit-fill-available;
+.container {
+	// max: mob 320px - 230px,
+	max-width: 230px;
+	margin: 0 auto;
+
+	// tablet 770x - 615px,
+	@media only screen and (min-width: 615px) and (max-width:770px) {
+		max-width: 615px;
+	}
+
+	// 1026 desk - 795px,
+	@media only screen and (min-width: 795px) and (max-width: 1026px) {
+		max-width: 795px;
+	}
+
+	// anything bigger 1195px 
+	@media only screen and (min-width: 1027px) {
+		max-width: 1195px;
+	}
 }
