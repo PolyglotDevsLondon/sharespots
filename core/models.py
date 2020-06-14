@@ -1,6 +1,12 @@
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.db import models
+from django.db import models, migrations
+from django.contrib.postgres.operations import TrigramExtension
 
+
+class Migration(migrations.Migration):
+    operations = [
+        TrigramExtension()
+    ]
 
 class Rating(models.Model):
     rate = models.IntegerField(
