@@ -21,7 +21,7 @@ DEBUG = get_env('DJANGO_DEBUG', False)
 # Security #
 ############
 
-ALLOWED_HOSTS = get_list('ALLOWED_HOSTS', separator=',')
+ALLOWED_HOSTS = ['*']
 
 # SESSION_COOKIE_HTTPONLY = True
 
