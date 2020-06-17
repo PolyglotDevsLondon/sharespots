@@ -14,14 +14,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-DEBUG = get_env('DJANGO_DEBUG', False)
+DEBUG = True
 
 
 ############
 # Security #
 ############
 
-ALLOWED_HOSTS = get_list('ALLOWED_HOSTS', separator=',')
+ALLOWED_HOSTS = ['*']
 
 # SESSION_COOKIE_HTTPONLY = True
 
