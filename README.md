@@ -108,20 +108,21 @@ docker-compose -f local.yml run django python manage.py makemigrations
 
 ## Team
 
+### Current
 - [Lili](https://github.com/lili2311)
-- [Fatimat](https://github.com/gbaja)
-- [Maurice](https://github.com/mbanerjeepalmer)
-- [Stefano](https://github.com/CianciuStyles)
 - [Simon](https://github.com/simonRedwards)
-- [Dan](https://github.com/snowkuma)
-- [Kit Sum Pang](https://github.com/ktsmpng)
-- [Ichi](https://github.com/icicleta)
 - [Tsveti](https://github.com/tsvetelinak0)
-- [Amy Boyd](https://github.com/amyboyd)
 - [Chris Wedgwood](https://github.com/chriswedgwood)
-- [Thao Vo](https://github.com/littlethao)
-- [Andreea](https://github.com/etiquetteX)
-- [Adnan](https://github.com/adnansalehin)
-- [Ju-Vern](https://github.com/juvern)
 - [Louie Christie](https://github.com/louiechristie)
 - [Ravi Pullagurla](https://github.com/ravinderreddy-p)
+
+### Previously contributed
+- [Kit Sum Pang](https://github.com/ktsmpng)
+- [Ju-Vern](https://github.com/juvern)
+- [Maurice](https://github.com/mbanerjeepalmer)
+- [Stefano](https://github.com/CianciuStyles)
+- [Fatimat](https://github.com/gbaja)
+- [Dan](https://github.com/snowkuma)
+- [Adnan](https://github.com/adnansalehin)
+- [Thao Vo](https://github.com/littlethao)
+- [Andreea](https://github.com/etiquetteX)
