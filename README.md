@@ -120,3 +120,4 @@ docker-compose -f local.yml run django python manage.py makemigrations
 - [Adnan](https://github.com/adnansalehin)
 - [Ju-Vern](https://github.com/juvern)
 - [Louie Christie](https://github.com/louiechristie)
+- [Ravi Pullagurla](https://github.com/ravinderreddy-p)
