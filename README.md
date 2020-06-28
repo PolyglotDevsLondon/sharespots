@@ -15,6 +15,10 @@ e.g. [TOC] or {:toc max_level=3 }
 - Hosting: Heroku
 - Storage: AWS S3
 
+## Tests
+
+We use [pytest](https://docs.pytest.org/en/stable/) for our tests
+Run the tests with `pytest`
 ## Software Tools Required
 
 1. **Terminal**: [iTerm2](https://www.iterm2.com/) (MacOSX), [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) (Linux) or use your preferred one.
