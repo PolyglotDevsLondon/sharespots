@@ -20,8 +20,9 @@ DEBUG = get_env('DJANGO_DEBUG', False)
 ############
 # Security #
 ############
-
-ALLOWED_HOSTS = get_list('ALLOWED_HOSTS', separator=',')
+# TODO: Uncomment and delete [*]
+# ALLOWED_HOSTS = get_list('ALLOWED_HOSTS', separator=',')
+ALLOWED_HOSTS = ['*']
 
 # SESSION_COOKIE_HTTPONLY = True
 
@@ -133,7 +134,8 @@ STATICFILES_DIRS = (
 )
 
 # Activate Django-Heroku.
-django_heroku.settings(locals(), logging=True, allowed_hosts=False, databases=not DEBUG)
+# TODO: Uncomment
+# django_heroku.settings(locals(), logging=True, allowed_hosts=False, databases=not DEBUG)
 
 NOTEBOOK_ARGUMENTS = [
     '--ip', '0.0.0.0',
