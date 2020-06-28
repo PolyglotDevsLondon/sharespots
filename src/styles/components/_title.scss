@@ -1,15 +1,9 @@
-//
-// Variables
-//
-
-@import "base/variables";
-
 .homepage_section_block {
+	background-color: $color-pink;
 	align-items: center;
     height: 450px;
-    display: flex;
-    padding: 0 30px 30px;
-    margin: 0px 50px;
+	display: flex;
+	padding-left: 55px;
 
 	h1 {
 		color: $color-white;
@@ -17,32 +11,40 @@
 		font-size: $title-font-size;
 		font-weight: 300;
 		text-align: left;
+		margin: 0;
 		margin-bottom: auto;
 	}
+        
 	h2 {
 		font-family: $h2-heading-font;
 		font-size: 36px;
 		font-weight: 300;
 		text-align: left;
 		max-width: 450px;
-	  }
+	}
 }
 
 .title_section_block {
+	background-color: $color-pink;
+	align-items: center;
+    height: 450px;
+	padding: 55px;
+
 	h1 {
 		color: $color-white;
 		font-family: $h2-heading-font;
 		font-size: $title-font-size;
 		font-weight: 300;
 		text-align: left;
-		margin-bottom: auto;
-	  }
+		margin: 0;
+		margin: auto;
+	}
 	  
-	  h2 {
+	h2 {
 		font-family: $h2-heading-font;
 		font-size: 36px;
 		font-weight: 300;
 		text-align: left;
 		max-width: 450px;
-	  }
+	}
 }

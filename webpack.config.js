@@ -2,6 +2,7 @@
 const path = require("path");
 
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: ["./src/index.js", "./src/styles/styles.scss"],
@@ -36,7 +37,15 @@ module.exports = {
             {
                 reload: true
             }
-        )
+        ),
+        new CopyPlugin({
+            patterns: [
+                {   
+                    from: './src/img/',
+                    to: './img',
+                },
+            ],    
+        })
     ],
     resolve: {
         extensions: [".tsx", ".ts", ".js"]

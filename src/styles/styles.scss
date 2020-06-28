@@ -17,74 +17,88 @@
 @import "components/layout";
 @import "components/search_bar";
 @import "components/star";
+@import "components/hero_section";
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: $color-pink;
-  font-family: $base-font;
-  font-weight: 300;
-  color: $color-black;
-  padding: 10px;
-  padding-bottom: 6.813em;
+	font-family: $base-font;
+	font-weight: 300;
+	color: $color-black;
+	padding: 10px;
+	padding-bottom: 6.813em;
 }
 
 html, body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+button {
+	background-color: #FAB7C8;
+	padding: 10px 27px;
+	text-align: center;
+	font-size: 18px;
+	border-style: none;
+}
+
+a {
+	color: #16162C;
+	text-decoration: none;
+	font-family: Raleway;
 }
 
 footer {
-  background-color: $color-pink;
-  width: 100%;
-  height: 8.813em;
-  color: $color-white;
-  font-family: $subheading-font;
-  font-style: normal;
-  font-weight: 300;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+	background-color: $color-pink;
+	width: 100%;
+	height: 8.813em;
+	color: $color-white;
+	font-family: $subheading-font;
+	font-style: normal;
+	font-weight: 300;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
 .footer-inner-wrap {
-  padding-top: 30px;
+	padding-top: 30px;
 }
 
 .footer-menu ul li {
-  display: inline-block;
-  padding: 10px;
+	display: inline-block;
+	padding: 10px;
 }
 
 .footer-menu ul {
-  list-style: none;
-  width: 200px;
-  margin: auto;
-  padding: 0;
+	list-style: none;
+	width: 200px;
+	margin: auto;
+	padding: 0;
 }
 
 .footer-menu ul li a {
-  font-size: 14px;
-  display: flex;
-  list-style: none;
-  text-decoration: none;
-  color: $color-white;
+	font-size: 14px;
+	display: flex;
+	list-style: none;
+	text-decoration: none;
+	color: $color-white;
 }
 
 .twitter {
-  font-size: 12px;
-  line-height: 12px;
-  width: 160px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
+	font-size: 12px;
+	line-height: 12px;
+	width: 160px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
 }
 
 .footer-twitter {
-  color: $color-white;
-  text-decoration: none;
+	color: $color-white;
+	text-decoration: none;
 }
