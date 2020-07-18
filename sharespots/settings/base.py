@@ -131,9 +131,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, '..', 'dist'),
 )
 
-# Activate Django-Heroku.
-django_heroku.settings(locals(), logging=True, allowed_hosts=False, databases=not DEBUG)
-
 NOTEBOOK_ARGUMENTS = [
     '--ip', '0.0.0.0',
     #'--port', '8888',
