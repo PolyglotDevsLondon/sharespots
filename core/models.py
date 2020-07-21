@@ -44,7 +44,7 @@ class Venue(models.Model):
         self.latitude = round(result['lat'], 6)
         self.longitude = round(result['lng'], 6)
 
-    # Overiding save, to set long & lat points from postcode entered
+    # Overriding save, to set long & lat points from postcode entered
     def save(self, *args, **kwargs):
         self.set_long_and_lat()
         super(Venue, self).save(*args, **kwargs)
