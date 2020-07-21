@@ -115,6 +115,7 @@ docker-compose -f local.yml run django python manage.py makemigrations
 - [Chris Wedgwood](https://github.com/chriswedgwood)
 - [Louie Christie](https://github.com/louiechristie)
 - [Ravi Pullagurla](https://github.com/ravinderreddy-p)
+- [Abu Darda](https://github.com/abuDarda97)
 
 ### Previously contributed
 - [Kit Sum Pang](https://github.com/ktsmpng)

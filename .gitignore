@@ -122,6 +122,9 @@ env.py
 ### Python Patch ###
 .venv/
 
+# Pipenv
+Pipfile
+Pipfile.lock
 
 # End of https://www.gitignore.io/api/python,django
 *.sass-cache
