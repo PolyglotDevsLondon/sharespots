@@ -34,7 +34,20 @@ class Venue(models.Model):
     coffee = models.OneToOneField('Rating', on_delete=models.CASCADE, null=True, related_name='coffee')
     slogan = models.CharField(max_length=250, null=True)
     image = models.URLField(max_length=200, null=True)
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
 
+    def set_long_and_lat(self):
+        location = self.post_code + self.address_2
+        result = geocoder.arcgis(location).json
+        if result is not None:
+            self.latitude = round(result['lat'], 6)
+            self.longitude = round(result['lng'], 6)
+
+    # Overriding save, to set long & lat points from postcode entered
+    def save(self, *args, **kwargs):
+        self.set_long_and_lat()
+        super(Venue, self).save(*args, **kwargs)
 
     def __str__(self):
         return '{0} - created at: {1}'.format(self.name, self.created_at)
