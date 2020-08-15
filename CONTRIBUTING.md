@@ -4,8 +4,14 @@
 5. Once ready, please raise a Pull Request to `develop` branch.
 
 ## How to raise a Pull Request
-In order to raise a Pull Request with your changes (please make sure all changes are done on a branch):
+If you are new to [Git](), please take some time to familiarise yourself with Git and Github flow:
+- [Git flow](https://guides.github.com/introduction/flow/)
+- [Git offical documentation](https://git-scm.com/)
+- [Introduction to Git & Github slides](http://slides.com/lilianakastilio/github)
+- [Git rewriting History](http://blog.lilianakastilio.co.uk/blog/2018/08/26/git-rewriting-history/)
+- [Interactive branching guide](https://learngitbranching.js.org/)
 
+In order to raise a Pull Request with your changes (please make sure all changes are done on a branch):
 - Save and commit your changes (If you don't know how to do this start with an [introduction to Git & Github](https://docs.google.com/document/d/1Mk_3mW1nHG4WrtTQcmPH5oCCrbgNIoTcegFk398K8OE/edit))
 - Push your changes and create a pull request: `git push origin your_branch_name`
 - Go to the [repo](https://github.com/PolyglotDevsLondon/sharespots) and you should see a green button "Raise a Pull Request"
