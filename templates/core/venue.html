@@ -5,97 +5,134 @@
 {% load static %}
 
 {% block main %}
-<section class="title_section_block">
-    <h1>{{ venue_detail.name }}</h1>
-    <p>{{ venue_detail.address_1 }}</p>
-    <p>{{ venue_detail.address_2 }}</p>
-    <p>{{ venue_detail.post_code }}</p>
-    <p>{{ venue_detail.description }}</p>
-
-    <div>
+<section class="venue">
+    <section class="venue_info">
         {% if venue_detail.image is not none %}
-           <img src= {{ venue_detail.image }} width="600" height="300">
+        <img src={{ venue_detail.image }} width="600" height="300">
         {% endif %}
+        <div class="venue_info-address">
+            <div class="container">
+                <h2>{{ venue_detail.name }}</h2>
+                <p>{{ venue_detail.address_1 }}</p>
+                <p>{{ venue_detail.address_2 }}</p>
+                <p>{{ venue_detail.post_code }}</p>
+            </div>
+        </div>
+    </section>
+</section>
+<section class="hero_component_container">
+    <div class='container'>
+        <div class="venue_slogan">
+            <h3>“{{ venue_detail.slogan }}”</h3>
+        </div>
+        <div class="venue_description">
+            <p>{{ venue_detail.description }}</p>
+        </div>
     </div>
-    <h2>Amenity Ratings:</h2>
-    
-    <div>
-    <span>Wifi:</span>
-    {% for i in 12345|make_list %}       
-        {% if forloop.counter <= venue_detail.wifi.rate %}
-                <span class="star--filled">
-                    ★
-                </span>
-        {% else %}
-            <span class="star">
-                ☆
+</section>
+
+<section class="venue_amenities container">
+
+    <div class="venue_rating">
+        <div class="amenity_rating-icon">
+            <img class="ame_icon" src="{% static "img/wifi.svg" %}" alt="WiFi icon">
+        </div>
+        <div class="venue_rating-score">
+            {% for i in 12345|make_list %}
+            {% if forloop.counter <= venue_detail.wifi.rate %}
+            <span class="star star--filled">
+                {% include 'images/star.svg' %}
             </span>
-        {% endif %}
-    {% endfor %}
+            {% else %}
+            <span class="star">
+                {% include 'images/star.svg' %}
+            </span>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <p class="venue_rating-title">Wifi</p>
     </div>
 
-    <div>    
-        <span>Food:</span>
-        {% for i in 12345|make_list %}       
-        {% if forloop.counter <= venue_detail.food.rate %}
-                <span class="star--filled">
-                    ★
-                </span>
-        {% else %}
-            <span class="star">
-                ☆
+    <div class="venue_rating">
+        <div class="venue_rating-icon">
+            <img class="venue_amenities-icon" src="{% static "img/menu.svg" %}" alt="Menu with bell">
+        </div>
+        <div class="venue_rating-score">
+            {% for i in 12345|make_list %}
+            {% if forloop.counter <= venue_detail.food.rate %}
+            <span class="star star--filled">
+                {% include 'images/star.svg' %}
             </span>
-        {% endif %}
-        {% endfor %}        
-    </div>
-    
-    
-    <div>    
-        <span>Atmosphere:</span>
-        {% for i in 12345|make_list %}       
-        {% if forloop.counter <= venue_detail.atmosphere.rate %}
-                <span class="star--filled">
-                    ★
-                </span>
-        {% else %}
+            {% else %}
             <span class="star">
-                ☆
+                {% include 'images/star.svg' %}
             </span>
-        {% endif %}
-        {% endfor %}        
+            {% endif %}
+            {% endfor %}
+        </div>
+        <p class="venue_rating-title">Food</p>
     </div>
-    
-    
-    <div>    
-        <span>Power socket access:</span>
-        {% for i in 12345|make_list %}       
-        {% if forloop.counter <= venue_detail.sockets.rate %}
-                <span class="star--filled">
-                    ★
-                </span>
-        {% else %}
-            <span class="star">
-                ☆
-            </span>
-        {% endif %}
-        {% endfor %}        
-    </div>
-        
 
-    <div>    
-        <span>Coffee:</span>
-        {% for i in 12345|make_list %}       
-        {% if forloop.counter <= venue_detail.coffee.rate %}
-                <span class="star--filled">
-                    ★
-                </span>
-        {% else %}
-            <span class="star">
-                ☆
+    <div class="venue_rating">
+        <div class="venue_rating-icon">
+            <img class="venue_amenities-icon" src="{% static "img/student.svg" %}" alt="Student on a computer">
+        </div>
+        <div class="venue_rating-score">
+            {% for i in 12345|make_list %}
+            {% if forloop.counter <= venue_detail.atmosphere.rate %}
+            <span class="star star--filled">
+                {% include 'images/star.svg' %}
             </span>
-        {% endif %}
-        {% endfor %}        
+            {% else %}
+            <span class="star">
+                {% include 'images/star.svg' %}
+            </span>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <p class="venue_rating-title">Atmosphere</p>
     </div>
+
+    <div class="venue_rating">
+        <div class="venue_rating-icon">
+            <img class="venue_amenities-icon" src="{% static "img/socket.svg" %}" alt="Socket">
+        </div>
+        <div class="venue_rating-score">
+            {% for i in 12345|make_list %}
+            {% if forloop.counter <= venue_detail.sockets.rate %}
+            <span class="star star--filled">
+                {% include 'images/star.svg' %}
+            </span>
+            {% else %}
+            <span class="star">
+                {% include 'images/star.svg' %}
+            </span>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <p class="venue_rating-title">Sockets</p>
+    </div>
+
+    <div class="venue_rating">
+        <div class="venue_rating-icon">
+            <img class="venue_amenities-icon" src="{% static "img/coffee-cup.svg" %}" alt="Coffee mug">
+        </div>
+        <div class="venue_rating-score">
+            {% for i in 12345|make_list %}
+            {% if forloop.counter <= venue_detail.coffee.rate %}
+            <span class="star star--filled">
+                {% include 'images/star.svg' %}
+            </span>
+            {% else %}
+            <span class="star">
+                {% include 'images/star.svg' %}
+            </span>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <p class="venue_rating-title">Coffee</p>
+    </div>
+
 
 </section>
 {% endblock %}

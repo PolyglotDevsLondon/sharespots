@@ -1,0 +1,45 @@
+//
+// Venue-detail specific ratings component
+//
+
+.amenity_rating {
+    max-width: 120px;
+    
+    &-icon {
+        background: $color-light-green;
+        height: 113px;
+        text-align: center;
+    }
+    &-score {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    &-title {
+        font-family: $subheading-font;
+        text-align: center;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+}
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 100px;
+}
+
+.ame_icon {
+    width: 100%;
+    height: 75px;
+    margin-top: 19px;
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    .amenities {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
