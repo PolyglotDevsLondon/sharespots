@@ -1,3 +1,7 @@
+- [ ] This PR follows [contributing quidelines](CONTRIBUTING.md)
+- [ ] This PR has tests (for backend in particular)
+
+
 ### What change does this PR introduce?
 
 _Explain why this PR exists_
