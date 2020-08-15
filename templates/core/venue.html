@@ -8,7 +8,8 @@
 <section class="venue">
     <section class="venue_info">
         {% if venue_detail.image is not none %}
-        <img src={{ venue_detail.image }} width="600" height="300">
+        <img
+            src="https://trello-attachments.s3.amazonaws.com/5b5deb66b4e3542422dbb2fd/5cd47bb2fb0887244b636b37/56e4f8698188409be99301e6b137f32f/toa-heftiba-195458-unsplash.png">
         {% endif %}
         <div class="venue_info-address">
             <div class="container">
@@ -20,12 +21,14 @@
         </div>
     </section>
 </section>
-<section class="hero_component_container">
-    <div class='container'>
-        <div class="venue_slogan">
+<section class="venue_description">
+    <div class="venue_slogan">
+        <div class='container'>
             <h3>“{{ venue_detail.slogan }}”</h3>
         </div>
-        <div class="venue_description">
+    </div>
+    <div class='container'>
+        <div>
             <p>{{ venue_detail.description }}</p>
         </div>
     </div>

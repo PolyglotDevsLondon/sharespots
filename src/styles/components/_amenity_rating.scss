@@ -4,17 +4,18 @@
 
 .amenity_rating {
     max-width: 120px;
-    
+
     &-icon {
         background: $color-light-green;
         height: 113px;
         text-align: center;
     }
+
     &-score {
         text-align: center;
         padding: 10px;
     }
-    
+
     &-title {
         font-family: $subheading-font;
         text-align: center;
