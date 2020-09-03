@@ -135,4 +135,32 @@
 
 
 </section>
+
+<section class="venue_map container">
+    <div id="mapid" class="map"></div>
+</section>
+
+<!-- Map scripts -->
+
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+<script>
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap Contributors. Tiles courtesy of Humanitarian OpenStreetMap Team',
+        // tileSize: 512,
+        // zoomOffset: -1,
+    }).addTo(mymap);
+
+    var popup = L.popup({ maxWidth: null })
+        .setLatLng([51.505, -0.09])
+        .setContent("<center>{{ venue_detail.name }}</center>")
+        .openOn(mymap);
+
+    mymap.setView([51.505, -0.09], 13);
+
+</script>
+
 {% endblock %}
