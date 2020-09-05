@@ -9,7 +9,6 @@
             background: $color-light-green;
             padding: 10px;
         }
-
     }
 
     &_rating-icon {
@@ -34,9 +33,6 @@
             font-size: 16px;
             margin: 0 auto;
         }
-
-
-
     }
 
     &_amenities {
@@ -52,17 +48,31 @@
             margin-top: 19px;
         }
 
-
-
         @media (min-width: 481px) and (max-width: 1023px) {
             display: flex;
             justify-content: space-evenly;
         }
     }
+    &_hero_section {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 60px;
+        padding-top: 0px;
+    }
+    &_description {
+        padding: 60px;
+        background-color: $color-provincial-pink;
+    }
 }
 
 .venue_slogan {
-    @media (min-width: 481px) and (max-width: 1023px) {
-        background-color: $color-white ;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 60px 60px 0px 60px;
+    background-color: $color-white;
+    @media (min-width: 1023px) {
+        background-color: $color-provincial-pink;
     }
 }
