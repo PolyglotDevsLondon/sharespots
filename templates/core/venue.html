@@ -8,7 +8,7 @@
 <section class="venue">
     <section class="venue_info">
         {% if venue_detail.image is not none %}
-        <img src={{ venue_detail.image }} width="600" height="300">
+        <img src={{ venue_detail.image }} width="100%">
         {% endif %}
         <div class="venue_info-address">
             <div class="container">
@@ -20,11 +20,11 @@
         </div>
     </section>
 </section>
+<div class="venue_slogan">
+    <h3>“{{ venue_detail.slogan }}”</h3>
+</div>
 <section class="hero_component_container">
     <div class='container'>
-        <div class="venue_slogan">
-            <h3>“{{ venue_detail.slogan }}”</h3>
-        </div>
         <div class="venue_description">
             <p>{{ venue_detail.description }}</p>
         </div>
