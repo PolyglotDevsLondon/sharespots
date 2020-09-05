@@ -19,6 +19,7 @@ e.g. [TOC] or {:toc max_level=3 }
 
 We use [pytest](https://docs.pytest.org/en/stable/) for our tests
 Run the tests with `pytest`
+
 ## Software Tools Required
 
 1. **Terminal**: [iTerm2](https://www.iterm2.com/) (MacOSX), [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) (Linux) or use your preferred one.
@@ -89,9 +90,13 @@ Reload your project in your web browser at
 
 (Optional) Open another browser tab/window and login using the superuser account you created in the django admin panel at [http://0.0.0.0:8000/admin](http://0.0.0.0:8000/admin)
 
+For the OpenCage api you would need to create your own API key.
+[Click here](https://opencagedata.com/) to make one.
+
 ## Front End changes
 
 1. To install [Sass](https://sass-lang.com/install)
+
    - You can install using node package manager `docker-compose -f local.yml run npm install -g sass`
    - Windows: `choco install sass`
    - Mac OS X: `brew install sass/sass/sass`
@@ -109,6 +114,7 @@ docker-compose -f local.yml run django python manage.py makemigrations
 ## Team
 
 ### Current
+
 - [Lili](https://github.com/lili2311)
 - [Simon](https://github.com/simonRedwards)
 - [Tsveti](https://github.com/tsvetelinak0)
@@ -118,6 +124,7 @@ docker-compose -f local.yml run django python manage.py makemigrations
 - [Abu Darda](https://github.com/abuDarda97)
 
 ### Previously contributed
+
 - [Kit Sum Pang](https://github.com/ktsmpng)
 - [Ju-Vern](https://github.com/juvern)
 - [Maurice](https://github.com/mbanerjeepalmer)

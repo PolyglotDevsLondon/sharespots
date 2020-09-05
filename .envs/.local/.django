@@ -7,5 +7,3 @@ IPYTHONDIR=/app/.ipython
 SECRET_KEY=~R.e|Olx,rMS:m#w%z@ZY!(}C~h>!i~s_sM]v;DrJS+|Lu#]H{
 DJANGO_DEBUG=True
 ALLOWED_HOSTS=['*']
-
-OPENCAGE_API_KEY=030fb8a03ec845bd858f01e28f092aff
