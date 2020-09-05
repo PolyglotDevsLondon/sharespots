@@ -62,10 +62,25 @@
     }
 
     &_map {
+        padding: 0 160px 50px 160px;
+
+        h3 {
+            font-family: $subheading-font;
+            font-weight: bold;
+            font-size: 28px;
+            text-align: center;
+        }
+
         .leaflet-container {
             width: 100%;
-            height: 256px;
+            height: 481px;
             margin-bottom: 2em;
+        }
+
+        @media (min-width: 1440px){
+            .leaflet-container {
+                height: 724px;
+            }
         }
     }
 }
