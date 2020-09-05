@@ -57,8 +57,10 @@
 
 .venue_slogan {
     text-align: center;
-    width:100%;
-    @media (min-width: 481px) and (max-width: 1023px) {
-        background-color: $color-white ;
+    width: 80%;
+    margin-left: 10%;
+    background-color: $color-white;
+    @media (min-width: 1023px) {
+        background-color: $color-provincial-pink;
     }
 }
