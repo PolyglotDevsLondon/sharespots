@@ -50,6 +50,24 @@ Build the docker container (included is django, postgres, pgadmin and jupyter no
 docker-compose -f local.yml build
 ```
 
+[Create your an OpenCage API key](https://opencagedata.com/)
+
+And add your OpenCage API key to sharespots/.env/.local/.django e.g.:
+
+```
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+
+
+SECRET_KEY=[secret key]
+OPENCAGE_API_KEY=[opencage_api_key]
+DJANGO_DEBUG=True
+ALLOWED_HOSTS=['*']
+
+```
+
 Fire up the docker container:
 
 ```shell
@@ -105,7 +123,15 @@ For the OpenCage api you would need to create your own API key.
 
 ## Troubleshooting
 
-If the project doesn't work after pulling the latest changes by doing a `git pull`, you may need to run new database migrations:
+If the project doesn't work after pulling the latest changes by doing a `git pull`, you may need to:
+
+### Rebuild your container to include recently added python modules
+
+```shell
+docker-compose -f local.yml build
+```
+
+### Run new database migrations
 
 ```shell
 docker-compose -f local.yml run django python manage.py makemigrations
