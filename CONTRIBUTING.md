@@ -1,5 +1,5 @@
 # Contributing Guidelines
-1. Always start by picking a ticket from the backlog. Please chat in Slack if you really want to pick something up and mentors can advise if it seems suitable. If you prefer to be assigned something based on your level that is great too!
+1. Always start by picking a ticket from the backlog [Trello Ticket](https://trello.com/b/JOTspGgX/sharespotscouk). Please chat in Slack if you really want to pick something up and mentors can advise if it seems suitable. If you prefer to be assigned something based on your level that is great too!
 4. Assign an issue to yourself and start working. All changes must be done on a branch so you can raise a PR.
 5. Once ready, please raise a Pull Request to `develop` branch.
 
