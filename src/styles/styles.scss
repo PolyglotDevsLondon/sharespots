@@ -13,12 +13,14 @@
 // Components
 //
 @import "components/navbar";
-@import "components/title";
+@import "components/section";
+@import "components/footer";
+@import "components/recommended";
 @import "components/layout";
-@import "components/search_bar";
+@import "components/search";
 @import "components/star";
 @import "components/venue";
-@import "components/hero_section";
+@import "components/hero";
 @import "components/amenity_rating";
 
 * {
@@ -51,57 +53,42 @@ button {
 a {
 	color: #16162C;
 	text-decoration: none;
-	font-family: Raleway;
-}
-
-footer {
-	background-color: $color-pink;
-	width: 100%;
-	height: 8.813em;
-	color: $color-white;
 	font-family: $subheading-font;
-	font-style: normal;
+	font-weight: 500;
+}
+
+p {
+	font-size: 20px;
+	font-family: $subheading-font;
 	font-weight: 300;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
 }
 
-.footer-inner-wrap {
-	padding-top: 30px;
+h3 {
+	font-family: $subheading-font;
+	font-weight: 300;
 }
 
-.footer-menu ul li {
-	display: inline-block;
-	padding: 10px;
-}
+h2 {
+	font-size: 36px;
+	font-family: $subheading-font;
+	font-weight: 700;
 
-.footer-menu ul {
-	list-style: none;
-	width: 200px;
-	margin: auto;
-	padding: 0;
-}
+	// tablet 770x - 615px,
+	@media only screen and (min-width: 615px) and (max-width:770px) {
+		font-size: 36px;
+		line-height: 36px;
+	}
 
-.footer-menu ul li a {
-	font-size: 14px;
-	display: flex;
-	list-style: none;
-	text-decoration: none;
-	color: $color-white;
-}
+	// 1026 desk - 795px,
+	@media only screen and (min-width: 795px) and (max-width: 1026px) {
+		font-size: 36px;
+		line-height: 36px;
+		;
+	}
 
-.twitter {
-	font-size: 12px;
-	line-height: 12px;
-	width: 160px;
-	display: flex;
-	flex-wrap: wrap;
-	margin: auto;
-}
-
-.footer-twitter {
-	color: $color-white;
-	text-decoration: none;
+	// anything bigger 1195px 
+	@media only screen and (min-width: 1027px) {
+		font-size: 36px;
+		line-height: 36px;
+	}
 }

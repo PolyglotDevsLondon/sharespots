@@ -4,11 +4,17 @@
 
 
 .venue {
-    &_info {
-        &-address {
-            background: $color-light-green;
-            padding: 10px;
-        }
+
+    p {
+        line-height: 12px;
+        font-family: 'Roboto';
+        font-weight: 400;
+
+    }
+    &_info-address {
+        background: $color-light-green;
+        padding: 60px;
+        font-size: 12px;
     }
 
     &_rating-icon {
@@ -53,12 +59,14 @@
             justify-content: space-evenly;
         }
     }
+
     &_hero_section {
         padding-left: 60px;
         padding-right: 60px;
         padding-bottom: 60px;
         padding-top: 0px;
     }
+
     &_description {
         padding: 60px;
         background-color: $color-provincial-pink;
@@ -72,6 +80,7 @@
     margin: 0 auto;
     padding: 60px 60px 0px 60px;
     background-color: $color-white;
+
     @media (min-width: 1023px) {
         background-color: $color-provincial-pink;
     }
