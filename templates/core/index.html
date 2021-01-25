@@ -6,7 +6,7 @@
 
 {% block main %}
 <section class='homepage_section_block'>
-	<div>
+	<div class="container">
 		<h1>sharespots</h1>
 		<h2>Find your perfect spot to work together</h2>
 	</div>
@@ -23,26 +23,38 @@
 			</div>
 		</form>
 	</div>
-	<div class='filler_space' id='filler_space_right'></div>
+	</div>
 </section>
 <section>
-	<h2>Recommended venues:</h2>
-	<ul>
-		{% for Venue in venues %}
-		<li><a href="/venue-detail/{{ Venue.id }}">{{ Venue.name }}</a></li>
-		{% endfor %}
-	</ul>
+	<div class="container">
+		<h2>Recommended venues:</h2>
+		<ul>
+			{% for Venue in venues %}
+			<li><a href="/venue-detail/{{ Venue.id }}">{{ Venue.name }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
 </section>
 <section class="hero_component_container">
-	<div class="hero_info">
-		<h3>The best creative spaces, cafes for a quiet spot away from work</h3>
-		<p>Find a co-working spot Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio augue, sollicitudin sed dui vitae, vulputate auctor nisl. Morbi mollis at mi quis tincidunt. Proin ac nisl congue, pretium mi et, convallis nunc. Aliquam ac posuere eros, eget interdum nisi. Integer a elementum nisl, sed luctus nisl. Maecenas quis lacus fringilla, condimentum urna vitae, facilisis neque. Proin semper aliquam metus, eget imperdiet mi. Fusce consequat ac diam at accumsan.</p>
-		<button class="hero">
-			<a href="{% url 'about' %}">About us</a>
-		</button>
+	<div class="container">
+		<div class="hero_info">
+			<h3>The best creative spaces, cafes for a quiet spot away from work</h3>
+			<p>Find a co-working spot Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas odio augue,
+				sollicitudin sed dui vitae, vulputate auctor nisl. Morbi mollis at mi quis tincidunt. Proin ac nisl
+				congue,
+				pretium mi et, convallis nunc. Aliquam ac posuere eros, eget interdum nisi. Integer a elementum nisl,
+				sed
+				luctus nisl. Maecenas quis lacus fringilla, condimentum urna vitae, facilisis neque. Proin semper
+				aliquam
+				metus, eget imperdiet mi. Fusce consequat ac diam at accumsan.</p>
+			<button class="hero">
+				<a href="{% url 'about' %}">About us</a>
+			</button>
+		</div>
+		<div class="hero_image">
+			<img class="menu_image" src="{% static "img/menu_image.svg" %}" alt="menu">
+		</div>
 	</div>
-	<div class="hero_image">
-		<img class="menu_image" src="{% static "img/menu_image.svg" %}" alt="menu">
-	</div>
+
 </section>
 {% endblock %}
