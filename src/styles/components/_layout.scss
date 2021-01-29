@@ -6,7 +6,7 @@
 
 .container {
 	// max: mob 320px - 230px,
-	max-width: 230px;
+	// max-width: 230px;
 	margin: 0 auto;
 
 	// tablet 770x - 615px,
@@ -21,6 +21,6 @@
 
 	// anything bigger 1195px 
 	@media only screen and (min-width: 1027px) {
-		max-width: 1195px;
+		max-width: 1100px;
 	}
 }
