@@ -137,14 +137,6 @@ docker-compose -f local.yml build
 docker-compose -f local.yml run django python manage.py makemigrations
 ```
 
-### Update Seed data
-
-To export the Sharespots data from a database to a file:
-
-```
-docker-compose -f local.yml run django python manage.py dumpdata core.venue > core/fixtures/seed_data.json
-```
-
 ## Team
 
 ### Current
