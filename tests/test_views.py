@@ -1,12 +1,11 @@
 from django.test import TestCase, Client
-from core.models import Venue, Rating
+from core.models import Venue
 
 # Create your tests here.
 class TestView(TestCase):
     def setUp(self):
         self.client = Client()
-        Rating.objects.create(rate=5)
-        self.default_rating = Rating.objects.get(rate=5)
+        self.default_rating = 5
         Venue.objects.create(
             name="The Ramp",
             featured=True,

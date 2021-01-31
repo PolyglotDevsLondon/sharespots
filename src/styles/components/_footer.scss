@@ -1,0 +1,42 @@
+.footer {
+    padding: 30px;
+    background-color: $color-pink;
+    width: 100%;
+    color: $color-white;
+    font-family: $subheading-font;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+
+    a {
+        color: $color-white;
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    &_nav ul {
+        list-style: none;
+        margin: auto;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            padding: 10px;
+
+        }
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 12px;
+        font-family: 'Roboto';
+        font-weight: 400;
+    }
+
+    &_social {
+        font-size: 12px;
+        line-height: 12px;
+        width: 200px;
+        margin: auto;
+    }
+}

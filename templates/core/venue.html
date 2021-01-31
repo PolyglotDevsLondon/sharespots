@@ -7,8 +7,8 @@
 {% block main %}
 <section class="venue">
     <section class="venue_info">
-        {% if venue_detail.image is not none %}
-        <img src={{ venue_detail.image }} width="600" height="300">
+        {% if venue_detail.image %}
+        <div class='venue_img' style="background-image: url({{venue_detail.image}})"></div>
         {% endif %}
         <div class="venue_info-address">
             <div class="container">
@@ -20,12 +20,15 @@
         </div>
     </section>
 </section>
-<section class="hero_component_container">
-    <div class='container'>
-        <div class="venue_slogan">
+
+<section>
+    <div class="venue_slogan">
+        <div class='container'>
             <h3>“{{ venue_detail.slogan }}”</h3>
         </div>
-        <div class="venue_description">
+    </div>
+    <div class="venue_description">
+        <div class='container'>
             <p>{{ venue_detail.description }}</p>
         </div>
     </div>
@@ -39,7 +42,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.wifi.rate %}
+            {% if forloop.counter <= venue_detail.wifi %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
@@ -59,7 +62,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.food.rate %}
+            {% if forloop.counter <= venue_detail.food %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
@@ -79,7 +82,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.atmosphere.rate %}
+            {% if forloop.counter <= venue_detail.atmosphere %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
@@ -99,7 +102,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.sockets.rate %}
+            {% if forloop.counter <= venue_detail.sockets %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
@@ -119,7 +122,7 @@
         </div>
         <div class="venue_rating-score">
             {% for i in 12345|make_list %}
-            {% if forloop.counter <= venue_detail.coffee.rate %}
+            {% if forloop.counter <= venue_detail.coffee %}
             <span class="star star--filled">
                 {% include 'images/star.svg' %}
             </span>
