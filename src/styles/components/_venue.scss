@@ -2,7 +2,6 @@
 // Venue-detail specific ratings component
 //
 
-@import url("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css");
 
 .venue {
 
@@ -97,29 +96,6 @@
     &_description {
         padding: 60px;
         background-color: $color-provincial-pink;
-    }
-
-    &_map {
-        padding: 0 160px 50px 160px;
-
-        h3 {
-            font-family: $subheading-font;
-            font-weight: bold;
-            font-size: 28px;
-            text-align: center;
-        }
-
-        .leaflet-container {
-            width: 100%;
-            height: 481px;
-            margin-bottom: 2em;
-        }
-
-        @media (min-width: 1440px){
-            .leaflet-container {
-                height: 724px;
-            }
-        }
     }
 }
 
