@@ -5,17 +5,20 @@
 {% load static %}
 
 {% block main %}
-<section class="section section--primary">
-    <ul>
-		{% if searched_venues|length >= 1 %}
+
+<section class="listings">
+	<div class="container">
+		<h2>Search results</h2>
+		<ul>
+			{% if searched_venues|length >= 1 %}
 			{% for venue in searched_venues %}
-				<li><a href="/venue-detail/{{ venue.id }}">{{ venue.name }}</a></li>
+			<li><a href="/venue-detail/{{ venue.id }}">{{ venue.name }}</a></li>
 			{% endfor %}
-		{% else %}
-		  <p>Could not find any matches</p>
-		{% endif %}
+			{% else %}
+			<p>Could not find any matches</p>
+			{% endif %}
 
-	</ul>
-
+		</ul>
+	</div>
 </section>
 {% endblock %}

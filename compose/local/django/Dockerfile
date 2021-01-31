@@ -18,12 +18,10 @@ RUN apk update \
 
 RUN  apk add py-zmq libxml2-dev libxslt-dev g++
 
-#RUN apk add gcc python3-dev python3-pip libxml2-dev libxslt1-dev zlib1g-dev g++
 RUN pip install --upgrade pip
 
 RUN addgroup -S django \
     && adduser -S -G django django
-#RUN apk del .build-deps gcc musl-dev
 
 # Requirements have to be pulled and installed here, otherwise caching won't work
 COPY ./requirements.txt /requirements.txt
