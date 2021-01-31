@@ -145,6 +145,8 @@ To export the Sharespots data from a database to a file:
 docker-compose -f local.yml run django python manage.py dumpdata core.venue > core/fixtures/seed_data.json
 ```
 
+Then format with Prettier and remove auth data to leave just core models.
+
 ## Team
 
 ### Current
