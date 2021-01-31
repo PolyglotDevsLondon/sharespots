@@ -2,16 +2,20 @@
 
 <!DOCTYPE html>
 <html lang="en-gb">
-    <head>
-        <title>{% block title %} {% endblock %}| Share Spots</title>
-        <!-- Latest compiled and minified CSS -->
-    </head>
-    <body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        {% block layout %} {% endblock %}
+<head>
+    <title>{% block title %} {% endblock %}| Share Spots</title>
+    <!-- Latest compiled and minified CSS -->
+</head>
 
-        <script src="{% static 'main.js' %}" type="module"></script>
-        <link href='https://fonts.googleapis.com/css?family=Monoton|Roboto' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Raleway:300,700,500' rel='stylesheet' type='text/css'>
-    </body>
+<body>
+
+    {% block layout %} {% endblock %}
+
+    <script src="{% static 'main.js' %}" type="module"></script>
+    <link href='https://fonts.googleapis.com/css?family=Monoton|Roboto' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:300,700,500' rel='stylesheet' type='text/css'>
+</body>
+
 </html>

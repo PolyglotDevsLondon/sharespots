@@ -5,12 +5,37 @@
 
 .venue {
 
+    &_img {
+        width: 100%;
+        height: 600px;
+        background-color: $color-provincial-pink;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        // tablet 770x - 615px,
+        @media only screen and (min-width: 615px) and (max-width:770px) {
+            height: 700px;
+        }
+
+        // 1026 desk - 795px,
+        @media only screen and (min-width: 795px) and (max-width: 1026px) {
+            height: 700px;
+
+        }
+
+        // anything bigger 1195px 
+        @media only screen and (min-width: 1027px) {
+            height: 800px;
+        }
+    }
+
     p {
         line-height: 12px;
         font-family: 'Roboto';
         font-weight: 400;
 
     }
+
     &_info-address {
         background: $color-light-green;
         padding: 60px;
