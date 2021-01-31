@@ -20,7 +20,6 @@
         // 1026 desk - 795px,
         @media only screen and (min-width: 795px) and (max-width: 1026px) {
             height: 700px;
-
         }
 
         // anything bigger 1195px 
@@ -33,7 +32,7 @@
         line-height: 12px;
         font-family: 'Roboto';
         font-weight: 400;
-
+        margin-top: 0;
     }
 
     &_info-address {
@@ -95,18 +94,30 @@
     &_description {
         padding: 60px;
         background-color: $color-provincial-pink;
+        padding: 60px;
+        text-align: center;
+
+        @media (min-width: 1023px) {
+            p {
+                margin-top: 0;
+            }
+        }
     }
 }
 
 .venue_slogan {
+    h2 {
+        font-size: 28px;
+    }
     width: 100%;
     text-align: center;
     display: inline-block;
     margin: 0 auto;
-    padding: 60px 60px 0px 60px;
+    padding: 60px 20px 60px 20px;
     background-color: $color-white;
 
     @media (min-width: 1023px) {
         background-color: $color-provincial-pink;
+        padding: 60px 60px 0px 60px;
     }
 }
