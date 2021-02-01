@@ -10,8 +10,7 @@
         height: 600px;
         background-color: $color-provincial-pink;
         background-repeat: no-repeat;
-        background-position: right 20% bottom 50%;
-        background-size: cover;
+        background-size: contain;
 
         // tablet 770x - 615px,
         @media only screen and (min-width: 615px) and (max-width:770px) {
