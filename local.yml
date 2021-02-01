@@ -45,9 +45,3 @@ services:
     image: mailhog/mailhog:v1.0.0
     ports:
       - "8025:8025"
-
-  jupyter:
-    <<: *django
-    command: python3 manage.py shell_plus --notebook
-    ports:
-        - "8888:8888"
