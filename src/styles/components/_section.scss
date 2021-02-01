@@ -10,6 +10,10 @@
 		margin: 0;
 	}
 
+	h2 {
+		font-size: 20px;
+	}
+
 	&--hero {
 		background-color: $color-pink;
 		height: 450px;
@@ -22,7 +26,6 @@
 			text-align: left;
 			margin-bottom: auto;
 			width: 100%;
-			font-size: 62px;
 			font-weight: 300;
 
 			//Desktop
