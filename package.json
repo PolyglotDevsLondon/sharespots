@@ -8,7 +8,7 @@
         "tslint": "tslint --project tsconfig.json --format stylish --exclude **/src/**/*.js",
         "lint": "npm run tslint",
         "dev": "webpack --mode development --watch",
-        "django-tests": "docker-compose -f local.yml run django pytest -rsx"
+        "django-tests": "docker-compose -f local.yml run --rm django pytest -rsx"
     },
     "repository": {
         "type": "git",
