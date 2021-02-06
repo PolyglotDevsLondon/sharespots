@@ -66,13 +66,20 @@ class TestVenueModel(TestCase):
         self.assertEqual(self.default_cafe.coffee, self.default_rating)
 
     ## MOCK THE DATETIME VALUE SO THAT AUTO_NOW_ADD USES THE MOCKED VALUE ##
-    @pytest.mark.skip("TODO re-write this test so that it works, is giving an error at the moment")
     def test_get_default_cafe_created_at(self):
         testtime = timezone.now()
         with mock.patch('django.utils.timezone.now') as test_now:
             test_now.return_value = testtime
-            new_venue = Venue()
+            new_venue = Venue(name='test cafe 2',
+                             address_1='20',
+                             address_2='mock street',
+                             post_code='E1D 3PU',
+                             description='This is a mock cafe.',
+                             wifi=self.default_rating,
+                             food=self.default_rating,
+                             atmosphere=self.default_rating,
+                             sockets=self.default_rating,
+                             coffee=self.default_rating)
             new_venue.save()
 
-        self.assertEqual(type(self.default_cafe.post_code), str)
         self.assertEqual(testtime, new_venue.created_at)

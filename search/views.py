@@ -6,7 +6,11 @@ from django.shortcuts import render
 
 def search(request):
     user_search_venue = request.GET.get('search')
-    search_venues = get_search_venues(user_search_venue)
+    if not user_search_venue:
+        search_venues = Venue.objects.all()
+    else:
+        search_venues = get_search_venues(user_search_venue)
+    print(search_venues)
     context = {'searched_venues': search_venues}
     return render(request, 'search/venues.html', context)
 
