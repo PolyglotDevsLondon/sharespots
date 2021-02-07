@@ -26,6 +26,8 @@ Run the tests with `pytest`
 2. **Text Editor**: [Sublime Text](http://www.sublimetext.com/) or your preferred one.
 3. [Docker Desktop](https://www.docker.com/products/docker-desktop)
 4. [Node.js](https://nodejs.org/en/)
+5. If you are NOT using a Mac (e.g. you are using Windows or Linux) then install [Docker Compose](https://docs.docker.com/compose/install/).
+
 
 ## Getting started
 
