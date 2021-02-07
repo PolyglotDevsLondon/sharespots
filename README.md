@@ -214,6 +214,21 @@ When developing continuously monitor front-end files and rebuild  whenever files
 ```
 npm run dev
 ```
+
+## Useful Heroku commands
+
+Command to create a superuser in **staging**:
+
+```console
+heroku run python manage.py createsuperuser --app sharespots-app
+```
+
+Command to create a superuser in staging **production**:
+
+```console
+heroku run python manage.py createsuperuser --app sharespots-prod
+```
+
 ## Team
 
 ### Current
