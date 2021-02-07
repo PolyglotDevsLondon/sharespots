@@ -27,9 +27,12 @@ Run the tests with `pytest`
 3. [Docker Desktop](https://www.docker.com/products/docker-desktop)
 4. [Node.js](https://nodejs.org/en/)
 
+
 ## Getting started
 
 Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop) if you haven't already.
+
+ If you are NOT using a Mac (e.g. you are using Windows or Linux) then install [Docker Compose](https://docs.docker.com/compose/install/).
 
 Download and install [Node.js](https://nodejs.org/en/) if you haven't already.
 
