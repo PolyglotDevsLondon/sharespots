@@ -25,10 +25,15 @@ Run the tests with `pytest`
 1. **Terminal**: [iTerm2](https://www.iterm2.com/) (MacOSX), [Terminator](http://gnometerminator.blogspot.co.uk/p/introduction.html) (Linux) or use your preferred one.
 2. **Text Editor**: [Sublime Text](http://www.sublimetext.com/) or your preferred one.
 3. [Docker Desktop](https://www.docker.com/products/docker-desktop)
+4. [Node.js](https://nodejs.org/en/)
 
-## Project Setup
+## Getting started
 
-Open iTerm2 (or your preferred terminal.)
+Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop) if you haven't already.
+
+Download and install [Node.js](https://nodejs.org/en/) if you haven't already.
+
+Open [iTerm2](https://www.iterm2.com/) (or your preferred terminal.)
 
 Clone the repo:
 
@@ -42,7 +47,35 @@ Change directory into the sharespots directory:
 cd sharespots
 ```
 
-[Download and install Docker Desktop](https://www.docker.com/products/docker-desktop) if you haven't already.
+### Quick setup using scripts
+
+Run the this command to set up the project
+
+```
+npm run bootstrap
+```
+
+Then run this command to launch the back-end
+```
+npm run dev:docker
+```
+
+Open a new iTerm2 terminal tab by pressing ⌘T (or open an additional terminal window using your preferred terminal.)
+
+Run this command to launch the back-end:
+```
+npm run dev
+```
+
+If this worked then you do not need to do manual setup.
+
+If this didn't work  look at the [troubleshooting](#Troubleshooting) section.
+
+(You may, or may not, need to [add opencage api [add opencage api key](###Add-opencage-api-key) - @TODO test this and update instructions.)
+
+If it still isn't working try the longer manual setup below.
+
+### Longer manual setup
 
 Build the docker container (included is django, postgres, pgadmin and jupyter notebook run from django_extensions):
 
@@ -50,26 +83,7 @@ Build the docker container (included is django, postgres, pgadmin and jupyter no
 docker-compose -f local.yml build
 ```
 
-[Create your an OpenCage API key](https://opencagedata.com/)
-
-And add your OpenCage API key to sharespots/.env/.local/.django e.g.:
-
-```
-# General
-# ------------------------------------------------------------------------------
-USE_DOCKER=yes
-IPYTHONDIR=/app/.ipython
-
-
-SECRET_KEY=[secret key]
-OPENCAGE_API_KEY=[opencage_api_key]
-DJANGO_DEBUG=True
-ALLOWED_HOSTS=['*']
-
-```
-
-Fire up the docker container:
-
+Launch the docker container:
 ```shell
 docker-compose -f local.yml up
 ```
@@ -100,6 +114,12 @@ Set up a super user for django admin:
 docker-compose -f local.yml run django python manage.py createsuperuser
 ```
 
+Build everything frontend related
+
+```
+run npm i && npm run build 
+```
+
 Reload your project in your web browser at
 
 [http://0.0.0.0:8000/](http://0.0.0.0:8000/)
@@ -108,35 +128,89 @@ Reload your project in your web browser at
 
 (Optional) Open another browser tab/window and login using the superuser account you created in the django admin panel at [http://0.0.0.0:8000/admin](http://0.0.0.0:8000/admin)
 
-For the OpenCage api you would need to create your own API key.
-[Click here](https://opencagedata.com/) to make one.
+Continuously monitor front end changes
 
-## Front End changes
-
-1. To install [Sass](https://sass-lang.com/install)
-
-   - You can install using node package manager `docker-compose -f local.yml run npm install -g sass`
-   - Windows: `choco install sass`
-   - Mac OS X: `brew install sass/sass/sass`
-
-2. To build everything frontend related run `npm i && npm run build`
+```
+npm run dev
+```
 
 ## Troubleshooting
 
-If the project doesn't work after pulling the latest changes by doing a `git pull`, you may need to:
 
-### Rebuild your container to include recently added python modules
+
+### Rebuild your docker container
+
+If the project doesn't work after pulling the latest changes by doing a `git pull`, you may need to rebuild to include recently added python modules:
 
 ```shell
 docker-compose -f local.yml build
 ```
 
-### Run new database migrations
+### Add opencage api key
+
+[Create an OpenCage API key](https://opencagedata.com/)
+
+And add your OpenCage API key to sharespots/.env/.local/.django e.g.:
+
+```
+# General
+# ------------------------------------------------------------------------------
+USE_DOCKER=yes
+IPYTHONDIR=/app/.ipython
+
+
+SECRET_KEY=[secret key]
+OPENCAGE_API_KEY=[opencage_api_key]
+DJANGO_DEBUG=True
+ALLOWED_HOSTS=['*']
+
+```
+
+## Useful Database commands
+
+### Make migrations
 
 ```shell
 docker-compose -f local.yml run django python manage.py makemigrations
 ```
 
+### Load data from seed file
+```
+docker-compose -f local.yml run django python manage.py dumpdata core.venue > core/fixtures/seed_data.json
+```
+
+### Dump data to seed file
+
+To export the Sharespots data from a database to a file:
+
+```
+docker-compose -f local.yml run django python manage.py dumpdata core.venue > core/fixtures/seed_data.json
+```
+
+Then remove auth data at the top to leave just core models.
+
+
+## Useful Front End commands
+
+### Install front end dependencies
+
+To install third party libraries:
+
+```
+npm i
+```
+### Build front-end once
+To build everything frontend related run `npm run build`
+
+This will build the front-end files (e.g. css styling files) once.
+
+### Build front-end continuously
+
+When developing continuously monitor front-end files and rebuild  whenever files changed:
+
+```
+npm run dev
+```
 ## Team
 
 ### Current

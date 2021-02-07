@@ -16,7 +16,9 @@
       "sockets": 5,
       "coffee": 5,
       "slogan": "Co-working in a hip, colourful converted old multi-storey carpark in Peckham",
-      "image": "https://i.picsum.photos/id/1016/3844/2563.jpg"
+      "image": "https://live.staticflickr.com/65535/50894262507_8ff253df59_b_d.jpg",
+      "latitude": "51.469906",
+      "longitude": "-0.068213"
     }
   },
   {
@@ -36,7 +38,9 @@
       "sockets": 4,
       "coffee": 4,
       "slogan": "Co-working in a close community in an iconic building in Peckham",
-      "image": "https://i.picsum.photos/id/1016/3844/2563.jpg"
+      "image": "https://live.staticflickr.com/65535/50894144701_a78f326a16_b_d.jpg",
+      "latitude": "51.469760",
+      "longitude": "-0.069282"
     }
   },
   {
@@ -56,7 +60,9 @@
       "sockets": 3,
       "coffee": 3,
       "slogan": "Co-working with a high standard of interior decor, good for small teams.",
-      "image": "https://i.picsum.photos/id/1016/3844/2563.jpg"
+      "image": "https://live.staticflickr.com/65535/50893431443_20b781a9e7_b_d.jpg",
+      "latitude": "51.469824",
+      "longitude": "-0.068174"
     }
   }
 ]

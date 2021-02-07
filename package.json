@@ -5,10 +5,16 @@
     "main": "dist/index.js",
     "scripts": {
         "build": "webpack --mode production",
+        "build:docker": "docker-compose -f local.yml build",
         "tslint": "tslint --project tsconfig.json --format stylish --exclude **/src/**/*.js",
         "lint": "npm run tslint",
         "dev": "webpack --mode development --watch",
-        "django-tests": "docker-compose -f local.yml run --rm django pytest -rsx"
+        "django-tests": "docker-compose -f local.yml run --rm django pytest -rsx",
+        "dev:docker": "docker-compose -f local.yml up",
+        "makemigrations": "docker-compose -f local.yml run django python manage.py makemigrations",
+        "loaddata": "docker-compose -f local.yml run django python manage.py loaddata seed_data.json",
+        "dumpdata": "docker-compose -f local.yml run django python manage.py dumpdata core.venue > core/fixtures/seed_data.json",
+        "bootstrap": "npm i && npm run build:docker && npm run build && npm run makemigrations && npm run loaddata"
     },
     "repository": {
         "type": "git",

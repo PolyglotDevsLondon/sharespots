@@ -8,7 +8,7 @@
 <section class="venue">
     <section class="venue_info">
         {% if venue_detail.image %}
-        <div class='venue_img' style="background-image: url({% static 'img/venue_img.png' %});"></div>
+        <div class='venue_img' style="background-image: url({{venue_detail.image}})"></div>
         {% endif %}
         <div class="venue_info-address">
             <div class="container">
