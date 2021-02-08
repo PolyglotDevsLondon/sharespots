@@ -117,10 +117,10 @@ Set up a super user for django admin:
 docker-compose -f local.yml run django python manage.py createsuperuser
 ```
 
-Build everything frontend related
+Build everything frontend related with:
 
 ```
-run npm i && npm run build 
+npm i && npm run build 
 ```
 
 Reload your project in your web browser at
