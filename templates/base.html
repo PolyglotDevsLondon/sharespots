@@ -56,9 +56,10 @@
       crossorigin=""
     ></script>
 
+<!-- beautify ignore:start -->
     <script>
-      const latitude = {{ venue_detail.latitude }}
-      const longitude = {{ venue_detail.longitude }}
+      const latitude = '{{ venue_detail.latitude }}'
+      const longitude = '{{ venue_detail.longitude }}'
       const latLong = [latitude, longitude];
       const map = L.map('mapid').setView(latLong, 13);
 
@@ -71,6 +72,7 @@
           .bindPopup('{{ venue_detail.name }}')
           .openPopup();
     </script>
+<!-- beautify ignore:end -->
 
     {% endif %}
   </body>
