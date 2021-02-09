@@ -13,7 +13,10 @@
         "makemigrations": "docker-compose -f local.yml run django python manage.py makemigrations",
         "loaddata": "docker-compose -f local.yml run django python manage.py loaddata seed_data.json",
         "dumpdata": "docker-compose -f local.yml run django python manage.py dumpdata core.venue > core/fixtures/seed_data.json",
-        "bootstrap": "npm i && npm run build:docker && npm run build && npm run loaddata"
+        "bootstrap": "npm i && npm run build:docker && npm run build && npm run loaddata",
+        "format:js-scss-md": "prettier --write '**/*.(js|scss|md)'",
+        "format:html": "js-beautify --replace **/*.html",
+        "format": "npm run format:html && npm run format:js-scss-md"
     },
     "repository": {
         "type": "git",
@@ -36,7 +39,9 @@
         "chokidar": "^3.4.0",
         "copy-webpack-plugin": "^6.0.2",
         "css-loader": "^2.0.1",
+        "js-beautify": "^1.13.5",
         "node-sass": "^4.12.0",
+        "prettier": "^2.2.1",
         "sass-loader": "^7.1.0",
         "source-map-loader": "^0.2.4",
         "style-loader": "^0.23.1",
