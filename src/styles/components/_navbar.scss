@@ -1,23 +1,23 @@
 // Navbar
 
 .navbar_header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 5px 0px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 0px;
 
-    &-wrap {
-        background-color: $color-pink;
+  &-wrap {
+    background-color: $color-pink;
+  }
+
+  &-item {
+    background-color: transparent;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin: 20px 7px 7px;
+    color: $color-black;
+
+    &:hover {
+      background-color: $color-dark-red;
     }
-
-    &-item {
-        background-color: transparent;
-        text-decoration: none;
-        padding: 15px 20px;
-        margin: 20px 7px 7px;
-        color: $color-black;
-
-        &:hover {
-            background-color: $color-dark-red;
-        }
-    }
+  }
 }

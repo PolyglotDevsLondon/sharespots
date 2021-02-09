@@ -2,61 +2,44 @@
 
 <!DOCTYPE html>
 <html lang="en-gb">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <head>
+<head>
     <title>{% block title %} {% endblock %}| Share Spots</title>
     <!-- Latest compiled and minified CSS -->
-  </head>
+</head>
 
-  <body>
+<body>
     {% block layout %} {% endblock %}
 
     <script src="{% static 'main.js' %}" type="module"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Monoton|Roboto"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway:300,700,500"
-      rel="stylesheet"
-      type="text/css"
-    />
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Roboto" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,700,500" rel="stylesheet" type="text/css" />
 
     {% if venue_detail.latitude %}
 
     <!-- Map styles and JavaScript  -->
 
     <style>
-      .map {
-        position: relative;
-        width: 100%;
-        height: 481px;
-        margin-bottom: 2em;
-      }
-
-      @media (min-width: 1440px) {
         .map {
-          height: 724px;
+            position: relative;
+            width: 100%;
+            height: 481px;
+            margin-bottom: 2em;
         }
-      }
+
+        @media (min-width: 1440px) {
+            .map {
+                height: 724px;
+            }
+        }
     </style>
 
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
 
-    <script
-      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-      crossorigin=""
-    ></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
-<!-- beautify ignore:start -->
+    <!-- beautify ignore:start -->
     <script>
       const latitude = '{{ venue_detail.latitude }}'
       const longitude = '{{ venue_detail.longitude }}'
@@ -75,5 +58,6 @@
 <!-- beautify ignore:end -->
 
     {% endif %}
-  </body>
+</body>
+
 </html>
