@@ -97,6 +97,17 @@
         padding: 60px;
         background-color: $color-provincial-pink;
     }
+
+    &_map h3 {
+        font-family: $subheading-font;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+
+        @media (min-width: 468px) {
+            font-size: 28px;
+        }
+    }
 }
 
 .venue_slogan {
