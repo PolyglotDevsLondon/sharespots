@@ -1,43 +1,33 @@
 .section {
-  align-items: center;
-
-  &-wrap {
-    width: 100%;
-  }
-
   h1 {
     color: $color-white;
-    margin: 0;
+    font-size: $title-font-size;
   }
 
   &--hero {
-    background-color: $color-pink;
-    height: 450px;
     display: flex;
-    padding-left: 55px;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 10px;
+    background-color: $color-pink;
 
     h1 {
       font-family: $heading-font;
-      font-size: $title-font-size;
-      text-align: left;
-      margin-bottom: auto;
-      width: 100%;
-      font-size: 62px;
-      font-weight: 300;
+      font-weight: 400;
+      margin-bottom: 0;
+
+      //Tablet
+      @media screen and (min-width: 468px) {
+        font-size: 62px;
+      }
 
       //Desktop
       @media screen and (min-width: 1024px) {
         font-size: 96px;
       }
-    }
-
-    h2 {
-      font-family: $h2-heading-font;
-      font-size: 28px;
-      text-align: left;
-      max-width: 450px;
-      width: 100%;
-      font-weight: 300;
 
       //Desktop
       @media screen and (min-width: 1024px) {
@@ -45,8 +35,37 @@
       }
     }
 
+    h2 {
+      font-family: $h2-heading-font;
+      font-size: 20px;
+      font-weight: 300;
+      max-width: 270px;
+
+      //Tablet
+      @media screen and (min-width: 468px) {
+        font-size: 28px;
+        max-width: 360px;
+      }
+
+      //Desktop
+      @media screen and (min-width: 1024px) {
+        font-size: 36px;
+        max-width: 420px;
+      }
+    }
+
+    //Tablet
+    @media screen and (min-width: 768px) {
+      display: block;
+      text-align: left;
+      height: 400px;
+    }
+    //Desktop
+    @media screen and (min-width: 1024px) {
+      height: 600px;
+    }
+
     &--primary {
-      background-color: $color-pink;
       padding: 55px;
 
       h1 {

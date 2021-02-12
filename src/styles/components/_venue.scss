@@ -79,30 +79,29 @@
       display: flex;
       justify-content: space-evenly;
     }
+
+    &_map h3 {
+      font-family: $subheading-font;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+
+      @media (min-width: 468px) {
+        font-size: 28px;
+      }
+    }
   }
 
-  &_hero_section {
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom: 60px;
-    padding-top: 0px;
-  }
+  .venue_slogan {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 60px 60px 0px 60px;
+    background-color: $color-white;
 
-  &_description {
-    padding: 60px;
-    background-color: $color-provincial-pink;
-  }
-}
-
-.venue_slogan {
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-  margin: 0 auto;
-  padding: 60px 60px 0px 60px;
-  background-color: $color-white;
-
-  @media (min-width: 1023px) {
-    background-color: $color-provincial-pink;
+    @media (min-width: 1023px) {
+      background-color: $color-provincial-pink;
+    }
   }
 }
