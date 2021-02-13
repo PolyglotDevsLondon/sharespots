@@ -72,6 +72,10 @@ h2 {
 	font-size: 36px;
 	font-family: $subheading-font;
 	font-weight: 700;
+	margin: 0 auto;
+
+	// TODO
+	// Update values for each break point.
 
 	// tablet 770x - 615px,
 	@media only screen and (min-width: 615px) and (max-width:770px) {
