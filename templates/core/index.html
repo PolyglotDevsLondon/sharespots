@@ -34,6 +34,11 @@
 			<li><a href="/venue-detail/{{ Venue.id }}">{{ Venue.name }}</a></li>
 			{% endfor %}
 		</ul>
+		<div class="text_align_center">
+			<button class="hero_button">
+				<a href="{% url 'search' %}">See more co-working spots</a>
+			</button>
+		</div>
 	</div>
 </section>
 <section class="hero_component_container">
