@@ -1,5 +1,5 @@
 from .base import *
-
+from env_utils import get_env
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -13,7 +13,10 @@ ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': get_env('POSTGRES_HOST'),
+        'NAME': get_env('POSTGRES_DB'),
+        'USER': get_env('POSTGRES_USER'),
+        'PASSWORD': get_env('POSTGRES_PASSWORD'),
     }
 }

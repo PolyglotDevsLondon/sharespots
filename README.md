@@ -18,7 +18,7 @@ e.g. [TOC] or {:toc max_level=3 }
 ## Tests
 
 We use [pytest](https://docs.pytest.org/en/stable/) for our tests
-Run the tests with `pytest`
+To run Pytest please run this command `npm run django-tests`
 
 ## Software Tools Required
 
@@ -241,7 +241,7 @@ heroku run python manage.py createsuperuser --app sharespots-prod
 - [Chris Wedgwood](https://github.com/chriswedgwood)
 - [Louie Christie](https://github.com/louiechristie)
 - [Ravi Pullagurla](https://github.com/ravinderreddy-p)
-- [Abu Darda](https://github.com/abuDarda97)
+- [Abu Darda](https://github.com/abu271)
 
 ### Previously contributed
 

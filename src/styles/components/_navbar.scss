@@ -4,6 +4,9 @@
   display: flex;
   justify-content: flex-end;
   padding: 5px 0px;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 
   &-wrap {
     background-color: $color-pink;
