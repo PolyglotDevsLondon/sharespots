@@ -14,7 +14,9 @@
             <div class="container">
                 <h2>{{ venue_detail.name }}</h2>
                 <div class="venue_address-wrap">
-                    <img class="venue_address-group-icon" src="{% static "img/group.svg" %}" alt= "group icon">
+                    <div>
+                        <img class="venue_address-group-icon" src="{% static "img/group.svg" %}" alt= "group icon">
+                    </div>
                     <ul class="venue_address-list">
                         <li>{{ venue_detail.address_1 }},</li>
                         <li>{{ venue_detail.address_2 }}</li>

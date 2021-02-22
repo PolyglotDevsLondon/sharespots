@@ -37,46 +37,71 @@
 
     }
 
+    @media only screen and (min-width: 770px) {
+        &_info {
+            position: relative;
+        }
+    }
+
     &_info-address {
+        min-height: 307px;
         background: $color-light-green;
-        padding: 60px;
+        padding: 10px;
+        padding-top: 57px;
+        padding-left: 60px;
+  
 
-        // tablet 770x - 615px,
-        @media only screen and (min-width: 615px) and (max-width:770px) {
-            transform: translate(320px, -600px);
-            width: 350px;
-            padding: 26px;
+        @media only screen and (min-width: 770px) {
+            position: absolute;
+            width: 402px;
+            top: 86px;
+            right: 36px;
+            min-height: 232px;
+            padding-top: 27px;
+            padding-left: 27px;
         }
 
-        // 1026 desk - 795px,
-        @media only screen and (min-width: 770px) and (max-width: 1024px) {
-            transform: translate(420px, -500px);
-            width: 400px;
-            padding: 33px 60px;
+        @media only screen and (min-width: 1022px) {
+            width: 479px;
+            top: 132px;
+            right: 50px;
+            padding-top: 32px;
+            padding-left: 64px;
         }
 
-        // anything bigger 1195px 
-        @media only screen and (min-width: 1027px) {
-            transform: translate(660px, -600px);
-            width: 430px;
-            padding: 26px 66px;
+        @media only screen and (min-width: 1440px) {
+            width: 521px;
+            top: 212px;
+            right: 200px;
+        }
+
+        h2 {
+            padding-bottom: 25px;
         }
     }
 
     &_address {
     
         &-wrap {
-        display: flex;
-        flex-wrap: wrap;
+            display: flex;
+            align-items: flex-start;
         }
 
-        &-group-icon{
-            height: 48px;
+        &-group-icon {
             width: 48px;
-            margin-top: 15px;
+            height: 49px;
+    
+            @media only screen and (min-width: 1022px) {
+                height: 53px;
+            }
+    
+            @media only screen and (min-width: 1440px) {
+                height: 60px;
+            }
         }
 
         &-list {
+            margin-top: 0;
             padding-top: 0;
             padding-left: 20px;
 
