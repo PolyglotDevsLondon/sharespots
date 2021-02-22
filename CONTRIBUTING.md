@@ -9,7 +9,7 @@
 If you are new to [Git](), please take some time to familiarise yourself with Git and Github flow:
 
 - [Git flow](https://guides.github.com/introduction/flow/)
-- [Git offical documentation](https://git-scm.com/)
+- [Git official documentation](https://git-scm.com/)
 - [Introduction to Git & Github slides](http://slides.com/lilianakastilio/github)
 - [Git rewriting History](http://blog.lilianakastilio.co.uk/blog/2018/08/26/git-rewriting-history/)
 - [Interactive branching guide](https://learngitbranching.js.org/)

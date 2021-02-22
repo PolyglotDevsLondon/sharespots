@@ -32,10 +32,77 @@
     font-weight: 400;
   }
 
+  @media only screen and (min-width: 770px) {
+    &_info {
+      position: relative;
+    }
+  }
+
   &_info-address {
+    min-height: 307px;
     background: $color-light-green;
-    padding: 60px;
-    font-size: 12px;
+    padding: 10px;
+    padding-top: 57px;
+    padding-left: 60px;
+
+    @media only screen and (min-width: 770px) {
+      position: absolute;
+      width: 402px;
+      top: 86px;
+      right: 36px;
+      min-height: 232px;
+      padding-top: 27px;
+      padding-left: 27px;
+    }
+
+    @media only screen and (min-width: 1022px) {
+      width: 479px;
+      top: 132px;
+      right: 50px;
+      padding-top: 32px;
+      padding-left: 64px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      width: 521px;
+      top: 212px;
+      right: 200px;
+    }
+
+    h2 {
+      padding-bottom: 25px;
+    }
+  }
+
+  &_address {
+    &-wrap {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &-group-icon {
+      width: 48px;
+      height: 49px;
+
+      @media only screen and (min-width: 1022px) {
+        height: 53px;
+      }
+
+      @media only screen and (min-width: 1440px) {
+        height: 60px;
+      }
+    }
+
+    &-list {
+      margin-top: 0;
+      padding-top: 0;
+      padding-left: 20px;
+
+      li {
+        font-size: 20px;
+        list-style: none;
+      }
+    }
   }
 
   &_rating-icon {
@@ -79,29 +146,41 @@
       display: flex;
       justify-content: space-evenly;
     }
-
-    &_map h3 {
-      font-family: $subheading-font;
-      font-size: 20px;
-      font-weight: 700;
-      text-align: center;
-
-      @media (min-width: 468px) {
-        font-size: 28px;
-      }
-    }
   }
 
-  .venue_slogan {
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-    margin: 0 auto;
-    padding: 60px 60px 0px 60px;
-    background-color: $color-white;
+  &_hero_section {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    padding-top: 0px;
+  }
 
-    @media (min-width: 1023px) {
-      background-color: $color-provincial-pink;
+  &_description {
+    padding: 60px;
+    background-color: $color-provincial-pink;
+  }
+
+  &_map h3 {
+    font-family: $subheading-font;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: 468px) {
+      font-size: 28px;
     }
+  }
+}
+
+.venue_slogan {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 60px 60px 0px 60px;
+  background-color: $color-white;
+
+  @media (min-width: 1023px) {
+    background-color: $color-provincial-pink;
   }
 }
