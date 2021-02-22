@@ -134,7 +134,3 @@ dist
 
 #Pycharm
 .idea/
-
-#VSCode
-.vscode
-.DS_Store
