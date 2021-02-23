@@ -13,9 +13,16 @@
         <div class="venue_info-address">
             <div class="container">
                 <h2>{{ venue_detail.name }}</h2>
-                <p>{{ venue_detail.address_1 }}</p>
-                <p>{{ venue_detail.address_2 }}</p>
-                <p>{{ venue_detail.post_code }}</p>
+                <div class="venue_address-wrap">
+                    <div>
+                        <img class="venue_address-group-icon" src="{% static "img/group.svg" %}" alt="group icon">
+                    </div>
+                    <ul class="venue_address-list">
+                        <li>{{ venue_detail.address_1 }},</li>
+                        <li>{{ venue_detail.address_2 }}</li>
+                        <li>{{ venue_detail.post_code }}</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>

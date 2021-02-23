@@ -1,56 +1,55 @@
 .search_component {
-    position: relative;
-    background-color: $color-light-green;
+  position: relative;
+  background-color: $color-light-green;
 
+  //Tablet
+  @media screen and (min-width: 768px) {
+    background-color: unset;
+  }
+
+  h3 {
+    font-weight: 300;
+    font-family: $h2-heading-font;
+  }
+
+  &-wrapper {
     //Tablet
     @media screen and (min-width: 768px) {
-        background-color: unset;
+      transform: translate(0px, -70px);
+      margin-left: 50%;
     }
+    background-color: $color-light-green;
+    padding: 60px;
+  }
 
-    h3 {
-        font-weight: 300;
-        font-family: $h2-heading-font;
-    }
+  &-button {
+    flex: 1 0 auto;
+    background-color: $color-light-pink;
+    border: none;
+    color: $color-black;
+    height: 36px;
+    padding: 6px 8px;
+    font-weight: 500;
+  }
 
-    &-wrapper {
+  &-search {
+    flex: 3 0 auto;
+    height: 36px;
+    border: none;
+    padding: 6px 8px;
+    margin-right: 8px;
+  }
 
-        //Tablet
-        @media screen and (min-width: 768px) {
-            transform: translate(0px, -70px);
-            margin-left: 50%;
-        }
-        background-color: $color-light-green;
-        padding: 60px;
-    }
-
-    &-button {
-        flex: 1 0 auto;
-        background-color: $color-light-pink;
-        border: none;
-        color: $color-black;
-        height: 36px;
-        padding: 6px 8px;
-        font-weight: 500;
-    }
-
-    &-search {
-        flex: 3 0 auto;
-        height: 36px;
-        border: none;
-        padding: 6px 8px;
-        margin-right: 8px;
-    }
-
-    &-container {
-        position: relative;
-        display: flex;
-    }
+  &-container {
+    position: relative;
+    display: flex;
+  }
 }
 
-
-
 //Desktop
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+}
 
 //Desktop HD
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1440px) {
+}
