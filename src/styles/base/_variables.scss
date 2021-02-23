@@ -16,27 +16,29 @@ $zindex-layer-5: 1005 !default;
 //
 
 $color-white: #fff !default;
-$color-black: #16162C !default;
-$color-pink: #FE7273 !default;
-$color-light-pink:#FAB7C8 !default;
-$color-dark-red: #F46A6B !default;
-$color-light-green:#C7E3C4 !default;
-$color-provincial-pink: #FEF2F2 !default;
-$color-light-brown:#DFD2D2 !default;
-$color-yellow:#FEE687 !default;
-
+$color-black: #16162c !default;
+$color-pink: #fe7273 !default;
+$color-light-pink: #fab7c8 !default;
+$color-dark-red: #f46a6b !default;
+$color-light-green: #c7e3c4 !default;
+$color-provincial-pink: #fef2f2 !default;
+$color-light-brown: #dfd2d2 !default;
+$color-yellow: #fee687 !default;
 
 //
 // Typography
 //
-$base-font: 'Roboto', sans-serif;
-$heading-font: 'Monoton', cursive;
-$subheading-font: 'Raleway';
+$base-font: "Roboto", sans-serif;
+$heading-font: "Monoton", cursive;
+$subheading-font: "Raleway";
 $base-font-color: $color-black !default;
 $base-link-color: $color-pink !default;
-$base-font: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
-$heading-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
-$quote-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans", "Helvetica Neue", sans-serif !default;
+$base-font: -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans",
+  "Helvetica Neue", sans-serif !default;
+$heading-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans",
+  "Helvetica Neue", sans-serif !default;
+$quote-font: "Lato", -apple-system, BlinkMacSystemFont, "Roboto", "Droid Sans",
+  "Helvetica Neue", sans-serif !default;
 
 $h1-heading-font: $heading-font !default;
 $h2-heading-font: $subheading-font !default;
@@ -48,64 +50,64 @@ $h5-heading-font: $heading-font !default;
 $title-font-size: 36px;
 
 $base-font-size: (
-    base: 16,
-    sm: 16,
-    md: 16,
-    lg: 16,
-    xl: 18,
+  base: 16,
+  sm: 16,
+  md: 16,
+  lg: 16,
+  xl: 18,
 ) !default;
 $base-line-height: (
-    base: 24,
-    sm: 24,
-    md: 24,
-    lg: 26,
-    xl: 28,
+  base: 24,
+  sm: 24,
+  md: 24,
+  lg: 26,
+  xl: 28,
 ) !default;
 $base-vertical-margin: (
-    base: 20,
-    md: 25,
+  base: 20,
+  md: 25,
 ) !default;
 $h1-font-size: (
-    base: 32,
-    md: 40,
-    lg: 48,
-    xl: 48,
+  base: 32,
+  md: 40,
+  lg: 48,
+  xl: 48,
 ) !default;
 $h1-line-height: (
-    base: 40,
-    md: 45,
-    lg: 52,
-    xl: 52,
+  base: 40,
+  md: 45,
+  lg: 52,
+  xl: 52,
 ) !default;
 $h1-weight: normal;
 $h1-margin-top: (
-    base: 30px,
-    lg: 40px,
+  base: 30px,
+  lg: 40px,
 ) !default;
 $h2-font-size: (
-    base: 26,
-    md: 32,
-    lg: 36,
-    xl: 36,
+  base: 26,
+  md: 32,
+  lg: 36,
+  xl: 36,
 ) !default;
 $h2-line-height: (
-    base: 30,
-    md: 40,
-    lg: 45,
-    xl: 45,
+  base: 30,
+  md: 40,
+  lg: 45,
+  xl: 45,
 ) !default;
 $h2-weight: normal;
 $h2-margin-top: (
-    base: 30px,
-    lg: 40px,
+  base: 30px,
+  lg: 40px,
 ) !default;
 $small-font-size: (
-    base: 14,
-    lg: 14,
-    xl: 14,
+  base: 14,
+  lg: 14,
+  xl: 14,
 ) !default;
 $small-line-height: (
-    base: 20,
-    lg: 22,
-    xl: 22,
+  base: 20,
+  lg: 22,
+  xl: 22,
 ) !default;

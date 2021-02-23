@@ -2,192 +2,185 @@
 // Venue-detail specific ratings component
 //
 
-
 .venue {
+  &_img {
+    width: 100%;
+    height: 600px;
+    background-color: $color-provincial-pink;
+    background-size: cover;
+    background-position: left 20% bottom 50%;
 
-    &_img {
-        width: 100%;
-        height: 600px;
-        background-color: $color-provincial-pink;
-        background-size: cover;
-        background-position: left 20% bottom 50%;
-
-
-        // tablet 770x - 615px,
-        @media only screen and (min-width: 615px) and (max-width:770px) {
-            height: 700px;
-        }
-
-        // 1026 desk - 795px,
-        @media only screen and (min-width: 795px) and (max-width: 1026px) {
-            height: 700px;
-
-        }
-
-        // anything bigger 1195px 
-        @media only screen and (min-width: 1027px) {
-            height: 800px;
-        }
+    // tablet 770x - 615px,
+    @media only screen and (min-width: 615px) and (max-width: 770px) {
+      height: 700px;
     }
 
-    p {
-        line-height: 12px;
-        font-family: 'Roboto';
-        font-weight: 400;
-
+    // 1026 desk - 795px,
+    @media only screen and (min-width: 795px) and (max-width: 1026px) {
+      height: 700px;
     }
+
+    // anything bigger 1195px
+    @media only screen and (min-width: 1027px) {
+      height: 800px;
+    }
+  }
+
+  p {
+    line-height: 12px;
+    font-family: "Roboto";
+    font-weight: 400;
+  }
+
+  @media only screen and (min-width: 770px) {
+    &_info {
+      position: relative;
+    }
+  }
+
+  &_info-address {
+    min-height: 307px;
+    background: $color-light-green;
+    padding: 10px;
+    padding-top: 57px;
+    padding-left: 60px;
 
     @media only screen and (min-width: 770px) {
-        &_info {
-            position: relative;
-        }
+      position: absolute;
+      width: 402px;
+      top: 86px;
+      right: 36px;
+      min-height: 232px;
+      padding-top: 27px;
+      padding-left: 27px;
     }
 
-    &_info-address {
-        min-height: 307px;
-        background: $color-light-green;
-        padding: 10px;
-        padding-top: 57px;
-        padding-left: 60px;
-  
-
-        @media only screen and (min-width: 770px) {
-            position: absolute;
-            width: 402px;
-            top: 86px;
-            right: 36px;
-            min-height: 232px;
-            padding-top: 27px;
-            padding-left: 27px;
-        }
-
-        @media only screen and (min-width: 1022px) {
-            width: 479px;
-            top: 132px;
-            right: 50px;
-            padding-top: 32px;
-            padding-left: 64px;
-        }
-
-        @media only screen and (min-width: 1440px) {
-            width: 521px;
-            top: 212px;
-            right: 200px;
-        }
-
-        h2 {
-            padding-bottom: 25px;
-        }
+    @media only screen and (min-width: 1022px) {
+      width: 479px;
+      top: 132px;
+      right: 50px;
+      padding-top: 32px;
+      padding-left: 64px;
     }
 
-    &_address {
-    
-        &-wrap {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        &-group-icon {
-            width: 48px;
-            height: 49px;
-    
-            @media only screen and (min-width: 1022px) {
-                height: 53px;
-            }
-    
-            @media only screen and (min-width: 1440px) {
-                height: 60px;
-            }
-        }
-
-        &-list {
-            margin-top: 0;
-            padding-top: 0;
-            padding-left: 20px;
-
-            li {
-                font-size: 20px;
-                list-style: none;
-            }
-        }
+    @media only screen and (min-width: 1440px) {
+      width: 521px;
+      top: 212px;
+      right: 200px;
     }
 
-    &_rating-icon {
-        background: $color-light-green;
-        height: 113px;
-        width: 113px;
-        text-align: center;
+    h2 {
+      padding-bottom: 25px;
+    }
+  }
+
+  &_address {
+    &-wrap {
+      display: flex;
+      align-items: flex-start;
     }
 
-    &_rating {
-        max-width: 120px;
-        margin: 10px 5px;
+    &-group-icon {
+      width: 48px;
+      height: 49px;
 
-        &-score {
-            text-align: center;
-            padding: 10px 0;
-        }
+      @media only screen and (min-width: 1022px) {
+        height: 53px;
+      }
 
-        &-title {
-            font-family: $subheading-font;
-            text-align: center;
-            font-size: 16px;
-            margin: 0 auto;
-        }
+      @media only screen and (min-width: 1440px) {
+        height: 60px;
+      }
     }
 
-    &_amenities {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        padding: 100px;
+    &-list {
+      margin-top: 0;
+      padding-top: 0;
+      padding-left: 20px;
 
-        &-icon {
-            width: 100%;
-            height: 75px;
-            margin-top: 19px;
-        }
-
-        @media (min-width: 481px) and (max-width: 1023px) {
-            display: flex;
-            justify-content: space-evenly;
-        }
-    }
-
-    &_hero_section {
-        padding-left: 60px;
-        padding-right: 60px;
-        padding-bottom: 60px;
-        padding-top: 0px;
-    }
-
-    &_description {
-        padding: 60px;
-        background-color: $color-provincial-pink;
-    }
-
-    &_map h3 {
-        font-family: $subheading-font;
+      li {
         font-size: 20px;
-        font-weight: 700;
-        text-align: center;
-
-        @media (min-width: 468px) {
-            font-size: 28px;
-        }
+        list-style: none;
+      }
     }
+  }
+
+  &_rating-icon {
+    background: $color-light-green;
+    height: 113px;
+    width: 113px;
+    text-align: center;
+  }
+
+  &_rating {
+    max-width: 120px;
+    margin: 10px 5px;
+
+    &-score {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    &-title {
+      font-family: $subheading-font;
+      text-align: center;
+      font-size: 16px;
+      margin: 0 auto;
+    }
+  }
+
+  &_amenities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 100px;
+
+    &-icon {
+      width: 100%;
+      height: 75px;
+      margin-top: 19px;
+    }
+
+    @media (min-width: 481px) and (max-width: 1023px) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  &_hero_section {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    padding-top: 0px;
+  }
+
+  &_description {
+    padding: 60px;
+    background-color: $color-provincial-pink;
+  }
+
+  &_map h3 {
+    font-family: $subheading-font;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: 468px) {
+      font-size: 28px;
+    }
+  }
 }
 
 .venue_slogan {
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-    margin: 0 auto;
-    padding: 60px 60px 0px 60px;
-    background-color: $color-white;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 60px 60px 0px 60px;
+  background-color: $color-white;
 
-    @media (min-width: 1023px) {
-        background-color: $color-provincial-pink;
-    }
+  @media (min-width: 1023px) {
+    background-color: $color-provincial-pink;
+  }
 }

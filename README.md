@@ -27,12 +27,11 @@ To run Pytest please run this command `npm run django-tests`
 3. [Docker Desktop](https://www.docker.com/products/docker-desktop)
 4. [Node.js](https://nodejs.org/en/)
 
-
 ## Getting started
 
 Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop) if you haven't already.
 
- If you are NOT using a Mac (e.g. you are using Windows or Linux) then install [Docker Compose](https://docs.docker.com/compose/install/).
+If you are NOT using a Mac (e.g. you are using Windows or Linux) then install [Docker Compose](https://docs.docker.com/compose/install/).
 
 Download and install [Node.js](https://nodejs.org/en/) if you haven't already.
 
@@ -59,6 +58,7 @@ npm run bootstrap
 ```
 
 Then run this command to launch the back-end
+
 ```
 npm run dev:docker
 ```
@@ -66,13 +66,14 @@ npm run dev:docker
 Open a new iTerm2 terminal tab by pressing ⌘T (or open an additional terminal window using your preferred terminal.)
 
 Run this command to launch the back-end:
+
 ```
 npm run dev
 ```
 
 If this worked then you do not need to do manual setup.
 
-If this didn't work  look at the [troubleshooting](#Troubleshooting) section.
+If this didn't work look at the [troubleshooting](#Troubleshooting) section.
 
 (You may, or may not, need to [add opencage api [add opencage api key](###Add-opencage-api-key) - @TODO test this and update instructions.)
 
@@ -87,6 +88,7 @@ docker-compose -f local.yml build
 ```
 
 Launch the docker container:
+
 ```shell
 docker-compose -f local.yml up
 ```
@@ -120,7 +122,7 @@ docker-compose -f local.yml run django python manage.py createsuperuser
 Build everything frontend related with:
 
 ```
-npm i && npm run build 
+npm i && npm run build
 ```
 
 Reload your project in your web browser at
@@ -138,8 +140,6 @@ npm run dev
 ```
 
 ## Troubleshooting
-
-
 
 ### Rebuild your docker container
 
@@ -178,6 +178,7 @@ docker-compose -f local.yml run django python manage.py makemigrations
 ```
 
 ### Load data from seed file
+
 ```
 docker-compose -f local.yml run django python manage.py dumpdata core.venue > core/fixtures/seed_data.json
 ```
@@ -192,7 +193,6 @@ docker-compose -f local.yml run django python manage.py dumpdata core.venue > co
 
 Then remove auth data at the top to leave just core models.
 
-
 ## Useful Front End commands
 
 ### Install front end dependencies
@@ -202,14 +202,16 @@ To install third party libraries:
 ```
 npm i
 ```
+
 ### Build front-end once
+
 To build everything frontend related run `npm run build`
 
 This will build the front-end files (e.g. css styling files) once.
 
 ### Build front-end continuously
 
-When developing continuously monitor front-end files and rebuild  whenever files changed:
+When developing continuously monitor front-end files and rebuild whenever files changed:
 
 ```
 npm run dev

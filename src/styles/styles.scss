@@ -25,80 +25,79 @@
 @import "components/amenity_rating";
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: $base-font;
-	font-weight: 300;
-	color: $color-black;
-	padding: 10px;
-	padding-bottom: 6.813em;
+  font-family: $base-font;
+  font-weight: 300;
+  color: $color-black;
+  padding: 10px;
+  padding-bottom: 6.813em;
 }
 
 html,
 body {
-	padding: 0;
-	margin: 0;
-	height: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
 
 button {
-	background-color: #FAB7C8;
-	padding: 10px 27px;
-	text-align: center;
-	font-size: 18px;
-	border-style: none;
+  background-color: #fab7c8;
+  padding: 10px 27px;
+  text-align: center;
+  font-size: 18px;
+  border-style: none;
 }
 
 a {
-	color: #16162C;
-	text-decoration: none;
-	font-family: $subheading-font;
-	font-weight: 500;
+  color: #16162c;
+  text-decoration: none;
+  font-family: $subheading-font;
+  font-weight: 500;
 }
 
 p {
-	font-size: 20px;
-	font-family: $subheading-font;
-	font-weight: 300;
+  font-size: 20px;
+  font-family: $subheading-font;
+  font-weight: 300;
 }
 
 h3 {
-	font-family: $subheading-font;
-	font-weight: 300;
+  font-family: $subheading-font;
+  font-weight: 300;
 }
 
 h2 {
-	font-size: 36px;
-	font-family: $subheading-font;
-	font-weight: 700;
-	margin: 0 auto;
+  font-size: 36px;
+  font-family: $subheading-font;
+  font-weight: 700;
+  margin: 0 auto;
 
-	// TODO
-	// Update values for each break point.
+  // TODO
+  // Update values for each break point.
 
-	// tablet 770x - 615px,
-	@media only screen and (min-width: 615px) and (max-width:770px) {
-		font-size: 36px;
-		line-height: 36px;
-	}
+  // tablet 770x - 615px,
+  @media only screen and (min-width: 615px) and (max-width: 770px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 
-	// 1026 desk - 795px,
-	@media only screen and (min-width: 795px) and (max-width: 1026px) {
-		font-size: 36px;
-		line-height: 36px;
-		;
-	}
+  // 1026 desk - 795px,
+  @media only screen and (min-width: 795px) and (max-width: 1026px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 
-	// anything bigger 1195px 
-	@media only screen and (min-width: 1027px) {
-		font-size: 36px;
-		line-height: 36px;
-	}
+  // anything bigger 1195px
+  @media only screen and (min-width: 1027px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 // aligns to center
 .text_align_center {
-	text-align: center;
+  text-align: center;
 }
