@@ -1,0 +1,20 @@
+{
+  "beautify.config": ".beautifyrc",
+
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+}
