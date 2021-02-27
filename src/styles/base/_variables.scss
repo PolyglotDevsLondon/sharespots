@@ -50,34 +50,34 @@ $h5-heading-font: $heading-font !default;
 $title-font-size: 36px;
 
 $base-font-size: (
-  base: 16,
-  sm: 16,
-  md: 16,
-  lg: 16,
-  xl: 18,
+    base: 16px,
+    sm: 16px,
+    md: 16px,
+    lg: 16px,
+    xl: 18px,
 ) !default;
 $base-line-height: (
-  base: 24,
-  sm: 24,
-  md: 24,
-  lg: 26,
-  xl: 28,
+    base: 24px,
+    sm: 24px,
+    md: 24px,
+    lg: 26px,
+    xl: 28px,
 ) !default;
 $base-vertical-margin: (
-  base: 20,
-  md: 25,
+    base: 20px,
+    md: 25px,
 ) !default;
 $h1-font-size: (
-  base: 32,
-  md: 40,
-  lg: 48,
-  xl: 48,
+    base: 32px,
+    md: 40px,
+    lg: 48px,
+    xl: 48px,
 ) !default;
 $h1-line-height: (
-  base: 40,
-  md: 45,
-  lg: 52,
-  xl: 52,
+    base: 40px,
+    md: 45px,
+    lg: 52px,
+    xl: 52px,
 ) !default;
 $h1-weight: normal;
 $h1-margin-top: (
@@ -85,16 +85,16 @@ $h1-margin-top: (
   lg: 40px,
 ) !default;
 $h2-font-size: (
-  base: 26,
-  md: 32,
-  lg: 36,
-  xl: 36,
+    base: 26px,
+    md: 32px,
+    lg: 36px,
+    xl: 36px,
 ) !default;
 $h2-line-height: (
-  base: 30,
-  md: 40,
-  lg: 45,
-  xl: 45,
+    base: 30px,
+    md: 40px,
+    lg: 45px,
+    xl: 45px,
 ) !default;
 $h2-weight: normal;
 $h2-margin-top: (
@@ -102,12 +102,27 @@ $h2-margin-top: (
   lg: 40px,
 ) !default;
 $small-font-size: (
-  base: 14,
-  lg: 14,
-  xl: 14,
+    base: 14px,
+    lg: 14px,
+    xl: 14px,
 ) !default;
 $small-line-height: (
-  base: 20,
-  lg: 22,
-  xl: 22,
+    base: 20px,
+    lg: 22px,
+    xl: 22px,
 ) !default;
+
+
+// Responsiveness
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px !default
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default
+// 960px container + 4rem
+$desktop: 960px + (2 * $gap) !default
+// 1152px container + 4rem
+$widescreen: 1152px + (2 * $gap) !default
+$widescreen-enabled: true !default
+// 1344px container + 4rem
+$fullhd: 1344px + (2 * $gap) !default
+$fullhd-enabled: true !default
