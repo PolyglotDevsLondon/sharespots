@@ -13,6 +13,7 @@
 // Components
 //
 @import "components/navbar";
+@import "components/venue_listing";
 @import "components/section";
 @import "components/footer";
 @import "components/recommended";
@@ -100,4 +101,10 @@ h2 {
 // aligns to center
 .text_align_center {
   text-align: center;
+}
+
+.unstyled-list {
+  list-style: none;
+  margin: auto;
+  padding: 0;
 }

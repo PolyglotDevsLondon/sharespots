@@ -6,7 +6,7 @@
 
 {% block main %}
 <section class='section section--hero'>
-    <div class="section-wrap">
+    <div class="section-wrap>
         <div class="container">
             <h1>Sharespots</h1>
             <h2>Find co-working friendly cafes in London</h2>
@@ -29,9 +29,110 @@
 <section class="listings">
     <div class="container">
         <h2>Recommended</h2>
-        <ul>
-            {% for Venue in venues %}
-            <li><a href="/venue-detail/{{ Venue.id }}">{{ Venue.name }}</a></li>
+        <ul class="unstyled-list">
+            {% for venue in venues %}
+            <li class="venue_listing">
+                <div class="venue_listing-name-and-address">
+                    <h4>{{ venue.name }} </h4>
+                    <p>{{ venue.address_1 }},
+                    {{ venue.address_2 }},
+                    {{ venue.post_code }}
+                    </p>
+                </div>
+            
+                <div class="venue_listing-stars-and-button">
+                    <div class="venue_listing-ratings-wrapper">
+                        <div class="venue_listing-rating">
+                            <p>Wifi</p>
+                            <div>
+                                {% for i in 12345|make_list %}
+                                {% if forloop.counter <= venue.wifi %}
+                                <span class="star star--filled">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% else %}
+                                <span class="star">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="venue_listing-rating">
+                            <p>Food</p>
+                            <div>
+                                {% for i in 12345|make_list %}
+                                {% if forloop.counter <= venue.food %}
+                                <span class="star star--filled">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% else %}
+                                <span class="star">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    
+                        <div class="venue_listing-rating">
+                            <p>Atmosphere</p>
+                            <div>
+                                {% for i in 12345|make_list %}
+                                {% if forloop.counter <= venue.atmosphere %}
+                                <span class="star star--filled">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% else %}
+                                <span class="star">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    
+                        <div class="venue_listing-rating">
+                            <p>Sockets</p>
+                            <div>
+                                {% for i in 12345|make_list %}
+                                {% if forloop.counter <= venue.sockets %}
+                                <span class="star star--filled">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% else %}
+                                <span class="star">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    
+                        <div class="venue_listing-rating">
+                            <p>Coffee</p>
+                            <div>
+                                {% for i in 12345|make_list %}
+                                {% if forloop.counter <= venue.coffee %}
+                                <span class="star star--filled">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% else %}
+                                <span class="star">
+                                    {% include 'images/star.svg' %}
+                                </span>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="see_details_button">
+                        <a href="/venue-detail/{{ venue.id }}">See details</a>
+                    </button>
+                </div>
+            </li>
             {% endfor %}
         </ul>
         <div class="text_align_center">

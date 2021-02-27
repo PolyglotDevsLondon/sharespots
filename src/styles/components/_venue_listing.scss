@@ -1,0 +1,57 @@
+.venue_listing {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid $color-provincial-pink;
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &-ratings-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &-rating {
+    margin-right: 10px;
+    flex: 0 0 45%;
+  }
+  // 1026 desk - 795px
+  @media only screen and (min-width: 795px) {
+    margin: 40px 0;
+    padding: 40px;
+    border: 2px solid $color-provincial-pink;
+    &-ratings-wrapper {
+      justify-content: space-between;
+    }
+
+    &-rating {
+      flex: 1 1 0;
+    }
+
+    &-name-and-address {
+      background-color: $color-provincial-pink;
+      padding: 20px;
+    }
+
+    &-stars-and-button {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.see_details_button {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 15px;
+  font-family: Raleway;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-align: center;
+}
