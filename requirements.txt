@@ -1,4 +1,4 @@
-Django==2.2.18
+Django==2.2.19
 pytest==3.7.4
 pytest-django==3.4.3
 psycopg2-binary==2.8.6
