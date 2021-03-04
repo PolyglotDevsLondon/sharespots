@@ -65,7 +65,7 @@ npm run dev:docker
 
 Open a new iTerm2 terminal tab by pressing ⌘T (or open an additional terminal window using your preferred terminal.)
 
-Run this command to launch the back-end:
+Run this command to launch the front-end:
 
 ```
 npm run dev
