@@ -7,8 +7,8 @@
 {% block main %}
 <section class="venue">
     <section class="venue_info">
-        {% if venue_detail.image %}
-        <div class='venue_img' style="background-image: url({{venue_detail.image}})"></div>
+        {% if venue_detail.uploaded_image %}
+        <div class='venue_img' style="background-image: url({{venue_detail.uploaded_image.url}})"></div>
         {% endif %}
         <div class="venue_info-address">
             <div class="container">
