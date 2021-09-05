@@ -6,3 +6,4 @@ ALLOWED_HOSTS = ['*']
 
 # Activate Django-Heroku.
 django_heroku.settings(locals(), logging=True, allowed_hosts=False, databases=not DEBUG)
+

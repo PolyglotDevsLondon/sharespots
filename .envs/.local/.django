@@ -8,3 +8,7 @@ SECRET_KEY=~R.e|Olx,rMS:m#w%z@ZY!(}C~h>!i~s_sM]v;DrJS+|Lu#]H{
 DJANGO_DEBUG=True
 ALLOWED_HOSTS=['*']
 OPENCAGE_API_KEY=foobar # TODO
+
+AWS_SECRET_ACCESS_KEY=foobar
+AWS_ACCESS_KEY_ID=foobar
+AWS_STORAGE_BUCKET_NAME=foobar

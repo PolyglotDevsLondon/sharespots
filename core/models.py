@@ -27,9 +27,9 @@ class Venue(models.Model):
     atmosphere = models.IntegerField(choices=RATING_CHOICES)
     sockets = models.IntegerField(choices=RATING_CHOICES)
     coffee = models.IntegerField(choices=RATING_CHOICES)
-    
     slogan = models.CharField(max_length=250, null=True)
     image = models.URLField(max_length=200, null=True)
+    uploaded_image = models.FileField(upload_to="venue-images", null=True) 
     latitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
     longitude = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)
 
