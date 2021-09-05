@@ -31,7 +31,78 @@
         <h2>Recommended</h2>
         <ul>
             {% for Venue in venues %}
-            <li><a href="/venue-detail/{{ Venue.id }}">{{ Venue.name }}</a></li>
+            <li>
+                <h1>{{ Venue.name }}</h1>
+                <p>{{ Venue.address_1 }},
+                    {{ Venue.address_2 }}
+                    {{ Venue.post_code }}
+                </p>
+                <div>
+                    <h2>Wifi</h2>
+                    {% for i in 12345|make_list %}
+                    {% if forloop.counter <= Venue.wifi %}
+                    <span class="star star--filled">
+                        {% include 'images/star.svg' %}
+                    </span>
+                    {% else %}
+                    <span class="star">
+                        {% include 'images/star.svg' %}
+                    </span>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% for i in 12345|make_list %}
+                {% if forloop.counter <= Venue.food %}
+                <span class="star star--filled">
+                    {% include 'images/star.svg' %}
+                </span>
+                {% else %}
+                <span class="star">
+                    {% include 'images/star.svg' %}
+                </span>
+                {% endif %}
+                {% endfor %}
+
+                {% for i in 12345|make_list %}
+                {% if forloop.counter <= Venue.coffee %}
+                <span class="star star--filled">
+                    {% include 'images/star.svg' %}
+                </span>
+                {% else %}
+                <span class="star">
+                    {% include 'images/star.svg' %}
+                </span>
+                {% endif %}
+                {% endfor %}
+
+                {% for i in 12345|make_list %}
+                {% if forloop.counter <= Venue.sockets %}
+                <span class="star star--filled">
+                    {% include 'images/star.svg' %}
+                </span>
+                {% else %}
+                <span class="star">
+                    {% include 'images/star.svg' %}
+                </span>
+                {% endif %}
+                {% endfor %}
+
+                {% for i in 12345|make_list %}
+                {% if forloop.counter <= Venue.atmosphere %}
+                <span class="star star--filled">
+                    {% include 'images/star.svg' %}
+                </span>
+                {% else %}
+                <span class="star">
+                    {% include 'images/star.svg' %}
+                </span>
+                {% endif %}
+                {% endfor %}
+
+                <button class="hero_button">
+                    <a href="/venue-detail/{{Venue.id}}">See details</a>
+                </button>
+            </li>
             {% endfor %}
         </ul>
         <div class="text_align_center">
