@@ -1,13 +1,13 @@
-Django==2.2.22
+Django==2.2.24
 pytest==3.7.4
 pytest-django==3.4.3
 psycopg2-binary==2.8.6
 env_utils==1.2.0
 dj-database-url==0.5.0
-gunicorn==19.9.0
+gunicorn==19.10.0
 django-heroku==0.3.1
 django-extensions==2.1.6
-Werkzeug==0.14.1  # https://github.com/pallets/werkzeug
+Werkzeug==0.15.3  # https://github.com/pallets/werkzeug
 geocoder==1.38.1
 django-storages==1.10.1
 boto3==1.15.11
