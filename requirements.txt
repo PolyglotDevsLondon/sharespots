@@ -1,4 +1,4 @@
-Django==2.2.22
+Django==4.2.22
 pytest==3.7.4
 pytest-django==3.4.3
 psycopg2-binary==2.8.6
@@ -11,3 +11,4 @@ Werkzeug==0.14.1  # https://github.com/pallets/werkzeug
 geocoder==1.38.1
 django-storages==1.10.1
 boto3==1.15.11
+requests>=2.32.4 # not directly required, pinned by Snyk to avoid a vulnerability
